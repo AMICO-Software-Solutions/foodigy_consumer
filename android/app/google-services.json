@@ -1,0 +1,163 @@
+{
+  "project_info": {
+    "project_number": "666662171875",
+    "firebase_url": "https://foodigy-app-default-rtdb.firebaseio.com",
+    "project_id": "foodigy-app",
+    "storage_bucket": "foodigy-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666662171875:android:627547475ad1f905d6c1d6",
+        "android_client_info": {
+          "package_name": "com.example.foodigy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQi9iOOzYD78qy1F4VM4T7VuArvPD7cg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666662171875-k6lim9o7iiqfftoca5qbmtcd9jm4keke.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foodigy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666662171875:android:b795791c519ded78d6c1d6",
+        "android_client_info": {
+          "package_name": "com.foodigy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQi9iOOzYD78qy1F4VM4T7VuArvPD7cg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666662171875-k6lim9o7iiqfftoca5qbmtcd9jm4keke.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foodigy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666662171875:android:5b45fab6f0f1ca85d6c1d6",
+        "android_client_info": {
+          "package_name": "com.foodigy.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666662171875-758c7o9rcaap3mtnnjb7ttas0ssqksdd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodigy.consumer",
+            "certificate_hash": "3d18115e13cc77bda884974eeb64efd5941dc33f"
+          }
+        },
+        {
+          "client_id": "666662171875-e23lgto9p03pl2vjbb905iabuic7ju94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodigy.consumer",
+            "certificate_hash": "5d02e36ecdbcc1ae24fc02cd6cb14fd035432b44"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQi9iOOzYD78qy1F4VM4T7VuArvPD7cg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666662171875-k6lim9o7iiqfftoca5qbmtcd9jm4keke.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foodigy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666662171875:android:15edcc83d8c5aaa2d6c1d6",
+        "android_client_info": {
+          "package_name": "com.foodigyapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQi9iOOzYD78qy1F4VM4T7VuArvPD7cg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666662171875-k6lim9o7iiqfftoca5qbmtcd9jm4keke.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foodigy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666662171875:android:03332e2a2f3a49c5d6c1d6",
+        "android_client_info": {
+          "package_name": "com.foodigyappnew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQi9iOOzYD78qy1F4VM4T7VuArvPD7cg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666662171875-k6lim9o7iiqfftoca5qbmtcd9jm4keke.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foodigy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
