@@ -339,6 +339,12 @@ class _CartBuildDataState extends State<CartBuildData> {
                               },
                               child: Row(
                                 children: const [
+                                   SizedBox(
+                                                                  child:Image(image: 
+                                                                    AssetImage("assets/images/personalize.png"),
+                                                                    width:24,
+                                                                  ), 
+                                                                ),
                                   Text(
                                     'Personalized',
                                     style: TextStyle(
