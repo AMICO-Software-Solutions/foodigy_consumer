@@ -57,6 +57,7 @@ class GetDunzoController extends GetxController {
 
         print(dunzoList!.distance.toString());
       } else {
+        dunzoList=null;
         print('dunzo');
         print(response.body.toString());
       }

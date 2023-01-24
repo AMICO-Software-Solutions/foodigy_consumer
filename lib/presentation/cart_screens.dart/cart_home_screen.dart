@@ -16,7 +16,6 @@ import 'package:foodigy/controller/user_contoller/current_user_profie_controller
 import 'package:foodigy/presentation/cart_screens.dart/cart_screen.dart';
 import 'package:foodigy/presentation/cart_screens.dart/get_cart_screen_details.dart';
 import 'package:foodigy/presentation/home_screens/home.dart';
-import 'package:foodigy/presentation/home_screens/home_screens/view_all_item_pagination_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
@@ -68,7 +67,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
 
   @override
   void initState() {
-    valueChoose=null;
+    valueChoose = null;
     selectPayType = null;
     isDeliveryCharge = false;
     _razorpay = Razorpay();
@@ -146,7 +145,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
   Map<String, dynamic> cartList = {};
   Future addCart() async {
     products.clear();
-  
+
     for (int i = 0;
         i < cartListController.cartList!.data!.cartDetails!.length;
         i++) {
@@ -189,7 +188,6 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
       // Product(i.toString(), quotationList[i][0], quotationList[i][1],
       //     quotationList[i][2]),
     }
-   
   }
 
   void getChefProfile() {
@@ -225,7 +223,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
   int afterDiscountValue = 0;
   int totalCostWithCouponTax = 0;
 
-  bool isabsorb= false;
+  bool isabsorb = false;
 
   @override
   Widget build(BuildContext context) {
@@ -239,7 +237,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
         backgroundColor: Colors.white,
         title: InkWell(
           onTap: () {
-         //   cartListController.getCartDetails(widget.uId.toString());
+            //   cartListController.getCartDetails(widget.uId.toString());
           },
           child: Text(
             'Cart',
@@ -306,15 +304,19 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                     backgroundColor:
                                         MaterialStateProperty.all(firstColor)),
                                 onPressed: () {
-                                 // Get.to(ViewAllItemPaginationScreen());
-                                  Get.offUntil(GetPageRoute(page: () =>Home(),), ModalRoute.withName('toNewLogin') ,);
+                                  // Get.to(ViewAllItemPaginationScreen());
+                                  Get.offUntil(
+                                    GetPageRoute(
+                                      page: () => Home(),
+                                    ),
+                                    ModalRoute.withName('toNewLogin'),
+                                  );
                                 },
                                 child: Text(
                                   "Browse Menu",
                                   style: FoodigyTextStyle.profileTitleStyle,
                                 ),
                               ),
-                                
                             ],
                           ),
                         );
@@ -323,7 +325,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                           num mod = pow(10.0, places);
                           return ((value * mod).round().toDouble() / mod);
                         }
-        
+
                         double percentage =
                             (2.5 / 100) * int.parse(totalValue.toString());
                         var taxtotalCost = (percentage * 2);
@@ -331,9 +333,9 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                             roundDouble(percentage, 2);
                         //    var totalTax = (percentage * 2) + deliveryCharge;
                         var tTotalTx = totalTax.toInt();
-        
+
                         int totalAmountWithTax = totalTax.toInt() + totalValue;
-        
+
                         return Column(
                           children: [
                             FutureBuilder(
@@ -349,12 +351,14 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                             ? Container(
                                                 height: 25,
                                                 width: double.infinity,
-                                                color: Colors.cyanAccent.shade100
+                                                color: Colors
+                                                    .cyanAccent.shade100
                                                     .withOpacity(0.3),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(5.0),
+                                                  padding:
+                                                      const EdgeInsets.all(5.0),
                                                   child: Text(
-                                                    "Based on your items, delivery is available at ${cartTimer.allTimes.isEmpty ? "" :cartTimer.allTimes[0]}",
+                                                    "Based on your items, delivery is available at ${cartTimer.allTimes.isEmpty ? "" : cartTimer.allTimes[0]}",
                                                     style: FoodigyTextStyle
                                                         .aboutChefStyle,
                                                   ),
@@ -362,7 +366,9 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                               )
                                             : Container(),
                                         SizedBox(
-                                          height: MediaQuery.of(context).size.height /
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
                                               1.73,
                                           child: SingleChildScrollView(
                                             child: Form(
@@ -373,8 +379,8 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                 children: [
                                                   GetCartScreenDetails(
                                                     uId: widget.uId,
-                                                    cartData:
-                                                        cartListController.cartList,
+                                                    cartData: cartListController
+                                                        .cartList,
                                                   ),
                                                   Column(
                                                     children: [
@@ -383,16 +389,20 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsets.all(8.0),
+                                                            const EdgeInsets
+                                                                .all(8.0),
                                                         child: Container(
-                                                          width: double.infinity,
+                                                          width:
+                                                              double.infinity,
                                                           height: 80,
                                                           decoration: BoxDecoration(
                                                               borderRadius:
                                                                   BorderRadius
-                                                                      .circular(5),
+                                                                      .circular(
+                                                                          5),
                                                               border: Border.all(
-                                                                  color: Colors.grey
+                                                                  color: Colors
+                                                                      .grey
                                                                       .shade200)),
                                                           child: Padding(
                                                               padding:
@@ -405,19 +415,29 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                     MainAxisAlignment
                                                                         .spaceBetween,
                                                                 children: [
-                                                                  Text(
-                                                                    "Delivery date and time*",
-                                                                    style: FoodigyTextStyle
-                                                                        .addTocartStyle,
+                                                                  InkWell(
+                                                                    onTap: (){
+                                                                      cartTimer
+                                                                          .getMaxTiming();
+                                                                    },
+
+                                                                    child: Text(
+                                                                      "Delivery date and time*",
+                                                                      style: FoodigyTextStyle
+                                                                          .addTocartStyle,
+                                                                    ),
                                                                   ),
                                                                   FutureBuilder(
                                                                       future: cartTimer
                                                                           .getMaxTiming(),
-                                                                      builder: (context,
-                                                                          snapshot) {
+                                                                      builder:
+                                                                          (context,
+                                                                              snapshot) {
                                                                         return SizedBox(
-                                                                          height: 50,
-                                                                          width: 120,
+                                                                          height:
+                                                                              50,
+                                                                          width:
+                                                                              120,
                                                                           child: DropdownButtonFormField(
                                                                               menuMaxHeight: 250.0,
                                                                               decoration: InputDecoration(
@@ -425,18 +445,15 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                                   errorBorder: OutlineInputBorder(
                                                                                     borderSide: BorderSide(color: Colors.red, width: 1.0),
                                                                                   ),
-                                                                                   focusedBorder: InputBorder.none,
-
-                                                                                  border:valueChoose==null?
-                                                                                   OutlineInputBorder(
-                                                                                    borderSide: BorderSide(color: Color(0XFFFFCC00).withOpacity(0.5),width: 0.5 ),
-                                                                                  ):
-                                                                                   InputBorder.none
-                                                                                   ),
+                                                                                  focusedBorder: InputBorder.none,
+                                                                                  border: valueChoose == null
+                                                                                      ? OutlineInputBorder(
+                                                                                          borderSide: BorderSide(color: Color(0XFFFFCC00).withOpacity(0.5), width: 0.5),
+                                                                                        )
+                                                                                      : InputBorder.none),
                                                                               //  isExpanded: true,
                                                                               validator: (value) => value == null ? 'Please fill out fields.' : null,
                                                                               value: valueChoose,
-                                                                              
                                                                               items: cartTimer.allTimes.map((valueItem) {
                                                                                 return DropdownMenuItem<String>(
                                                                                     // ignore: sort_child_properties_last
@@ -447,33 +464,22 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                                     value: valueItem);
                                                                               }).toList(),
                                                                               onChanged: (newValue) {
+                                                                                selectPayType = null;
                                                                                 //  setState(() {
-                                                                                isDeliveryCharge =
-                                                                                    false;
-                                                                                valueChoose =
-                                                                                    newValue as String?;
-                                                                                print(
-                                                                                    'new value');
-        
-                                                                                pickUpTime =
-                                                                                    newValue.toString();
-                                                                                print(
-                                                                                    pickUpTime);
-                                                                                if (newValue
-                                                                                    .toString()
-                                                                                    .contains("am")) {
+                                                                                isDeliveryCharge = false;
+                                                                                valueChoose = newValue as String?;
+                                                                                print('new value');
+
+                                                                                pickUpTime = newValue.toString();
+                                                                                print(pickUpTime);
+                                                                                if (newValue.toString().contains("am")) {
                                                                                   print("$newValue AM");
                                                                                 } else {
-                                                                                  int first =
-                                                                                      int.parse(newValue.toString().substring(0, newValue.toString().indexOf(':')));
-                                                                                  String
-                                                                                      second =
-                                                                                      newValue.toString().substring(newValue.toString().indexOf(':') + 1, newValue.toString().indexOf(' '));
-                                                                                  int data =
-                                                                                      first + 12;
-                                                                                  dunsoTime =
-                                                                                      "$data:$second";
-        
+                                                                                  int first = int.parse(newValue.toString().substring(0, newValue.toString().indexOf(':')));
+                                                                                  String second = newValue.toString().substring(newValue.toString().indexOf(':') + 1, newValue.toString().indexOf(' '));
+                                                                                  int data = first + 12;
+                                                                                  dunsoTime = "$data:$second";
+
                                                                                   print("$data:$second ");
                                                                                 }
                                                                                 //   });
@@ -484,32 +490,22 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                       child: deliveryDate ==
                                                                               null
                                                                           ? IconButton(
-                                                                              onPressed:
-                                                                                  () async {
+                                                                              onPressed: () async {
                                                                                 showDate();
-                                                                                isDeliveryCharge =
-                                                                                    false;
+                                                                                isDeliveryCharge = false;
                                                                               },
-                                                                              icon:
-                                                                                  Icon(
-                                                                                MdiIcons
-                                                                                    .calendar,
-                                                                                color:
-                                                                                    Colors.grey,
+                                                                              icon: Icon(
+                                                                                MdiIcons.calendar,
+                                                                                color: Colors.grey,
                                                                               ))
                                                                           : InkWell(
-                                                                              onTap:
-                                                                                  () {
-                                                                                isDeliveryCharge =
-                                                                                    false;
+                                                                              onTap: () {
+                                                                                isDeliveryCharge = false;
                                                                                 showDate();
                                                                               },
-                                                                              child:
-                                                                                  Text(
-                                                                                deliveryDisplayDate
-                                                                                    .toString(),
-                                                                                style:
-                                                                                    FoodigyTextStyle.addTocartStyle,
+                                                                              child: Text(
+                                                                                deliveryDisplayDate.toString(),
+                                                                                style: FoodigyTextStyle.addTocartStyle,
                                                                               )))
                                                                 ],
                                                               )),
@@ -522,36 +518,39 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                         onTap: () {
                                                           //goToSecondScreen();
                                                           couponController.getCoupons(
-                                                                          cartValue:
-                                                                              totalValue
-                                                                                  .toString(),
-                                                                          consumerId:
-                                                                              currentUserId,
-                                                                          chefId: cartListController
-                                                                              .cartList!
-                                                                              .data!
-                                                                              .cartDetails![
-                                                                                  0]
-                                                                              .providerId
-                                                                              .toString(),
-                                                                          orderDate:
-                                                                              deliveryDate);
-                                                          showAddNoteDialog(context);
+                                                              cartValue:
+                                                                  totalValue
+                                                                      .toString(),
+                                                              consumerId:
+                                                                  currentUserId,
+                                                              chefId: cartListController
+                                                                  .cartList!
+                                                                  .data!
+                                                                  .cartDetails![
+                                                                      0]
+                                                                  .providerId
+                                                                  .toString(),
+                                                              orderDate:
+                                                                  deliveryDate);
+                                                          showAddNoteDialog(
+                                                              context);
                                                         },
                                                         child: Container(
                                                           height: 50,
-                                                          width:
-                                                              MediaQuery.of(context)
-                                                                      .size
-                                                                      .width /
-                                                                  1,
-                                                          color:
-                                                              Colors.yellow.shade100,
+                                                          width: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width /
+                                                              1,
+                                                          color: Colors
+                                                              .yellow.shade100,
                                                           child: Padding(
-                                                            padding: const EdgeInsets
-                                                                    .symmetric(
-                                                                vertical: 5,
-                                                                horizontal: 15),
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .symmetric(
+                                                                    vertical: 5,
+                                                                    horizontal:
+                                                                        15),
                                                             child: Row(
                                                               mainAxisAlignment:
                                                                   MainAxisAlignment
@@ -575,13 +574,13 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                           fontSize:
                                                                               12,
                                                                           fontWeight:
-                                                                              FontWeight
-                                                                                  .w600),
+                                                                              FontWeight.w600),
                                                                     )
                                                                   ],
                                                                 ),
                                                                 IconButton(
-                                                                    onPressed: () {
+                                                                    onPressed:
+                                                                        () {
                                                                       print(
                                                                           deliveryDate);
                                                                       print(
@@ -597,15 +596,13 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                         cartListController
                                                                             .cartList!
                                                                             .data!
-                                                                            .cartDetails![
-                                                                                0]
+                                                                            .cartDetails![0]
                                                                             .providerId
                                                                             .toString(),
                                                                       );
                                                                       couponController.getCoupons(
-                                                                          cartValue:
-                                                                              totalValue
-                                                                                  .toString(),
+                                                                          cartValue: totalValue
+                                                                              .toString(),
                                                                           consumerId:
                                                                               currentUserId,
                                                                           chefId: cartListController
@@ -633,7 +630,8 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                       ),
                                                       pickUpTime == ""
                                                           ? ErrorContainer()
-                                                          : (selectPayType == null
+                                                          : (selectPayType ==
+                                                                  null
                                                               ? InkWell(
                                                                   onTap: () {
                                                                     addCart();
@@ -647,21 +645,18 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                         "${dunsoTime.toString()}:00";
                                                                     DateTime
                                                                         sendDate =
-                                                                        DateFormat(
-                                                                                "MM-dd-yyyy HH:mm:ss")
-                                                                            .parse(
-                                                                                "$deliveryDate $t");
+                                                                        DateFormat("MM-dd-yyyy HH:mm:ss")
+                                                                            .parse("$deliveryDate $t");
                                                                     // print("dunxo");
                                                                     // print(sendDate);
                                                                     print(sendDate
                                                                         .microsecondsSinceEpoch);
-                                                                    dunsoSheduleTime =
-                                                                        sendDate
-                                                                            .millisecondsSinceEpoch
-                                                                            .toString()
-                                                                            .substring(
-                                                                                0,
-                                                                                10);
+                                                                    dunsoSheduleTime = sendDate
+                                                                        .millisecondsSinceEpoch
+                                                                        .toString()
+                                                                        .substring(
+                                                                            0,
+                                                                            10);
                                                                     print(
                                                                         dunsoSheduleTime);
                                                                     dunzoController.getDunzo(
@@ -685,8 +680,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                             longFoodigy
                                                                                 .toString(),
                                                                         sheduleTime:
-                                                                            dunsoSheduleTime
-                                                                                .toString());
+                                                                            dunsoSheduleTime.toString());
                                                                     pickDropController.getPickDrop(
                                                                         chefLat: chefProfileController
                                                                             .currentchefProfile!
@@ -715,65 +709,43 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                   child:
                                                                       ErrorContainer())
                                                               : Container(
-                                                                  color: Colors.white,
-                                                                  child: Padding(
-                                                                    padding:
-                                                                        const EdgeInsets
-                                                                                .only(
-                                                                            left: 15,
-                                                                            top: 15,
-                                                                            bottom:
-                                                                                15),
+                                                                  color: Colors
+                                                                      .white,
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsets
+                                                                            .only(
+                                                                        left:
+                                                                            15,
+                                                                        top: 15,
+                                                                        bottom:
+                                                                            15),
                                                                     child: Row(
                                                                       children: [
                                                                         InkWell(
                                                                             onTap:
                                                                                 () {
                                                                               addCart();
-                                                                              isDeliveryCharge =
-                                                                                  !isDeliveryCharge;
-                                                                              print(
-                                                                                  pickUpDate);
-                                                                              print(
-                                                                                  pickUpTime);
-        
-                                                                              dunzoController.getDunzo(
-                                                                                  cheflat:
-                                                                                      chefProfileController.currentchefProfile!.data!.address![0].latitude.toString(),
-                                                                                  chefLong: chefProfileController.currentchefProfile!.data!.address![0].longitude.toString(),
-                                                                                  cusLat: latFoodigy.toString(),
-                                                                                  cusLong: longFoodigy.toString(),
-                                                                                  sheduleTime: dunsoSheduleTime.toString());
-                                                                              pickDropController.getPickDrop(
-                                                                                  chefLat: chefProfileController.currentchefProfile!.data!.address![0].latitude
-                                                                                      .toString(),
-                                                                                  chefLong: chefProfileController.currentchefProfile!.data!.address![0].longitude
-                                                                                      .toString(),
-                                                                                  cusLat: latFoodigy
-                                                                                      .toString(),
-                                                                                  cusLong: longFoodigy
-                                                                                      .toString(),
-                                                                                  time:
-                                                                                      pickUpTime,
-                                                                                  date:
-                                                                                      pickUpDate);
+                                                                              isDeliveryCharge = !isDeliveryCharge;
+                                                                              print(pickUpDate);
+                                                                              print(pickUpTime);
+
+                                                                              dunzoController.getDunzo(cheflat: chefProfileController.currentchefProfile!.data!.address![0].latitude.toString(), chefLong: chefProfileController.currentchefProfile!.data!.address![0].longitude.toString(), cusLat: latFoodigy.toString(), cusLong: longFoodigy.toString(), sheduleTime: dunsoSheduleTime.toString());
+                                                                              pickDropController.getPickDrop(chefLat: chefProfileController.currentchefProfile!.data!.address![0].latitude.toString(), chefLong: chefProfileController.currentchefProfile!.data!.address![0].longitude.toString(), cusLat: latFoodigy.toString(), cusLong: longFoodigy.toString(), time: pickUpTime, date: pickUpDate);
                                                                             },
                                                                             child: SizedBox(
                                                                                 child: Row(
                                                                               children: const [
                                                                                 Text(
                                                                                   "Choose delivery type*",
-                                                                                  style:
-                                                                                      FoodigyTextStyle.addTocartStyle,
+                                                                                  style: FoodigyTextStyle.addTocartStyle,
                                                                                 ),
                                                                                 SizedBox(
-                                                                                  width:
-                                                                                      10,
+                                                                                  width: 10,
                                                                                 ),
                                                                                 Icon(
                                                                                   MdiIcons.chevronDown,
-                                                                                  size:
-                                                                                      18,
+                                                                                  size: 18,
                                                                                 )
                                                                               ],
                                                                             ))),
@@ -784,11 +756,12 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                       deliveryFunction(),
                                                       Container(
                                                         width: double.infinity,
-                                                        color: Colors.grey.shade100,
+                                                        color: Colors
+                                                            .grey.shade100,
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                  15.0),
+                                                              const EdgeInsets
+                                                                  .all(15.0),
                                                           child: Text(
                                                             "Bill Details",
                                                             style: FoodigyTextStyle
@@ -802,127 +775,138 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                         color: Colors.white,
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                  15.0),
+                                                              const EdgeInsets
+                                                                  .all(15.0),
                                                           child: InkWell(
                                                             onTap: () {
                                                               //  print(totalValue);
                                                             },
                                                             child:
                                                                 SingleChildScrollView(
-                                                              child:
-                                                                  Column(children: [
-                                                                Row(
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .spaceBetween,
+                                                              child: Column(
                                                                   children: [
-                                                                    Text(
-                                                                      "Items in cart",
-                                                                      style: FoodigyTextStyle
-                                                                          .addTocartStyle,
+                                                                    Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      children: [
+                                                                        Text(
+                                                                          "Items in cart",
+                                                                          style:
+                                                                              FoodigyTextStyle.addTocartStyle,
+                                                                        ),
+                                                                        Text(
+                                                                          '${cartListController.cartList!.data!.cartDetails!.length}',
+                                                                          style: TextStyle(
+                                                                              // fontFamily: 'Poppins',
+                                                                              fontSize: 12,
+                                                                              color: Colors.black,
+                                                                              fontWeight: FontWeight.w400),
+                                                                        )
+                                                                      ],
                                                                     ),
-                                                                    Text(
-                                                                      '${cartListController.cartList!.data!.cartDetails!.length}',
-                                                                      style: TextStyle(
-                                                                          // fontFamily: 'Poppins',
-                                                                          fontSize: 12,
-                                                                          color: Colors.black,
-                                                                          fontWeight: FontWeight.w400),
-                                                                    )
-                                                                  ],
-                                                                ),
-                                                                SizedBox(
-                                                                  height: 10,
-                                                                ),
-                                                                cartMethod(
-                                                                    title:
-                                                                        "Subtotal Amount",
-                                                                    value:
-                                                                        "${iRubee.toString()} ${double.parse(totalValue.toString()).toStringAsFixed(2)}"),
-                                                                SizedBox(
-                                                                  height: 10,
-                                                                ),
-                                                                cartMethod(
-                                                                    title: couponCode ==
-                                                                            null
-                                                                        ? "Discount "
-                                                                        : "Discount (${couponCode.toString()})",
-                                                                    value:
-                                                                        "\u{20B9} -${double.parse(discountValue.toString()).toStringAsFixed(2)}"),
-                                                                SizedBox(
-                                                                  height: 10,
-                                                                ),
-                                                                cartMethod(
-                                                                    title:
-                                                                        "After Discount",
-                                                                    value: afterDiscountValue ==
-                                                                            0
-                                                                        ? "${iRubee.toString()} ${double.parse(totalValue.toString()).toStringAsFixed(2)}"
-                                                                        : "${iRubee.toString()} ${double.parse(afterDiscountValue.toString()).toStringAsFixed(2)}"),
-                                                                SizedBox(
-                                                                  height: 10,
-                                                                ),
-                                                                cartMethod(
-                                                                    title:
-                                                                        "SGST @ 2.5%",
-                                                                    value: sgstCostCoupon ==
-                                                                            ""
-                                                                        ? "\u{20B9} ${double.parse(percentage.toString()).toStringAsFixed(2)}"
-                                                                        : "\u{20B9} ${double.parse(sgstCostCoupon.toString()).toStringAsFixed(2)}"),
-                                                                SizedBox(
-                                                                  height: 10,
-                                                                ),
-                                                                cartMethod(
-                                                                    title:
-                                                                        "CGST @ 2.5%",
-                                                                    value: cgstCostCoupon ==
-                                                                            ""
-                                                                        ? "\u{20B9} ${double.parse(percentage.toString()).toStringAsFixed(2)}"
-                                                                        : "\u{20B9} ${double.parse(cgstCostCoupon.toString()).toStringAsFixed(2)}"),
-                                                                // cartMethod(
-                                                                //     title: "CGST @ 2.5%",
-                                                                //     value:
-                                                                //         "\u{20B9} ${(2.5 / 100) * int.parse(totalValue.toString())}"),
-                                                                SizedBox(
-                                                                  height: 10,
-                                                                ),
-                                                                cartMethod(
-                                                                    title:
-                                                                        "Delivery charge",
-                                                                    value:
-                                                                        "\u{20B9} ${double.parse(deliveryCharge.toString()).toStringAsFixed(2)}"),
-                                                                // SizedBox(
-                                                                //   height: 10,
-                                                                // ),
-                                                                // cartMethod(
-                                                                //     title: "Total tax",
-                                                                //     value:
-                                                                //         "\u{20B9} ${double.parse(totalTax.toString()).toStringAsFixed(2)}"),
-                                                                SizedBox(
-                                                                  height: 10,
-                                                                ),
-                                                                             cartMethod(
-                                                                    isFAmount: true,
-                                                                    title:
-                                                                        "Grand Total",
-                                                                    value: totalCostWithCouponTax ==
-                                                                            0
-                                                                        ? "\u{20B9} ${totalAmountWithTax+ deliveryCharge}"
-                                                                        : "\u{20B9} ${totalCostWithCouponTax + deliveryCharge}"),
-                                                                          SizedBox(height: 10),
-                                                            TextFieldCart(noteController: noteController),
-                                                                
-                                                                // cartMethod(
-                                                                //     isFAmount: true,
-                                                                //     title:
-                                                                //         "Grand Total",
-                                                                //     value: totalCostWithCouponTax ==
-                                                                //             0
-                                                                //         ? "\u{20B9} ${double.parse(totalAmountWithTax.toString()).toStringAsFixed(2)}"
-                                                                //         : "\u{20B9} ${double.parse(totalCostWithCouponTax.toString()).toStringAsFixed(2)}"),
-                                                             
-                                                              ]),
+                                                                    SizedBox(
+                                                                      height:
+                                                                          10,
+                                                                    ),
+                                                                    cartMethod(
+                                                                        title:
+                                                                            "Subtotal Amount",
+                                                                        value:
+                                                                            "${iRubee.toString()} ${double.parse(totalValue.toString()).toStringAsFixed(2)}"),
+                                                                    SizedBox(
+                                                                      height:
+                                                                          10,
+                                                                    ),
+                                                                    cartMethod(
+                                                                        title: couponCode ==
+                                                                                null
+                                                                            ? "Discount "
+                                                                            : "Discount (${couponCode.toString()})",
+                                                                        value:
+                                                                            "\u{20B9} -${double.parse(discountValue.toString()).toStringAsFixed(2)}"),
+                                                                    SizedBox(
+                                                                      height:
+                                                                          10,
+                                                                    ),
+                                                                    cartMethod(
+                                                                        title:
+                                                                            "After Discount",
+                                                                        value: afterDiscountValue ==
+                                                                                0
+                                                                            ? "${iRubee.toString()} ${double.parse(totalValue.toString()).toStringAsFixed(2)}"
+                                                                            : "${iRubee.toString()} ${double.parse(afterDiscountValue.toString()).toStringAsFixed(2)}"),
+                                                                    SizedBox(
+                                                                      height:
+                                                                          10,
+                                                                    ),
+                                                                    cartMethod(
+                                                                        title:
+                                                                            "SGST @ 2.5%",
+                                                                        value: sgstCostCoupon ==
+                                                                                ""
+                                                                            ? "\u{20B9} ${double.parse(percentage.toString()).toStringAsFixed(2)}"
+                                                                            : "\u{20B9} ${double.parse(sgstCostCoupon.toString()).toStringAsFixed(2)}"),
+                                                                    SizedBox(
+                                                                      height:
+                                                                          10,
+                                                                    ),
+                                                                    cartMethod(
+                                                                        title:
+                                                                            "CGST @ 2.5%",
+                                                                        value: cgstCostCoupon ==
+                                                                                ""
+                                                                            ? "\u{20B9} ${double.parse(percentage.toString()).toStringAsFixed(2)}"
+                                                                            : "\u{20B9} ${double.parse(cgstCostCoupon.toString()).toStringAsFixed(2)}"),
+                                                                    // cartMethod(
+                                                                    //     title: "CGST @ 2.5%",
+                                                                    //     value:
+                                                                    //         "\u{20B9} ${(2.5 / 100) * int.parse(totalValue.toString())}"),
+                                                                    SizedBox(
+                                                                      height:
+                                                                          10,
+                                                                    ),
+                                                                    cartMethod(
+                                                                        title:
+                                                                            "Delivery charge",
+                                                                        value:
+                                                                            "\u{20B9} ${double.parse(deliveryCharge.toString()).toStringAsFixed(2)}"),
+                                                                    // SizedBox(
+                                                                    //   height: 10,
+                                                                    // ),
+                                                                    // cartMethod(
+                                                                    //     title: "Total tax",
+                                                                    //     value:
+                                                                    //         "\u{20B9} ${double.parse(totalTax.toString()).toStringAsFixed(2)}"),
+                                                                    SizedBox(
+                                                                      height:
+                                                                          10,
+                                                                    ),
+                                                                    cartMethod(
+                                                                        isFAmount:
+                                                                            true,
+                                                                        title:
+                                                                            "Grand Total",
+                                                                        value: totalCostWithCouponTax ==
+                                                                                0
+                                                                            ? "\u{20B9} ${totalAmountWithTax + deliveryCharge}"
+                                                                            : "\u{20B9} ${totalCostWithCouponTax + deliveryCharge}"),
+                                                                    SizedBox(
+                                                                        height:
+                                                                            10),
+                                                                    TextFieldCart(
+                                                                        noteController:
+                                                                            noteController),
+
+                                                                    // cartMethod(
+                                                                    //     isFAmount: true,
+                                                                    //     title:
+                                                                    //         "Grand Total",
+                                                                    //     value: totalCostWithCouponTax ==
+                                                                    //             0
+                                                                    //         ? "\u{20B9} ${double.parse(totalAmountWithTax.toString()).toStringAsFixed(2)}"
+                                                                    //         : "\u{20B9} ${double.parse(totalCostWithCouponTax.toString()).toStringAsFixed(2)}"),
+                                                                  ]),
                                                             ),
                                                           ),
                                                         ),
@@ -934,331 +918,343 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                             ),
                                           ),
                                         ),
-                                         
-                                      
                                       ],
                                     ),
                                   );
                                 }),
-                       
-                         
-                           SizedBox(
-                                      // height: MediaQuery.of(context).size.height / 4.5,
-                                      // height: 500,
-                                      width: double.infinity,
-                                      child: FutureBuilder(
-                                        //  future: cartListController.getCartDetails(  widget.uId.toString()),
-                                          builder: (context, snapshot) {
-                                            return Container(
-                                              color: Colors.white,
-                                              height: 150,
-                                              width: double.infinity,
-                                              child: Padding(
+                            SizedBox(
+                              // height: MediaQuery.of(context).size.height / 4.5,
+                              // height: 500,
+                              width: double.infinity,
+                              child: FutureBuilder(
+                                  //  future: cartListController.getCartDetails(  widget.uId.toString()),
+                                  builder: (context, snapshot) {
+                                return Container(
+                                  color: Colors.white,
+                                  height: 150,
+                                  width: double.infinity,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(0.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Divider(
+                                          color: Colors.black,
+                                        ),
+                                        selectPayType == "Takeaway"
+                                            ? Padding(
                                                 padding:
-                                                    const EdgeInsets.all(0.0),
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.end,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.start,
-                                                  children: [
-                                                    Divider(
-                                                      color: Colors.black,
-                                                    ),
-                                                    selectPayType == "Takeaway"
-                                                        ? Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .symmetric(
-                                                                    horizontal:
-                                                                        15),
-                                                            child: SizedBox(
-                                                              child: Row(
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: const [
-                                                                  Text(
-                                                                    'Pickup Address ',
-                                                                    style: TextStyle(
-                                                                        color: Colors
-                                                                            .black,
-                                                                        fontSize:
-                                                                            16,
-                                                                        fontWeight:
-                                                                            FontWeight
-                                                                                .w500),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          )
-                                                        : Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .symmetric(
-                                                                    horizontal:
-                                                                        15),
-                                                            child: SizedBox(
-                                                              child: Row(
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: const [
-                                                                  Text(
-                                                                    'Delivery Address',
-                                                                    style: TextStyle(
-                                                                        color: Colors
-                                                                            .black,
-                                                                        fontSize:
-                                                                            16,
-                                                                        fontWeight:
-                                                                            FontWeight
-                                                                                .w500),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ),
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          color: Colors.white,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(10)),
-                                                      child: Padding(
-                                                        padding: const EdgeInsets
-                                                                .symmetric(
-                                                            vertical: 5,
-                                                            horizontal: 15),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            Column(
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                SizedBox(
-                                                                  height: 5,
-                                                                ),
-                                                                selectPayType ==
-                                                                        "Takeaway"
-                                                                    ? SizedBox(
-                                                                        height:
-                                                                            30,
-                                                                        width: MediaQuery.of(context)
-                                                                                .size
-                                                                                .width /
-                                                                            1.2,
-                                                                        child:
-                                                                            Wrap(
-                                                                          children: [
-                                                                            Text(
-                                                                                "${chefProfileController.currentchefProfile!.data!.address![0].addressLine1.toString()} ,${chefProfileController.currentchefProfile!.data!.address![0].addressLine2.toString()} ,${chefProfileController.currentchefProfile!.data!.address![0].city.toString()} ,${chefProfileController.currentchefProfile!.data!.address![0].pincode.toString()}",
-                                                                                style: FoodigyTextStyle.smallTextStyle),
-                                                                          ],
-                                                                        ),
-                                                                      )
-                                                                    : SizedBox(
-                                                                        height:
-                                                                            30,
-                                                                        width: MediaQuery.of(context)
-                                                                                .size
-                                                                                .width /
-                                                                            1.2,
-                                                                        child:
-                                                                            Wrap(
-                                                                          children: [
-                                                                            Text(
-                                                                                selectedAddress.toString() == "" ? add : selectedAddress,
-                                                                                style: FoodigyTextStyle.smallTextStyle),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                SizedBox(
-                                                                  height: 5,
-                                                                ),
-                                                                Text(
-                                                                    'Delivery date : $deliveryDisplayDate',
-                                                                    style: FoodigyTextStyle
-                                                                        .smallTextStyle),
-                                                                GetBuilder<
-                                                                        CartCountController>(
-                                                                    init:
-                                                                        CartCountController(),
-                                                                    builder:
-                                                                        (cartController) {
-                                                                      // return registerController.pressedBool
-                                                                      return InkWell(
-                                                                        onTap:
-                                                                            () {
-                                                                          print(cartController
-                                                                              .totValu
-                                                                              .toString());
-                                                                        },
-                                                                        child:
-                                                                            Column(
-                                                                          children: [
-                                                                            Row(
-                                                                              children: const [
-                                                                                // SizedBox(
-                                                                                //     child: Text(
-                                                                                //   'Value ${cartController.totValu}',
-                                                                                //   style: const TextStyle(
-                                                                                //     fontSize: 12.0,
-                                                                                //     color: Colors.black,
-                                                                                //   ),
-                                                                                // )),
-                                                                              ],
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      );
-                                                                    }),
-                                                              ],
-                                                            ),
-                                                          ],
-                                                        ),
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 15),
+                                                child: SizedBox(
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: const [
+                                                      Text(
+                                                        'Pickup Address ',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500),
                                                       ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets
-                                                              .symmetric(
-                                                          horizontal: 15),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          SizedBox(
-                                                              height: 40,
-                                                              width: MediaQuery.of(
-                                                                          context)
-                                                                      .size
-                                                                      .width /
-                                                                  3,
-                                                              child: Column(
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .start,
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .start,
-                                                                children: [
-                                                                  Text(
-                                                                    "${cartListController.cartList!.data!.cartDetails!.length} items in cart",
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .grey,
-                                                                      fontSize:
-                                                                          10,
-                                                                      fontFamily:
-                                                                          'Poppins',
-                                                                    ),
-                                                                  ),
-                                                                  Text(totalCostWithCouponTax ==
-                                                                        0
-                                                                    ? "\u{20B9} ${totalAmountWithTax+ deliveryCharge}"
-                                                                    : "\u{20B9} ${totalCostWithCouponTax + deliveryCharge}"),
-                                                                ],
-                                                              )),
-                                                          selectPayType == null
-                                                              ? placeOrderButtondisable()
-                                                              : Obx(() {
-                                                                  if (createOrderController
-                                                                      .isDataLoading
-                                                                      .isTrue) {
-                                                                    return placeOrderButtondisable();
-                                                                  } else {
-                                                                    return SizedBox(
-                                                                      height: 38,
-                                                                      width: MediaQuery.of(context)
-                                                                              .size
-                                                                              .width /
-                                                                          3,
-                                                                      child:
-                                                                          TextButton(
-                                                                        // ignore: sort_child_properties_last
-                                                                        child:
-                                                                            Text(
-                                                                          "Place order",
-                                                                          style: TextStyle(
-                                                                              color:
-                                                                                  Colors.white),
-                                                                        ),
-                                                                        style: TextButton.styleFrom(
-                                                                            primary: Colors
-                                                                                .purple,
-                                                                            backgroundColor:
-                                                                                firstColor,
-                                                                            textStyle: const TextStyle(
-                                                                                fontSize: 14,
-                                                                                fontFamily: 'Poppins')),
-                                                                        onPressed:
-                                                                            () {
-                                                                          print(  "coupons");
-                                                                          print( couponCode);
-                                                                          print( "here $couponId");
-                                                                          print(discountValue.toInt() ==
-                                                                                  0
-                                                                              ? null
-                                                                              : discountValue.toInt().toString());
-                                                                          print( 'done');
-                                                                          setState(() {
-                                                                            isabsorb =true;
-                                                                          });
-                                                                          createOrderController
-                                                                              .createOrder(
-                                                                                  cart: products,
-                                                                                  deliveryRate: deliveryCharge.toString(),
-                                                                                  couponId: couponId,
-                                                                                  couponCode: couponCode,
-                                                                                  couponCost: discountValue.toInt().toString(),
-                                                                                  deliveryMode: selectPayType.toString().toUpperCase(),
-                                                                                  currentProfile: registerController.currentProfile,
-                                                                                  cartData: cartListController.cartList,
-                                                                                  addressId:selectPayType == "Takeaway" ? chefProfileController.currentchefProfile!.data!.address![0].id : selecteAddressId.toString(),
-                                                                                  address: selectPayType == "Takeaway" ? chefProfileController.currentchefProfile!.data!.address![0].addressLine1.toString() : (selectedAddress.toString() == "" ? add : selectedAddress),
-                                                                                  bookingDate: bookingIsoDate.toString(),
-                                                                                  totalCost: totalCostWithCouponTax == 0 ? "${totalAmountWithTax+ deliveryCharge}" : "${totalCostWithCouponTax+ deliveryCharge}",
-                                                                                  taxTotalCost: totalTaxCoupon == '' ? totalTax.toString() : totalTaxCoupon.toString(),
-                                                                                  productTotalCost: totalValue.toString(),
-                                                                                  sgstCost: sgstCostCoupon == '' ? percentage.toString() : sgstCostCoupon.toString(),
-                                                                                  cgstCost: cgstCostCoupon == '' ? percentage.toString() : cgstCostCoupon.toString(),
-                                                                                  notes: noteController.text)
-                                                                              .whenComplete(() {
-                                                                                setState(() {
-                                                                                  isabsorb=false;
-                                                                                });
-                                                                                razorPay();
-                                                                              } );
-
-
-                                                                        },
-                                                                      ),
-                                                                    );
-                                                                  }
-                                                                })
-                                                        ],
+                                                    ],
+                                                  ),
+                                                ),
+                                              )
+                                            : Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 15),
+                                                child: SizedBox(
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: const [
+                                                      Text(
+                                                        'Delivery Address',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500),
                                                       ),
-                                                    )
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
-                                            );
-                                          }),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 5, horizontal: 15),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    selectPayType == "Takeaway"
+                                                        ? SizedBox(
+                                                            height: 30,
+                                                            width: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                1.2,
+                                                            child: Wrap(
+                                                              children: [
+                                                                Text(
+                                                                    "${chefProfileController.currentchefProfile!.data!.address![0].addressLine1.toString()} ,${chefProfileController.currentchefProfile!.data!.address![0].addressLine2.toString()} ,${chefProfileController.currentchefProfile!.data!.address![0].city.toString()} ,${chefProfileController.currentchefProfile!.data!.address![0].pincode.toString()}",
+                                                                    style: FoodigyTextStyle
+                                                                        .smallTextStyle),
+                                                              ],
+                                                            ),
+                                                          )
+                                                        : SizedBox(
+                                                            height: 30,
+                                                            width: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                1.2,
+                                                            child: Wrap(
+                                                              children: [
+                                                                Text(
+                                                                    selectedAddress.toString() ==
+                                                                            ""
+                                                                        ? add
+                                                                        : selectedAddress,
+                                                                    style: FoodigyTextStyle
+                                                                        .smallTextStyle),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Text(
+                                                        'Delivery date : $deliveryDisplayDate',
+                                                        style: FoodigyTextStyle
+                                                            .smallTextStyle),
+                                                    GetBuilder<
+                                                            CartCountController>(
+                                                        init:
+                                                            CartCountController(),
+                                                        builder:
+                                                            (cartController) {
+                                                          // return registerController.pressedBool
+                                                          return InkWell(
+                                                            onTap: () {
+                                                              print(cartController
+                                                                  .totValu
+                                                                  .toString());
+                                                            },
+                                                            child: Column(
+                                                              children: [
+                                                                Row(
+                                                                  children: const [
+                                                                    // SizedBox(
+                                                                    //     child: Text(
+                                                                    //   'Value ${cartController.totValu}',
+                                                                    //   style: const TextStyle(
+                                                                    //     fontSize: 12.0,
+                                                                    //     color: Colors.black,
+                                                                    //   ),
+                                                                    // )),
+                                                                  ],
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          );
+                                                        }),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              SizedBox(
+                                                  height: 40,
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width /
+                                                      3,
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        "${cartListController.cartList!.data!.cartDetails!.length} items in cart",
+                                                        style: TextStyle(
+                                                          color: Colors.grey,
+                                                          fontSize: 10,
+                                                          fontFamily: 'Poppins',
+                                                        ),
+                                                      ),
+                                                      Text(totalCostWithCouponTax ==
+                                                              0
+                                                          ? "\u{20B9} ${totalAmountWithTax + deliveryCharge}"
+                                                          : "\u{20B9} ${totalCostWithCouponTax + deliveryCharge}"),
+                                                    ],
+                                                  )),
+                                              selectPayType == null
+                                                  ? placeOrderButtondisable()
+                                                  : Obx(() {
+                                                      if (createOrderController
+                                                          .isDataLoading
+                                                          .isTrue) {
+                                                        return placeOrderButtondisable();
+                                                      } else {
+                                                        return SizedBox(
+                                                          height: 38,
+                                                          width: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width /
+                                                              3,
+                                                          child: TextButton(
+                                                            // ignore: sort_child_properties_last
+                                                            child: Text(
+                                                              "Place order",
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .white),
+                                                            ),
+                                                            style: TextButton.styleFrom(
+                                                                primary: Colors
+                                                                    .purple,
+                                                                backgroundColor:
+                                                                    firstColor,
+                                                                textStyle: const TextStyle(
+                                                                    fontSize:
+                                                                        14,
+                                                                    fontFamily:
+                                                                        'Poppins')),
+                                                            onPressed: () {
+                                                              print("coupons");
+                                                              print(couponCode);
+                                                              print(
+                                                                  "here $couponId");
+                                                              print(discountValue
+                                                                          .toInt() ==
+                                                                      0
+                                                                  ? null
+                                                                  : discountValue
+                                                                      .toInt()
+                                                                      .toString());
+                                                              print('done');
+                                                              setState(() {
+                                                                isabsorb = true;
+                                                              });
+                                                              createOrderController
+                                                                  .createOrder(
+                                                                      cart:
+                                                                          products,
+                                                                      deliveryRate:
+                                                                          deliveryCharge
+                                                                              .toString(),
+                                                                      couponId:
+                                                                          couponId,
+                                                                      couponCode:
+                                                                          couponCode,
+                                                                      couponCost: discountValue
+                                                                          .toInt()
+                                                                          .toString(),
+                                                                      deliveryMode: selectPayType
+                                                                          .toString()
+                                                                          .toUpperCase(),
+                                                                      currentProfile:
+                                                                          registerController
+                                                                              .currentProfile,
+                                                                      cartData:
+                                                                          cartListController
+                                                                              .cartList,
+                                                                      addressId: selectPayType == "Takeaway"
+                                                                          ? chefProfileController
+                                                                              .currentchefProfile!
+                                                                              .data!
+                                                                              .address![
+                                                                                  0]
+                                                                              .id
+                                                                          : selecteAddressId
+                                                                              .toString(),
+                                                                      address: selectPayType == "Takeaway"
+                                                                          ? chefProfileController.currentchefProfile!.data!.address![0].addressLine1
+                                                                              .toString()
+                                                                          : (selectedAddress.toString() == ""
+                                                                              ? add
+                                                                              : selectedAddress),
+                                                                      bookingDate:
+                                                                          bookingIsoDate
+                                                                              .toString(),
+                                                                      totalCost: totalCostWithCouponTax == 0
+                                                                          ? "${totalAmountWithTax + deliveryCharge}"
+                                                                          : "${totalCostWithCouponTax + deliveryCharge}",
+                                                                      taxTotalCost: totalTaxCoupon == ''
+                                                                          ? totalTax
+                                                                              .toString()
+                                                                          : totalTaxCoupon
+                                                                              .toString(),
+                                                                      productTotalCost:
+                                                                          totalValue
+                                                                              .toString(),
+                                                                      sgstCost: sgstCostCoupon == ''
+                                                                          ? percentage.toString()
+                                                                          : sgstCostCoupon.toString(),
+                                                                      cgstCost: cgstCostCoupon == '' ? percentage.toString() : cgstCostCoupon.toString(),
+                                                                      notes: noteController.text)
+                                                                  .whenComplete(() {
+                                                                setState(() {
+                                                                  isabsorb =
+                                                                      false;
+                                                                });
+                                                                razorPay();
+                                                              });
+                                                            },
+                                                          ),
+                                                        );
+                                                      }
+                                                    })
+                                            ],
+                                          ),
+                                        )
+                                      ],
                                     ),
-                         
+                                  ),
+                                );
+                              }),
+                            ),
                           ],
                         );
                       } else {
@@ -1357,63 +1353,62 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                 ]),
                           ),
                         );
-                        
                       } else {
-                        return Container();
-                        // return InkWell(
-                        //   onTap: () {},
-                        //   child: Padding(
-                        //     padding: const EdgeInsets.all(10.0),
-                        //     child: Row(
-                        //         mainAxisAlignment:
-                        //             MainAxisAlignment.spaceBetween,
-                        //         crossAxisAlignment: CrossAxisAlignment.start,
-                        //         children: [
-                        //           Row(
-                        //             children: [
-                        //               Container(
-                        //                 height: 15,
-                        //                 width: 15,
-                        //                 decoration: BoxDecoration(
-                        //                     shape: BoxShape.circle,
-                        //                     border: Border.all(
-                        //                         color: Colors.black)),
-                        //                 child: selectPayType == "Dunzo"
-                        //                     ? Icon(
-                        //                         MdiIcons.circle,
-                        //                         color: Colors.grey.shade500,
-                        //                         size: 10,
-                        //                       )
-                        //                     : Container(),
-                        //               ),
-                        //               SizedBox(
-                        //                 width: 5,
-                        //               ),
-                        //               Text(
-                        //                 "Dunzo service charge",
-                        //                 style: FoodigyTextStyle
-                        //                     .addTocartDisableStyle,
-                        //               ),
-                        //             ],
-                        //           ),
-                        //           Row(
-                        //             children: [
-                        //               SizedBox(
-                        //                 width: 20,
-                        //               ),
-                        //               Container(
-                        //                 alignment: Alignment.centerRight,
-                        //                 width: 70,
-                        //                 child: Text(
-                        //                   " ",
-                        //                 ),
-                        //               ),
-                        //             ],
-                        //           ),
-                        //         ]),
-                        //   ),
-                        // );
-                        
+                       
+                        return InkWell(
+                          onTap: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 15,
+                                        width: 15,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.black)),
+                                        child: selectPayType == "Dunzo"
+                                            ? Icon(
+                                                MdiIcons.circle,
+                                                color: Colors.grey.shade500,
+                                                size: 10,
+                                              )
+                                            : Container(),
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text(
+                                        "Dunzo service charge",
+                                        style: FoodigyTextStyle
+                                            .addTocartDisableStyle,
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        width: 70,
+                                        child: Text(
+                                          " ",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ]),
+                          ),
+                        );
+
                       }
                     }),
                     SizedBox(
@@ -1427,15 +1422,18 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                       } else if (pickDropController.pickDropList != null) {
                         return InkWell(
                           onTap: () {
-                              selectPayType = "pickDrop";
+                            selectPayType = "pickDrop";
                             //deliveryCharge=10;
                             print("helo");
-                            print(pickDropController.pickDropList!.deliveryCharge!.toInt());
-                           
-                           
-                            deliveryCharge = int.parse(pickDropController.pickDropList!.deliveryCharge!.toInt().toString());
-                                print(deliveryCharge.toString());
-                           
+                            print(pickDropController
+                                .pickDropList!.deliveryCharge!
+                                .toInt());
+
+                            deliveryCharge = int.parse(pickDropController
+                                .pickDropList!.deliveryCharge!
+                                .toInt()
+                                .toString());
+                            print(deliveryCharge.toString());
                           },
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -1703,7 +1701,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
     if (pickedDate != null) {
       // print(pickedDate); //pickedDate output format => 2021-03-10 00:00:00.000
       String formattedDate = DateFormat('MM-dd-yyyy').format(pickedDate);
-      deliveryDisplayDate= DateFormat('dd-MM-yyyy').format(pickedDate);
+      deliveryDisplayDate = DateFormat('dd-MM-yyyy').format(pickedDate);
       var isoFormatted =
           DateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(pickedDate);
       // print( formattedDate); //formatted date output using intl package =>  2021-03-16
@@ -1713,7 +1711,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
       //   print(pickedDate.microsecondsSinceEpoch);
       deliveryDate = formattedDate.toString();
       String formatted = DateFormat('dd/MM/yyyy').format(pickedDate).toString();
-      
+
       pickUpDate = DateFormat('yyyy-MM-dd').format(pickedDate).toString();
 
       bookingIsoDate = isoFormatted;
@@ -2007,27 +2005,19 @@ class TextFieldCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors
-          .grey.shade200,
+      color: Colors.grey.shade200,
       height: 40,
       child: Padding(
-        padding:
-            const EdgeInsets
-                .all(3.0),
-        child:
-            TextField(
-              
-          controller:  noteController,
-          readOnly : false,
+        padding: const EdgeInsets.all(3.0),
+        child: TextField(
+          controller: noteController,
+          readOnly: false,
           autofocus: false,
           autocorrect: false,
-          scribbleEnabled : false,
+          scribbleEnabled: false,
           decoration: InputDecoration(
-              hintText:
-                  "Cooking Instructions (Optional)",
-              hintStyle:
-                  FoodigyTextStyle
-                      .addressTextStyle),
+              hintText: "Cooking Instructions (Optional)",
+              hintStyle: FoodigyTextStyle.addressTextStyle),
         ),
       ),
     );

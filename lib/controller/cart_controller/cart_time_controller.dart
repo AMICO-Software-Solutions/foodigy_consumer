@@ -1,5 +1,7 @@
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
+import 'package:foodigy/presentation/chef_screens/payment_suceess_screen.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class CartTimerController extends GetxController {
   GetCartDetailsController cartListController =
@@ -13,9 +15,9 @@ class CartTimerController extends GetxController {
 
   void updateItemTimingList() {
     if (cartListController.cartList == null) {
-      return null;
+      return;
     } else if (cartListController.cartList!.data == null) {
-      return null;
+      return;
     } else {
       var timeIndex = int.parse(cartListController
           .cartList!.data!.cartDetails![0].productAvailableTime
@@ -39,13 +41,15 @@ class CartTimerController extends GetxController {
 
   var allValue = <int>[12];
 
-  Future getMaxTiming() async{
+  Future getMaxTiming() async {
+   
     if (cartListController.cartList == null) {
       return;
     } else if (cartListController.cartList!.data == null) {
       return;
     } else {
       allValue.clear();
+       print('check');
       for (int i = 0;
           i < cartListController.cartList!.data!.cartDetails!.length;
           i++) {
@@ -56,7 +60,7 @@ class CartTimerController extends GetxController {
                 .toString()
                 .substring(0, 1)) ==
             null) {
-    //      print('Only Number are allowed');
+              print('Only Number are allowed');
         } else {
           var timeIndex = int.parse(cartListController
               .cartList!.data!.cartDetails![i].productAvailableTime
@@ -72,13 +76,13 @@ class CartTimerController extends GetxController {
               .cartList!.data!.cartDetails![i].productAvailableTime
               .toString()
               .contains(other)) {
-        //    print("${timeIndex.toInt()} AM");
+               print("${timeIndex.toInt()} AM");
             allValue.add(timeIndex + 1);
           } else {
-          //  print("${timeIndex.toString()} PM");
+            //  print("${timeIndex.toString()} PM");
             allValue.add(timeIndex + 12 + 1);
           }
-       //   print('this numnbet');
+          //   print('this numnbet');
         }
 
         // var timeIndex = int.parse(cartListController
@@ -95,14 +99,21 @@ class CartTimerController extends GetxController {
         // print('hello ${i + 1}');
         // print('hello ${i + 1}:30');
       }
-     // print('all product');
-     // print(allValue);
+      // print('all product');
+      // print(allValue);
       maximumValu();
     }
   }
 
   // Main function
   void maximumValu() {
+
+    DateTime now = DateTime.now();
+String formattedDate = DateFormat('kk:mm:ss \n EEE d MMM').format(now);
+print('formated date');
+print(formattedDate);
+String current=formattedDate.substring(0, formattedDate.indexOf(':'));
+print(current);
 // Creating a geek list
     //var geekList = [121, 12, 33, 14, 3];
 
@@ -125,15 +136,15 @@ class CartTimerController extends GetxController {
 
 // Printing the values
 //    print("Smallest value in the list : $smallestGeekValue");
- //   print("Largest value in the list : $largestGeekValue");
-    fo(largestGeekValue.toString());
+    //   print("Largest value in the list : $largestGeekValue");
+    fo(largestGeekValue.toString(), current);
   }
 
   int time = 3;
 
   List allTimes = [];
 
-  void fo(String? time) {
+  void fo(String? time, String? curent) {
     allTimes.clear();
     String timing = time.toString();
     List<String> allTime = [
@@ -181,14 +192,17 @@ class CartTimerController extends GetxController {
       "21:30",
       "22:00"
     ];
-
+ print(allTime);
+ print(timing);
     for (var i = 0; i < allTime.length; i++) {
+     
       int valu = int.parse(allTime[i].substring(0, allTime[i].indexOf(':')));
 
-      if (int.parse(timing) <= int.parse(valu.toString())) {
+      if(int.parse(curent.toString())+1 <= int.parse(valu.toString())){
+            if (int.parse(timing) <= int.parse(valu.toString())) {
         if (valu <= 11) {
           allTimes.add("${allTime[i]} am");
-        //  print("${allTime[i]} am");
+            print("${allTime[i]} am");
 //        if(valu >= time){
 //       print(allTime[i]);
 //     }
@@ -199,11 +213,17 @@ class CartTimerController extends GetxController {
           int data = valu - 12;
           // print("${allTime[i]} pm");
           allTimes.add("${data}$two pm");
-       //   print("check");
+          //   print("check");
 
-       //   print("${data}$two pm");
+            print("${data}$two pm");
         }
       } else {}
+
+      }else{
+
+      }
+
+  
     }
   }
 }

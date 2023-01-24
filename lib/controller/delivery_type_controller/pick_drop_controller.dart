@@ -54,10 +54,9 @@ class PickDropController extends GetxController {
           response.statusCode == 201 ||
           response.statusCode == 202) {
         var result = jsonDecode(response.body);
-          print("++++++++++++++++++++");
         print(result);
         pickDropList = PickDropModel.fromJson(result);
-             print("++++++++++++++++++++");
+          
 
         print(pickDropList!.deliveryCharge.toString());
       } else {
