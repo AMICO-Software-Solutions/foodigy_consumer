@@ -235,7 +235,7 @@ class GetCartDetailsController extends GetxController {
       currency,
       itemdec,
       iSlug,
-     required BuildContext context}) async {
+      BuildContext? context}) async {
     var url = Uri.parse("${ApiDomain.apiDomain}/ordermgmt/cart/add");
     try {
       //  String token = box.read('auth_token');
@@ -269,7 +269,7 @@ class GetCartDetailsController extends GetxController {
           responseData.statusCode == 202 ||
           responseData.statusCode == 203) {
         print("cart added sucessfully");
-          Navigator.push(context,MaterialPageRoute(builder: (context) => CartHomeScreen( )),);
+          Navigator.push(context!,MaterialPageRoute(builder: (context) => const CartHomeScreen( )),);
         // Get.toNamed(AppRoutes.cartHomeScreen);
         // print(responseData.body);
         //  Map<String, dynamic> map = {};
