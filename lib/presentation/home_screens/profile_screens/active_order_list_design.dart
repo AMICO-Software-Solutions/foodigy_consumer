@@ -74,7 +74,7 @@ class _ActiveOrderListDesignState extends State<ActiveOrderListDesign> {
   DateTime? orderAcceptedDate = DateTime.now();
   DateTime? orderPickUpDate = DateTime.now();
 
-  IconData? _selectedIcon;
+  //IconData? _selectedIcon;
 
   int? groupValue;
   String title = '';

@@ -149,7 +149,11 @@ class CreateOrderController extends GetxController {
       // return addressGetFromJson(data);
       //  print(e.toString());
     } finally {
-      isDataLoading(false);
+      Timer(const Duration(seconds: 2),(){
+          isDataLoading(false);
+
+      });
+    
     }
   }
 
