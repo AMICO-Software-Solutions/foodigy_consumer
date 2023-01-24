@@ -91,8 +91,8 @@ class _CalendarTableState extends State<CalendarTable> {
                   // print(
                   //     '${_selectedDay!.month},${_selectedDay!.day},${_selectedDay!.year}');
                   // print(_selectedDay);
-                  selectDate =
-                      "${_selectedDay!.month}/${_selectedDay!.day}/${_selectedDay!.year}";
+                  selectDate ="${_selectedDay!.month}/${_selectedDay!.day}/${_selectedDay!.year}";
+                  selectDisaplayDate="${_selectedDay!.day}/${_selectedDay!.month}/${_selectedDay!.year}";
                   // print('seleceted date');
                   // print(selectDate);
                 });

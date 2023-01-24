@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: () {
-               // foodigyBottomSheet(context);
+             //  foodigyBottomSheet(context);
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -117,7 +117,8 @@ class _HomePageState extends State<HomePage> {
                     width: 5,
                   ),
                   Text(
-                    selectDate,
+                    selectDisaplayDate,
+                   // selectDate,
                     style: TextStyle(
                         color: Colors.grey,
                         fontSize: 10,

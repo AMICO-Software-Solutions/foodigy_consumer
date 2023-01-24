@@ -124,6 +124,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
   DateTime? newDateTimeObj2;
   //calendar date
   String deliveryDate = DateFormat('MM-dd-yyyy').format(DateTime.now());
+  String deliveryDisplayDate = DateFormat('dd-MM-yyyy').format(DateTime.now());
   var bookingIsoDate =
       DateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(DateTime.now());
 
@@ -238,7 +239,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
         backgroundColor: Colors.white,
         title: InkWell(
           onTap: () {
-            cartListController.getCartDetails(widget.uId.toString());
+         //   cartListController.getCartDetails(widget.uId.toString());
           },
           child: Text(
             'Cart',
@@ -505,7 +506,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                               },
                                                                               child:
                                                                                   Text(
-                                                                                deliveryDate
+                                                                                deliveryDisplayDate
                                                                                     .toString(),
                                                                                 style:
                                                                                     FoodigyTextStyle.addTocartStyle,
@@ -1087,7 +1088,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                   height: 5,
                                                                 ),
                                                                 Text(
-                                                                    'Delivery date : $deliveryDate',
+                                                                    'Delivery date : $deliveryDisplayDate',
                                                                     style: FoodigyTextStyle
                                                                         .smallTextStyle),
                                                                 GetBuilder<
@@ -1261,7 +1262,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                           ],
                         );
                       } else {
-                        return Container(
+                        return SizedBox(
                           child: Text("error"),
                         );
                       }
@@ -1702,6 +1703,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
     if (pickedDate != null) {
       // print(pickedDate); //pickedDate output format => 2021-03-10 00:00:00.000
       String formattedDate = DateFormat('MM-dd-yyyy').format(pickedDate);
+      deliveryDisplayDate= DateFormat('dd-MM-yyyy').format(pickedDate);
       var isoFormatted =
           DateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(pickedDate);
       // print( formattedDate); //formatted date output using intl package =>  2021-03-16
@@ -1711,6 +1713,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
       //   print(pickedDate.microsecondsSinceEpoch);
       deliveryDate = formattedDate.toString();
       String formatted = DateFormat('dd/MM/yyyy').format(pickedDate).toString();
+      
       pickUpDate = DateFormat('yyyy-MM-dd').format(pickedDate).toString();
 
       bookingIsoDate = isoFormatted;

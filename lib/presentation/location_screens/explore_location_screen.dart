@@ -20,10 +20,13 @@ class _ExploreLocationScreenState extends State<ExploreLocationScreen> {
   
   @override
   void initState() {
-   //  var inputFormat = DateFormat('dd/MM/yyyy HH:mm');
+   
      var formatter =  DateFormat('MM-dd-yyyy');
     String formattedDate = formatter.format(now);
+     var inputFormat = DateFormat('dd/MM/yyyy');
+    String formattedDisplayDate = inputFormat.format(now);
     print(formattedDate); 
+    selectDisaplayDate =formattedDisplayDate.toString();
     selectDate = formattedDate.toString();
     passDate= formattedDate.toString();
     super.initState();

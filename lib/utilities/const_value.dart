@@ -30,6 +30,7 @@ String add = '';
 //current user details
 String currentUserId = '';
 String selectDate = 'Date';
+String selectDisaplayDate = 'Date';
 String passDate = "2022-11-07T06:58:37.957Z";
 DateTime focused = DateTime.now();
 

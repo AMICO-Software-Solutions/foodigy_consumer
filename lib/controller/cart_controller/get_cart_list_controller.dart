@@ -61,7 +61,7 @@ class GetCartDetailsController extends GetxController {
        // cartList =  result['data'] == null ? null : CartDetailsModel.fromJson(result);
         cartList =  result['data'] == null ? null : CartDetailsModel.fromJson(result);
 
-        print(cartList!.data!.cartId);
+     ///   print(cartList!.data!.cartId);
       } else {
         print(response.body.toString());
       }

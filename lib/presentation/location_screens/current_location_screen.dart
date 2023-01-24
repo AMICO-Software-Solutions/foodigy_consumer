@@ -84,6 +84,10 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
       var formatter =  DateFormat('MM-dd-yyyy');
     String formattedDate = formatter.format(now);
     print(formattedDate); 
+     var inputFormat = DateFormat('dd/MM/yyyy');
+    String formattedDisplayDate = inputFormat.format(now);
+    print(formattedDate); 
+    selectDisaplayDate =formattedDisplayDate.toString();
     selectDate = formattedDate.toString();
     passDate= formattedDate.toString();
 
