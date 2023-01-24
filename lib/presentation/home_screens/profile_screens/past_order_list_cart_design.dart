@@ -534,7 +534,7 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
                                         print( widget.pastOrder!
                                               .data![widget.index].bookingDate
                                               .toString());
-                                        Get.to(RateOrderScreen(
+                                        Get.to(()=>RateOrderScreen(
                                           productList: productsList,
                                           pastOrder: widget.pastOrder,
                                           index: widget.index,

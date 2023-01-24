@@ -80,6 +80,7 @@ class OrderProductListController extends GetxController {
           responseData.statusCode == 201 ||
           responseData.statusCode == 202 ||
           responseData.statusCode == 203) {
+            print('review added successfully');
         Get.back();
         print(responseData.body);
       } else {
@@ -129,7 +130,7 @@ class OrderProductListController extends GetxController {
           responseData.statusCode == 201 ||
           responseData.statusCode == 202 ||
           responseData.statusCode == 203) {
-        Get.back();
+       // Get.back();
         print(responseData.body);
       } else {
         print(responseData.body);

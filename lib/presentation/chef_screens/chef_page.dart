@@ -433,11 +433,9 @@ class _ChefPageState extends State<ChefPage>
                           );
                         } else {
                           return ListView.separated(
-                            itemCount: chefDetailsController
-                                    .chefDetailsList!.data!.isEmpty
+                            itemCount: chefReviewController.chefsReview!.data!.isEmpty
                                 ? 0
-                                : chefDetailsController
-                                    .chefDetailsList!.data!.length,
+                                : chefReviewController.chefsReview!.data!.length,
                             itemBuilder: (context, index) {
                               return Container(
                                 height: 60,

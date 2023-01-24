@@ -127,7 +127,9 @@ void chefAdd(){
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: SingleChildScrollView(
-              child: Column(children: [
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                 Container(
                   height: 250,
                   width: double.infinity,
@@ -281,7 +283,11 @@ void chefAdd(){
                       //     ),
                       //   ),
                       // ),
-                      SizedBox(
+                      
+                    ],
+                  ),
+                ),
+               SizedBox(
                         height: 20,
                       ),
                       Text(
@@ -359,11 +365,8 @@ void chefAdd(){
                           },
                           buttonColor:firstColor),
                       SizedBox(
-                        height: 20,
+                        height: 200,
                       ),
-                    ],
-                  ),
-                ),
               ]),
             ),
           );

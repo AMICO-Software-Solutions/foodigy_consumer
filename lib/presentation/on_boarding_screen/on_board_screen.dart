@@ -448,10 +448,11 @@ class _SearchAddressBottomSheetState extends State<SearchAddressBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return AnimatedPadding(
-            padding: MediaQuery.of(context).viewInsets,
+            padding: MediaQuery.of(context).viewPadding,
             duration: const Duration(milliseconds: 100),
             child: SizedBox(
-                  height: 120,
+             // height: 120,
+                 height:MediaQuery.of(context).size.height/2.4,
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
