@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: () {
-             //  foodigyBottomSheet(context);
+               foodigyBottomSheet(context);
               },
               child: Container(
                 decoration: BoxDecoration(

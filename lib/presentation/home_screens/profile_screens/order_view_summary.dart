@@ -627,7 +627,9 @@ class _OrderViewSummaryState extends State<OrderViewSummary> {
     final file = File('${dir!.path}/$filename'); 
     print("check");
     print(file.toString());
-    await file.writeAsBytes(bytes, flush: true);
+    await file.writeAsBytes(bytes, 
+    mode:  FileMode.write,
+    flush: true);
     if (kDebugMode) {
       print('$file');
     }
