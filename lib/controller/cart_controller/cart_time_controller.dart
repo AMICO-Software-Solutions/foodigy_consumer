@@ -49,7 +49,7 @@ class CartTimerController extends GetxController {
       return;
     } else {
       allValue.clear();
-       print('check');
+      // print('check');
       for (int i = 0;
           i < cartListController.cartList!.data!.cartDetails!.length;
           i++) {
@@ -60,7 +60,7 @@ class CartTimerController extends GetxController {
                 .toString()
                 .substring(0, 1)) ==
             null) {
-              print('Only Number are allowed');
+          //    print('Only Number are allowed');
         } else {
           var timeIndex = int.parse(cartListController
               .cartList!.data!.cartDetails![i].productAvailableTime
@@ -110,10 +110,10 @@ class CartTimerController extends GetxController {
 
     DateTime now = DateTime.now();
 String formattedDate = DateFormat('kk:mm:ss \n EEE d MMM').format(now);
-print('formated date');
-print(formattedDate);
+//print('formated date');
+//print(formattedDate);
 String current=formattedDate.substring(0, formattedDate.indexOf(':'));
-print(current);
+//print(current);
 // Creating a geek list
     //var geekList = [121, 12, 33, 14, 3];
 
@@ -192,8 +192,8 @@ print(current);
       "21:30",
       "22:00"
     ];
- print(allTime);
- print(timing);
+//  print(allTime);
+//  print(timing);
     for (var i = 0; i < allTime.length; i++) {
      
       int valu = int.parse(allTime[i].substring(0, allTime[i].indexOf(':')));
@@ -202,7 +202,7 @@ print(current);
             if (int.parse(timing) <= int.parse(valu.toString())) {
         if (valu <= 11) {
           allTimes.add("${allTime[i]} am");
-            print("${allTime[i]} am");
+            //print("${allTime[i]} am");
 //        if(valu >= time){
 //       print(allTime[i]);
 //     }
@@ -215,7 +215,7 @@ print(current);
           allTimes.add("${data}$two pm");
           //   print("check");
 
-            print("${data}$two pm");
+          //  print("${data}$two pm");
         }
       } else {}
 

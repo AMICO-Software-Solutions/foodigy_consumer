@@ -4,6 +4,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:foodigy/controller/order_controller/past_order_controller.dart';
 import 'package:foodigy/model/past_order_model.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/order_view_summary.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/rate_order_screen.dart';
@@ -17,6 +18,7 @@ import 'package:intl/intl.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class PastOrderListCardDesign extends StatefulWidget {
+  
   final String? date;
   final PastOrderModel? pastOrder;
   final int index;
@@ -29,6 +31,7 @@ class PastOrderListCardDesign extends StatefulWidget {
 }
 
 class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
+    PastOrderController pastController = Get.put(PastOrderController());
   DateTime? date = DateTime.now();
   DateTime? cancelDate=DateTime.now();
   DateTime? rejectedDate=DateTime.now();
@@ -534,15 +537,16 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
                                         print( widget.pastOrder!
                                               .data![widget.index].bookingDate
                                               .toString());
-                                        Get.to(()=>RateOrderScreen(
-                                          productList: productsList,
-                                          pastOrder: widget.pastOrder,
-                                          index: widget.index,
-                                          productIdList: productIdList,
-                                          bookingDate: widget.pastOrder!
-                                              .data![widget.index].bookingDate
-                                              .toString(),
-                                        ));
+                                              navigateSecondPage();
+                                        // Get.to(()=>RateOrderScreen(
+                                        //   productList: productsList,
+                                        //   pastOrder: widget.pastOrder,
+                                        //   index: widget.index,
+                                        //   productIdList: productIdList,
+                                        //   bookingDate: widget.pastOrder!
+                                        //       .data![widget.index].bookingDate
+                                        //       .toString(),
+                                        // ));
                                       }),
                                 ))
                           : Container(
@@ -555,5 +559,24 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
         ),
       ),
     );
+  }
+  
+  FutureOr onGoBack(dynamic value) {
+    pastController.pastOrderList();
+ 
+    setState(() {});
+  }
+
+  void navigateSecondPage() {
+    Route route = MaterialPageRoute(builder: (context) => RateOrderScreen(
+                                          productList: productsList,
+                                          pastOrder: widget.pastOrder,
+                                          index: widget.index,
+                                          productIdList: productIdList,
+                                          bookingDate: widget.pastOrder!
+                                              .data![widget.index].bookingDate
+                                              .toString(),
+                                        ));
+    Navigator.push(context, route).then(onGoBack);
   }
 }

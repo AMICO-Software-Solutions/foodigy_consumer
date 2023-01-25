@@ -340,7 +340,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                           children: [
                             FutureBuilder(
                                 future: cartListController
-                                    .getCartDetails(widget.uId.toString()),
+                                    .  getLoader(),
                                 builder: (context, snapshot) {
                                   return SingleChildScrollView(
                                     child: Column(
@@ -417,6 +417,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                 children: [
                                                                   InkWell(
                                                                     onTap: (){
+                                                                     
                                                                       cartTimer
                                                                           .getMaxTiming();
                                                                     },
@@ -464,6 +465,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                                     value: valueItem);
                                                                               }).toList(),
                                                                               onChanged: (newValue) {
+                                                                                
                                                                                 selectPayType = null;
                                                                                 //  setState(() {
                                                                                 isDeliveryCharge = false;
@@ -634,7 +636,10 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                   null
                                                               ? InkWell(
                                                                   onTap: () {
-                                                                    addCart();
+                                                                     cartListController.getCartDetails('');
+                                                                   Timer(const Duration(seconds: 1), () {
+      addCart();
+    });
                                                                     isDeliveryCharge =
                                                                         true;
                                                                     print(
@@ -725,7 +730,11 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                         InkWell(
                                                                             onTap:
                                                                                 () {
-                                                                              addCart();
+                                                                                   cartListController.getCartDetails('');
+                                                                                    Timer(const Duration(seconds: 1), () {
+      addCart();
+    });
+                                                                        
                                                                               isDeliveryCharge = !isDeliveryCharge;
                                                                               print(pickUpDate);
                                                                               print(pickUpTime);
