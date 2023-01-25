@@ -97,7 +97,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
 
     Timer(const Duration(seconds: 0), () {
       //print("cart get maximum timing");
-      cartTimer.getMaxTiming();
+      cartTimer.getMaxTiming(deliveryDisplayDate);
     });
 
     Timer(const Duration(seconds: 1), () {
@@ -419,7 +419,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                     onTap: (){
                                                                      
                                                                       cartTimer
-                                                                          .getMaxTiming();
+                                                                          .getMaxTiming(deliveryDisplayDate);
                                                                     },
 
                                                                     child: Text(
@@ -430,7 +430,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                   ),
                                                                   FutureBuilder(
                                                                       future: cartTimer
-                                                                          .getMaxTiming(),
+                                                                          .getMaxTiming(deliveryDisplayDate),
                                                                       builder:
                                                                           (context,
                                                                               snapshot) {

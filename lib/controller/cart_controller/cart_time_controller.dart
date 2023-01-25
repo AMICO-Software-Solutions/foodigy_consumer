@@ -1,5 +1,6 @@
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
 import 'package:foodigy/presentation/chef_screens/payment_suceess_screen.dart';
+import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
@@ -41,7 +42,9 @@ class CartTimerController extends GetxController {
 
   var allValue = <int>[12];
 
-  Future getMaxTiming() async {
+  Future getMaxTiming(
+    String? selecetdDate
+  ) async {
    
     if (cartListController.cartList == null) {
       return;
@@ -101,15 +104,20 @@ class CartTimerController extends GetxController {
       }
       // print('all product');
       // print(allValue);
-      maximumValu();
+      maximumValu( selecetdDate);
     }
   }
 
   // Main function
-  void maximumValu() {
+  void maximumValu(String? selectedDate) {
+   
 
     DateTime now = DateTime.now();
 String formattedDate = DateFormat('kk:mm:ss \n EEE d MMM').format(now);
+  var inputFormat = DateFormat('dd-MM-yyyy');
+   String curentDisaplayDate =inputFormat.format(now).toString();
+  //  print(curentDisaplayDate);
+  //  print(selectedDate);
 //print('formated date');
 //print(formattedDate);
 String current=formattedDate.substring(0, formattedDate.indexOf(':'));
@@ -137,14 +145,14 @@ String current=formattedDate.substring(0, formattedDate.indexOf(':'));
 // Printing the values
 //    print("Smallest value in the list : $smallestGeekValue");
     //   print("Largest value in the list : $largestGeekValue");
-    fo(largestGeekValue.toString(), current);
+    fo(time: largestGeekValue.toString(),curent: current,curentDate: curentDisaplayDate, selectedDate: selectedDate);
   }
 
   int time = 3;
 
   List allTimes = [];
 
-  void fo(String? time, String? curent) {
+  void fo({String? time, String? curent, String? curentDate ,String? selectedDate}) {
     allTimes.clear();
     String timing = time.toString();
     List<String> allTime = [
@@ -198,6 +206,8 @@ String current=formattedDate.substring(0, formattedDate.indexOf(':'));
      
       int valu = int.parse(allTime[i].substring(0, allTime[i].indexOf(':')));
 
+      if(curentDate ==selectedDate){
+        
       if(int.parse(curent.toString())+1 <= int.parse(valu.toString())){
             if (int.parse(timing) <= int.parse(valu.toString())) {
         if (valu <= 11) {
@@ -222,6 +232,30 @@ String current=formattedDate.substring(0, formattedDate.indexOf(':'));
       }else{
 
       }
+
+      }else{
+           if (int.parse(timing) <= int.parse(valu.toString())) {
+        if (valu <= 11) {
+          allTimes.add("${allTime[i]} am");
+            //print("${allTime[i]} am");
+//        if(valu >= time){
+//       print(allTime[i]);
+//     }
+        } else if (valu == 12) {
+          allTimes.add("${allTime[i]} pm");
+        } else {
+          String two = allTime[i].substring(2, 5);
+          int data = valu - 12;
+          // print("${allTime[i]} pm");
+          allTimes.add("${data}$two pm");
+          //   print("check");
+
+          //  print("${data}$two pm");
+        }
+      } else {}
+        print('date');
+      }
+
 
   
     }
