@@ -1,12 +1,19 @@
 // ignore_for_file: avoid_print
 
+import 'dart:async';
+import 'dart:convert';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/cart_controller/cart_count_controller.dart';
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
 import 'package:foodigy/model/cart_details_model.dart';
 import 'package:foodigy/presentation/cart_screens.dart/cart_cusomize_screen.dart';
 import 'package:foodigy/presentation/cart_screens.dart/cart_filter_bottom_sheet.dart';
+import 'package:foodigy/presentation/cart_screens.dart/cart_home_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
+import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -25,6 +32,8 @@ class CartBuildData extends StatefulWidget {
 
 class _CartBuildDataState extends State<CartBuildData> {
   CartCountController cartCOntroller = Get.put(CartCountController());
+    GetCartDetailsController cartListController =
+      Get.put(GetCartDetailsController());
 
   int _counter = 1;
   @override
@@ -148,30 +157,51 @@ class _CartBuildDataState extends State<CartBuildData> {
                                                   return null;
                                                 } else {
                                                   _counter--;
+                                                     countIncrease(
+                                                  cartId: widget
+                                                      .cartData!
+                                                      .data!
+                                                      .cartDetails![
+                                                          widget.index]
+                                                      .cartId,
+                                                  itemCost: widget
+                                                      .cartData!
+                                                      .data!
+                                                      .cartDetails![
+                                                          widget.index]
+                                                      .itemCost,
+                                                  cartDetailsId: widget
+                                                      .cartData!
+                                                      .data!
+                                                      .cartDetails![
+                                                          widget.index]
+                                                      .cartDetailsId,
+                                                      quantity:  _counter.toString()
+                                                );
                                                   //  totalValue = totalValue - value;
                                                   // cartCOntroller
                                                   //     .subtract(value);
-                                                  cartCOntroller.countIncrease(
-                                                      cartId: widget
-                                                          .cartData!
-                                                          .data!
-                                                          .cartDetails![
-                                                              widget.index]
-                                                          .cartId,
-                                                      itemCost: widget
-                                                          .cartData!
-                                                          .data!
-                                                          .cartDetails![
-                                                              widget.index]
-                                                          .itemCost,
-                                                      cartDetailsId: widget
-                                                          .cartData!
-                                                          .data!
-                                                          .cartDetails![
-                                                              widget.index]
-                                                          .cartDetailsId,
-                                                      quantity:
-                                                          _counter.toString());
+                                                  // cartCOntroller.countIncrease(
+                                                  //     cartId: widget
+                                                  //         .cartData!
+                                                  //         .data!
+                                                  //         .cartDetails![
+                                                  //             widget.index]
+                                                  //         .cartId,
+                                                  //     itemCost: widget
+                                                  //         .cartData!
+                                                  //         .data!
+                                                  //         .cartDetails![
+                                                  //             widget.index]
+                                                  //         .itemCost,
+                                                  //     cartDetailsId: widget
+                                                  //         .cartData!
+                                                  //         .data!
+                                                  //         .cartDetails![
+                                                  //             widget.index]
+                                                  //         .cartDetailsId,
+                                                  //     quantity:
+                                                  //         _counter.toString());
                                                 }
                                                 print(_counter);
                                                 //     });
@@ -210,6 +240,7 @@ class _CartBuildDataState extends State<CartBuildData> {
                                             ),
                                             InkWell(
                                               onTap: () {
+                                               
                                                 //              setState(() {
                                                 _counter++;
                                                 // totalValue = totalValue + value;
@@ -224,7 +255,7 @@ class _CartBuildDataState extends State<CartBuildData> {
                                                     .cartDetails![widget.index]
                                                     .itemName);
                                                 //worked
-                                                cartCOntroller.countIncrease(
+                                                countIncrease(
                                                   cartId: widget
                                                       .cartData!
                                                       .data!
@@ -245,6 +276,7 @@ class _CartBuildDataState extends State<CartBuildData> {
                                                       .cartDetailsId,
                                                       quantity:  _counter.toString()
                                                 );
+                                               
                                                 // cartCOntroller.addCart(
                                                 //     widget.cartData,
                                                 //     _counter);
@@ -362,7 +394,7 @@ class _CartBuildDataState extends State<CartBuildData> {
                             ),
                             InkWell(
                               onTap: () {
-                                GetCartDetailsController().deleteCartItem(
+                                deleteCartItem(
                                     cartDetailsID: widget
                                         .cartData!
                                         .data!
@@ -411,6 +443,52 @@ class _CartBuildDataState extends State<CartBuildData> {
       ),
     );
   }
+   void countIncrease({
+    String? itemCost,
+    String? cartDetailsId,
+    String? cartId,
+    String? quantity,
+  }) async {
+    valueChoose=null;
+    isDeliveryCharge = false;
+    selectPayType = null;
+    var url =
+        Uri.parse("${ApiDomain.apiDomain}/ordermgmt/cart/update-quantity");
+    try {
+        
+      //  isLoading(true);
+      final responseData = await http.post(url,
+          headers: {
+            "content-type": "application/json",
+            "Authorization": 'Bearer $token',
+          },
+          body: jsonEncode({
+            "itemCost": int.parse(itemCost.toString()),
+            "cartDetailsId": int.parse(cartDetailsId.toString()),
+            "cartId": int.parse(cartId.toString()),
+            "quantity": int.parse(quantity.toString())
+          }));
+      print("status code is ${responseData.statusCode.toString()}");
+      if (responseData.statusCode == 200 ||
+          responseData.statusCode == 201 ||
+          responseData.statusCode == 202 ||
+          responseData.statusCode == 203) {
+        print(responseData.body);
+      } else {
+        print(responseData.body);
+      
+      }
+    } catch (e) {
+     
+      print('erroer');
+
+      print(e.toString());
+    } finally {
+      Timer(Duration(seconds: 3), (){
+        cartListController   .getCartDetails('');
+      });
+      //isLoading(false);
+    }}
 
   Future<dynamic> foodigyBottomSheet(
       BuildContext context, CartDetailsModel? cartData, int? index) {
@@ -430,5 +508,85 @@ class _CartBuildDataState extends State<CartBuildData> {
         );
       },
     );
+  }
+  
+  //delete add to cart
+  Future deleteCartItem(
+      {int? id,
+      cartId,
+      providerId,
+      proCost,
+      String? tenantId,
+      cartDetailsID,
+      itemId,
+      String? pName,
+      pSlug,
+      pTiming,
+      pAvaiTiming,
+      iName,
+      currency,
+      itemdec,
+      iSlug}) async {
+    var url = Uri.parse(
+        "${ApiDomain.apiDomain}/ordermgmt/cart/delete/$cartDetailsID");
+    try {
+      //  String token = box.read('auth_token');
+
+      final responseData = await http.post(url,
+          headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+            "Authorization": 'Bearer $token',
+          },
+          body: jsonEncode(<String, dynamic>{
+            "itemId": int.parse(itemId.toString()),
+            "providerId": int.parse(providerId.toString()),
+            "itemCost": int.parse(proCost.toString()),
+            //"orderCutOffTime": Null,
+            "itemName": iName,
+            "currency": currency,
+            "itemDesc": itemdec,
+            "itemSlug": iSlug,
+            "productTiming": pTiming,
+            "productAvailableTime": pAvaiTiming,
+            "quantity": 1,
+            "cartId": int.parse(cartId),
+            "customization": {
+              "customization": {"custom": []}
+            }
+          }));
+      print('one');
+      print("heelo");
+      print("status code is ${responseData.statusCode.toString()}");
+      if (responseData.statusCode == 200 ||
+          responseData.statusCode == 201 ||
+          responseData.statusCode == 202 ||
+          responseData.statusCode == 203) {
+        print(responseData.body);
+         cartListController.getCartDetails('');
+        //  Map<String, dynamic> map = {};
+        //  map = json.decode(responseData.body);
+        // Map<String, dynamic> token = map["auth_token"];
+      } else {
+        print(responseData.body);
+          cartListController.getCartDetails('');
+        Map<String, dynamic> map = json.decode(responseData.body);
+        String data = map['message'];
+
+        Fluttertoast.showToast(
+            msg: data,
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1);
+        return null;
+      }
+    } catch (e) {
+      //  return null;
+      // return addressGetFromJson(data);
+      //  print(e.toString());
+    } finally {
+    
+      // isLoading(false);
+      //  print(isLoading);
+    }
   }
 }

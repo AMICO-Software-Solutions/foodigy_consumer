@@ -193,6 +193,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               color: Colors.grey.shade200,
                               thickness: 2,
                             ),
+                              InkWell(
+                                onTap: () {
+                                 // Get.to(ContactUsScreen());
+                                },
+                                child: AccountContainer(
+                                  isNext: true,
+                                  text: 'Reword Rate us to Rate Foodigy',
+                                  icon: MdiIcons.star,
+                                )),
+                            Divider(
+                              color: Colors.grey.shade200,
+                              thickness: 2,
+                            ),
                             InkWell(
                                 onTap: () {
                                   LogOutController().logOutSession();

@@ -875,11 +875,22 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                       height:
                                                                           10,
                                                                     ),
-                                                                    cartMethod(
-                                                                        title:
-                                                                            "Delivery charge",
-                                                                        value:
-                                                                            "\u{20B9} ${double.parse(deliveryCharge.toString()).toStringAsFixed(2)}"),
+                                                                    InkWell(
+                                                                      onTap: (){
+                                                                        print(bookingIsoDate
+                                                                              .toString());
+                                                                        print(deliveryCharge
+                                                                              .toString(),);
+                                                                              print(selectPayType
+                                                                          .toString()
+                                                                          .toUpperCase());
+                                                                      },
+                                                                      child: cartMethod(
+                                                                          title:
+                                                                              "Delivery charge",
+                                                                          value:
+                                                                              "\u{20B9} ${double.parse(deliveryCharge.toString()).toStringAsFixed(2)}"),
+                                                                    ),
                                                                     // SizedBox(
                                                                     //   height: 10,
                                                                     // ),
@@ -1075,9 +1086,10 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                           // return registerController.pressedBool
                                                           return InkWell(
                                                             onTap: () {
-                                                              print(cartController
-                                                                  .totValu
-                                                                  .toString());
+                                                              
+                                                              // print(cartController
+                                                              //     .totValu
+                                                              //     .toString());
                                                             },
                                                             child: Column(
                                                               children: [

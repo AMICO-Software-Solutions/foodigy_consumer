@@ -326,14 +326,14 @@ class _HelpScreenState extends State<HelpScreen> {
                     text: 'About Foodigy',
                   ),
                 ),
-                Divider(
-                  color: Colors.grey.shade200,
-                  thickness: 2,
-                ),
-                AccountContainer(
-                  isNext: true,
-                  text: 'Rate us',
-                ),
+                // Divider(
+                //   color: Colors.grey.shade200,
+                //   thickness: 2,
+                // ),
+                // AccountContainer(
+                //   isNext: true,
+                //   text: 'Rate us',
+                // ),
                 Divider(
                   color: Colors.grey.shade200,
                   thickness: 2,

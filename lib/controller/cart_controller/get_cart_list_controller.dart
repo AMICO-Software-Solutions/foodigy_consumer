@@ -41,6 +41,14 @@ class GetCartDetailsController extends GetxController {
   CartDetailsModel? cartList;
 
   var isDataLoading = false.obs;
+
+  getLoader(){
+    isDataLoading(true);
+   Timer(const Duration(seconds: 1),(){
+    isDataLoading(false);
+
+   });
+  }
   getCartDetails(String? uId) async {
     try {
       isDataLoading(true);
@@ -436,80 +444,4 @@ class GetCartDetailsController extends GetxController {
     }
   }
 
-  //delete add to cart
-  Future deleteCartItem(
-      {int? id,
-      cartId,
-      providerId,
-      proCost,
-      String? tenantId,
-      cartDetailsID,
-      itemId,
-      String? pName,
-      pSlug,
-      pTiming,
-      pAvaiTiming,
-      iName,
-      currency,
-      itemdec,
-      iSlug}) async {
-    var url = Uri.parse(
-        "${ApiDomain.apiDomain}/ordermgmt/cart/delete/$cartDetailsID");
-    try {
-      //  String token = box.read('auth_token');
-
-      final responseData = await http.post(url,
-          headers: {
-            'Content-Type': 'application/json; charset=UTF-8',
-            "Authorization": 'Bearer $token',
-          },
-          body: jsonEncode(<String, dynamic>{
-            "itemId": int.parse(itemId.toString()),
-            "providerId": int.parse(providerId.toString()),
-            "itemCost": int.parse(proCost.toString()),
-            //"orderCutOffTime": Null,
-            "itemName": iName,
-            "currency": currency,
-            "itemDesc": itemdec,
-            "itemSlug": iSlug,
-            "productTiming": pTiming,
-            "productAvailableTime": pAvaiTiming,
-            "quantity": 1,
-            "cartId": int.parse(cartId),
-            "customization": {
-              "customization": {"custom": []}
-            }
-          }));
-      print('one');
-      print("heelo");
-      print("status code is ${responseData.statusCode.toString()}");
-      if (responseData.statusCode == 200 ||
-          responseData.statusCode == 201 ||
-          responseData.statusCode == 202 ||
-          responseData.statusCode == 203) {
-        print(responseData.body);
-        //  Map<String, dynamic> map = {};
-        //  map = json.decode(responseData.body);
-        // Map<String, dynamic> token = map["auth_token"];
-      } else {
-        print(responseData.body);
-        Map<String, dynamic> map = json.decode(responseData.body);
-        String data = map['message'];
-
-        Fluttertoast.showToast(
-            msg: data,
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 1);
-        return null;
-      }
-    } catch (e) {
-      //  return null;
-      // return addressGetFromJson(data);
-      //  print(e.toString());
-    } finally {
-      // isLoading(false);
-      //  print(isLoading);
-    }
-  }
 }
