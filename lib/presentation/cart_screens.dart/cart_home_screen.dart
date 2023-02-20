@@ -126,9 +126,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
   String deliveryDisplayDate = DateFormat('dd-MM-yyyy').format(DateTime.now());
   var bookingIsoDate =
       DateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(DateTime.now());
-
   List items = ["item1", "item2", "item3", "item4"];
-
   var deliveryCharge = 0.toInt();
   var discountValue = 0.0;
   String? couponId;
@@ -1771,7 +1769,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
               content: SizedBox(
                   child: SizedBox(
                 width: double.maxFinite,
-                height: 100,
+              height: MediaQuery.of(context).size.height/2.5,
                 child: Obx(() {
                   if (couponController.isDataLoading.value == true) {
                     return Center(

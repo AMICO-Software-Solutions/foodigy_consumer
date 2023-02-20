@@ -1,8 +1,6 @@
 // ignore_for_file: avoid_print
-
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -25,7 +23,6 @@ class CartBuildData extends StatefulWidget {
   final CartDetailsModel? cartData;
   final int index;
   const CartBuildData({super.key, this.cartData, required this.index});
-
   @override
   State<CartBuildData> createState() => _CartBuildDataState();
 }
@@ -41,9 +38,7 @@ class _CartBuildDataState extends State<CartBuildData> {
     // updateItemTimingList();
     _counter = int.parse(
         widget.cartData!.data!.cartDetails![widget.index].quantity.toString());
-    //cartCOntroller.addCart(widget.cartData);
-
-    super.initState();
+ super.initState();
   }
 
   void updateItemTimingList() {
@@ -54,8 +49,7 @@ class _CartBuildDataState extends State<CartBuildData> {
             .cartData!.data!.cartDetails![widget.index].productAvailableTime
             .toString()
             .indexOf(':')));
-    print('Sub string time');
-    print(timeIndex);
+
   }
 
   @override
@@ -65,7 +59,6 @@ class _CartBuildDataState extends State<CartBuildData> {
             .toString());
     totalValue = value + totalValue;
     // cartCOntroller.totValu.value = value + totalValue;
-
     return Padding(
       padding: const EdgeInsets.only(
         bottom: 10,
@@ -94,7 +87,6 @@ class _CartBuildDataState extends State<CartBuildData> {
                           fit: BoxFit.cover)),
                 ),
                 SizedBox(
-                  // width: MediaQuery.of(context).size.width/1.1,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -134,11 +126,9 @@ class _CartBuildDataState extends State<CartBuildData> {
                                 ),
                               ],
                             ),
-
                             SizedBox(
                               width: 10,
                             ),
-
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -239,8 +229,7 @@ class _CartBuildDataState extends State<CartBuildData> {
                                               ),
                                             ),
                                             InkWell(
-                                              onTap: () {
-                                               
+                                              onTap: () {                                              
                                                 //              setState(() {
                                                 _counter++;
                                                 // totalValue = totalValue + value;
@@ -248,7 +237,6 @@ class _CartBuildDataState extends State<CartBuildData> {
                                                 //  cartCOntroller.add(value);
                                                 // cartCOntroller.addCart(
                                                 //     widget.cartData, _counter);
-
                                                 print(widget
                                                     .cartData!
                                                     .data!
@@ -275,8 +263,7 @@ class _CartBuildDataState extends State<CartBuildData> {
                                                           widget.index]
                                                       .cartDetailsId,
                                                       quantity:  _counter.toString()
-                                                );
-                                               
+                                                );                                               
                                                 // cartCOntroller.addCart(
                                                 //     widget.cartData,
                                                 //     _counter);
@@ -318,39 +305,6 @@ class _CartBuildDataState extends State<CartBuildData> {
                                 ),
                               ],
                             ),
-
-                            // IconButton(
-                            //     onPressed: () {
-                            //       print('click');
-                            //       GetCartDetailsController().deleteCartItem(
-                            //           cartDetailsID: widget.cartData!.data!
-                            //               .cartDetails![widget.index].cartDetailsId,
-                            //           itemId: widget
-                            //               .cartData!.data!.cartDetails![widget.index].itemId,
-                            //           providerId: widget.cartData!.data!
-                            //               .cartDetails![widget.index].providerId,
-                            //           iName: widget.cartData!.data!.cartDetails![widget.index]
-                            //               .itemName,
-                            //           currency: widget.cartData!.data!
-                            //               .cartDetails![widget.index].currency,
-                            //           itemdec: widget.cartData!.data!
-                            //               .cartDetails![widget.index].itemDesc,
-                            //           iSlug: widget.cartData!.data!.cartDetails![widget.index]
-                            //               .itemSlug,
-                            //               proCost: widget.cartData!.data!
-                            //               .cartDetails![widget.index].itemCost,
-                            //           pTiming: widget.cartData!.data!
-                            //               .cartDetails![widget.index].productTiming,
-                            //               pAvaiTiming: widget.cartData!.data!
-                            //               .cartDetails![widget.index].productAvailableTime,
-                            //           cartId: widget
-                            //               .cartData!.data!.cartDetails![widget.index].cartId);
-                            //     },
-                            //     icon: Icon(
-                            //        MdiIcons .deleteOutline,
-                            //       size: iconHeight,
-                            //       color: FoodigyColors.deleteIcon,
-                            //     ))
                           ],
                         ),
                       ),
