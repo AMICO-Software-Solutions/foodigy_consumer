@@ -1308,7 +1308,59 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                   children: [
                     Obx(() {
                       if (dunzoController.isDataLoading.isTrue) {
-                        return Center(child: Container());
+                         return InkWell(
+                          onTap: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 15,
+                                        width: 15,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.black)),
+                                        child: selectPayType == "Dunzo"
+                                            ? Icon(
+                                                MdiIcons.circle,
+                                                color: Colors.grey.shade500,
+                                                size: 10,
+                                              )
+                                            : Container(),
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text(
+                                        "Dunzo service charge",
+                                        style: FoodigyTextStyle
+                                            .addTocartDisableStyle,
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        width: 70,
+                                        child: Text(
+                                          " ",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ]),
+                          ),
+                        );
                       } else if (dunzoController.dunzoList != null) {
                         return InkWell(
                           onTap: () {
@@ -1435,8 +1487,54 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                     ),
                     Obx(() {
                       if (pickDropController.isDataLoading.isTrue) {
-                        return Center(
-                          child: Container(),
+                        return Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      height: 15,
+                                      width: 15,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          border:
+                                              Border.all(color: Colors.black)),
+                                      child: selectPayType == "pickDrop"
+                                          ? Icon(
+                                              MdiIcons.circle,
+                                              color: Colors.grey.shade500,
+                                              size: 10,
+                                            )
+                                          : Container(),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      "PickDrop service charge",
+                                      style: FoodigyTextStyle
+                                          .addTocartDisableStyle,
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Container(
+                                      alignment: Alignment.centerRight,
+                                      width: 70,
+                                      child: Text(
+                                        "",
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ]),
                         );
                       } else if (pickDropController.pickDropList != null) {
                         return InkWell(
