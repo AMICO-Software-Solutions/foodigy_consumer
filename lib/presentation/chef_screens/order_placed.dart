@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/order_controller/order_complete_api_controller.dart';
 import 'package:foodigy/model/order_completed_model.dart';
-import 'package:foodigy/presentation/chef_screens/payment_suceess_screen.dart';
-import 'package:foodigy/presentation/home_screens/home.dart';
 import 'package:foodigy/presentation/home_screens/home_screens/view_all_item_pagination_screen.dart';
-import 'package:foodigy/presentation/home_screens/profile_screens/order_view_summary.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/orders_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
@@ -15,21 +12,17 @@ import 'package:get/get.dart';
 class OrderPlaceScreen extends StatefulWidget {
   final OrderCompletedModel? ordeCompleted;
   const OrderPlaceScreen({super.key, this.ordeCompleted});
-
   @override
   State<OrderPlaceScreen> createState() => _OrderPlaceScreenState();
 }
 
 class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
   OrderCompletedApiController orderCompletedApi=Get.put(OrderCompletedApiController());
-
   @override
   void initState() {
     orderCompletedApi.orderCompletedList(orderId:widget.ordeCompleted!.orderId.toString() );
     super.initState();
   }
-
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,10 +55,6 @@ class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        // Text(
-                        //   "Order Sttaus",
-                        //   style: FoodigyTextStyle.aboutChefStyle,
-                        // ),
                         Text(
                           "Order Completed",
                           style: FoodigyTextStyle.aboutChefStyle,
@@ -125,23 +114,14 @@ class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
                           "Total",
                           style: FoodigyTextStyle.aboutChefStyle,
                         ),SizedBox(
-                                                      width: 30,
-                                                    ),
-                                                     Text("$iRubee ${double.parse(orderCompletedApi.orderCompletedApi!.data!.totalCost.toString()).toStringAsFixed(2)}",
+                          width: 30, ),
+       Text("$iRubee ${double.parse(orderCompletedApi.orderCompletedApi!.data!.totalCost.toString()).toStringAsFixed(2)}",
                           style: FoodigyTextStyle.amountStyle,
                         )
-                                                    
-
-                        // Text("$iRubee ${double.parse(widget.ordeCompleted!.amount.toString()).toStringAsFixed(2)}",
-                        //   style: FoodigyTextStyle.amountStyle,
-                        // )
                       ],
                     ),
                   ),
                 ),
-                // SizedBox(
-                //   height: 20,
-                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -152,8 +132,6 @@ class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
                           text: 'Order Status',
                           onPressed: () {
                         //     Get.to(OrderSuccessViewSummary(orderId: widget.ordeCompleted!.orderId.toString(),));
-                          
-
                         //  //  Get.to( OrderSuccessViewSummary(ordeCompleted:widget.ordeCompleted,));
                         // //   Get.to(CheckScreen());
                             Get.off(OrdersScreen());
@@ -166,7 +144,7 @@ class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
                           textColor: firstColor,
                           text: 'Keep Ordering',
                           onPressed: () {
-                            Get.offUntil(GetPageRoute(page: () =>Home(),), ModalRoute.withName('toNewLogin') ,);
+                            Get.offUntil(GetPageRoute(page: () =>ViewAllItemPaginationScreen(),), ModalRoute.withName('toNewLogin') ,);
                          //   Navigator.push(context, MaterialPageRoute(builder: (_)=>ViewAllItemPaginationScreen()));
                            // Get.to(ViewAllItemPaginationScreen());
                           }),
@@ -177,8 +155,6 @@ class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
             ),
               ),
             );
-         
-
             }
           }
         ));
@@ -187,7 +163,6 @@ class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
 
 class CheckScreen extends StatefulWidget {
   const CheckScreen({super.key});
-
   @override
   State<CheckScreen> createState() => _CheckScreenState();
 }

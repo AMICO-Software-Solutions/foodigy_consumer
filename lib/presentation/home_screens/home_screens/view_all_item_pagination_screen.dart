@@ -1,15 +1,14 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, unused_import
 import 'dart:async';
 import 'dart:convert';
+import 'package:foodigy/presentation/home_screens/home.dart';
 import 'package:foodigy/presentation/home_screens/home_screens/item_available_product/item_available_disable_product.dart';
 import 'package:foodigy/presentation/home_screens/home_screens/item_available_product/item_available_product_enable.dart';
-import 'package:foodigy/presentation/home_screens/home_screens/item_available_view_page_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:foodigy/widgets/bottom_filter_screen.dart';
 import 'package:foodigy/widgets/bottom_sort_by_screen.dart';
-import 'package:foodigy/widgets/glass_blur.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -20,32 +19,26 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 class ViewAllItemPaginationScreen extends StatefulWidget {
   final String? productTIming;
   const ViewAllItemPaginationScreen({super.key, this.productTIming});
-
   @override
   State<ViewAllItemPaginationScreen> createState() =>
       _ViewAllItemPaginationScreenState();
 }
 
-class _ViewAllItemPaginationScreenState
-    extends State<ViewAllItemPaginationScreen> {
+class _ViewAllItemPaginationScreenState extends State<ViewAllItemPaginationScreen> {
   GlobalKey<ScaffoldState> key = GlobalKey();
   List<Datum>? result = [];
-
   ScrollController scrollController = ScrollController();
   bool loading = true;
   bool isNoData = false;
   int offset = 0;
-
   DateTime now = DateTime.now();
   DateTime dateToday =
-      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
-
+  DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
   String? productTime;
   String? one = '';
   String? second = '';
   String? third = '';
   int? valu;
-
   List anySelected = ["ANYTIME"];
   List passValue = [];
 
@@ -53,16 +46,13 @@ class _ViewAllItemPaginationScreenState
   void initState() {
     result!.clear();
     anySelected.addAll(selectedProductTiming);
-
     print(selectedProductTiming);
-    passValue =
-        selectedProductTiming.isEmpty ? selectedProductTiming : anySelected;
+    passValue =selectedProductTiming.isEmpty ? selectedProductTiming : anySelected;
     //       //: selectedProductTiming.insert(0, "ANYTIME";);
     // : selectedProductTiming.add("ANYTIME");
     print(anySelected);
     print(selectedProductTiming);
     print(passValue);
-
     super.initState();
     fetchData(paraOffset: offset);
     handleNext();
@@ -134,8 +124,7 @@ class _ViewAllItemPaginationScreenState
       //loading = false;
       offset = localOffset;
        Timer(const Duration(seconds: 2), () {
-      setState(() {
-         
+      setState(() {        
             loading = false;
             isNoData = true;
           });
@@ -194,150 +183,160 @@ class _ViewAllItemPaginationScreenState
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          elevation: 0,
-          iconTheme: IconThemeData(
-            color: Colors.white, //change your color here
-          ),
-          backgroundColor: firstColor,
-          title: Text("")),
-      body: Column(
-        children: [
-          Container(
-            height: 52,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                color: Colors.white,
-                // color: Colors.grey,
-                border: Border.symmetric(vertical: BorderSide.none),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 5.0,
-                  ),
-                ]),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                InkWell(
-                  onTap: () {
-                    foodigyFilter(context);
-                  },
-                  child: Container(
-                    color: Colors.white,
-                    width: MediaQuery.of(context).size.width / 3,
-                    height: 52,
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            MdiIcons.tuneVariant,
-                            size: 18,
-                            color: firstColor,
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Filter',
-                            style: FoodigyTextStyle.addressTextStyle,
-                          )
-                        ]),
-                  ),
-                )
-              ],
+    return WillPopScope(
+      onWillPop: () async {
+        Get.to(Home());
+        return false;
+      } ,
+      child: Scaffold(
+        appBar: AppBar( 
+          leading: BackButton(onPressed: (){
+            print('home');
+            Get.off(Home());
+          }),
+            elevation: 0,
+            iconTheme: IconThemeData(
+              color: Colors.white, //change your color here
             ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          FutureBuilder(
-              //future: fetchData(),
-              builder: (context, snapshot) {
-                return Expanded(
-                  child: ListView.builder(
-                      controller: scrollController,
-                      itemCount: result!.length + 1,
-                      itemBuilder: (context, index) {
-                        if (index == result!.length) {
-                       if (loading == true) {
-                          return SizedBox(
-                            height: 200,
-                            child: Center(
-                              child: CircularProgressIndicator(
-                                strokeWidth: 4,
-                                color: firstColor,
-                              ),
+            backgroundColor: firstColor,
+            title: Text("")),
+        body: Column(
+          children: [
+            Container(
+              height: 52,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  // color: Colors.grey,
+                  border: Border.symmetric(vertical: BorderSide.none),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 5.0,
+                    ),
+                  ]),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      foodigyFilter(context);
+                    },
+                    child: Container(
+                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: 52,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(
+                              MdiIcons.tuneVariant,
+                              size: 18,
+                              color: firstColor,
                             ),
-                          );
-                        } else if (result!.isEmpty) {
-                          return SizedBox(
-                            height: MediaQuery.of(context).size.height / 5,
-                            width: double.infinity,
-                            child: Center(
-                              child: Text(
-                                "Food is not available at this location",
-                                style: FoodigyTextStyle.homeHeadLine,
-                              ),
+                            SizedBox(
+                              width: 8,
                             ),
-                          );
-                        }else if(isNoData==true){
-                          return SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height / 5,
-                                  width: double.infinity,
-                                  child: Center(
-                                    child: Text(
-                                      "Yay! You have seen it all",
-                                      // "Item is not available",
-                                      style: FoodigyTextStyle.homeHeadLine,
+                            Text(
+                              'Filter',
+                              style: FoodigyTextStyle.addressTextStyle,
+                            )
+                          ]),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            FutureBuilder(
+                //future: fetchData(),
+                builder: (context, snapshot) {
+                  return Expanded(
+                    child: ListView.builder(
+                        controller: scrollController,
+                        itemCount: result!.length + 1,
+                        itemBuilder: (context, index) {
+                          if (index == result!.length) {
+                         if (loading == true) {
+                            return SizedBox(
+                              height: 200,
+                              child: Center(
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 4,
+                                  color: firstColor,
+                                ),
+                              ),
+                            );
+                          } else if (result!.isEmpty) {
+                            return SizedBox(
+                              height: MediaQuery.of(context).size.height / 5,
+                              width: double.infinity,
+                              child: Center(
+                                child: Text(
+                                  "Food is not available at this location",
+                                  style: FoodigyTextStyle.homeHeadLine,
+                                ),
+                              ),
+                            );
+                          }else if(isNoData==true){
+                            return SizedBox(
+                                    height:
+                                        MediaQuery.of(context).size.height / 5,
+                                    width: double.infinity,
+                                    child: Center(
+                                      child: Text(
+                                        "Yay! You have seen it all",
+                                        // "Item is not available",
+                                        style: FoodigyTextStyle.homeHeadLine,
+                                      ),
                                     ),
-                                  ),
-                                );
-
-                        }
-                         else {
-                          return isNoData
-                              ? SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height / 5,
-                                  width: double.infinity,
-                                  child: Center(
-                                    child: Text(
-                                      "Yay! You have seen it all",
-                                      // "Item is not available",
-                                      style: FoodigyTextStyle.homeHeadLine,
+                                  );
+    
+                          }
+                           else {
+                            return isNoData
+                                ? SizedBox(
+                                    height:
+                                        MediaQuery.of(context).size.height / 5,
+                                    width: double.infinity,
+                                    child: Center(
+                                      child: Text(
+                                        "Yay! You have seen it all",
+                                        // "Item is not available",
+                                        style: FoodigyTextStyle.homeHeadLine,
+                                      ),
                                     ),
-                                  ),
+                                  )
+                                : SizedBox(
+                                    height:
+                                        MediaQuery.of(context).size.height / 5,
+                                    width: double.infinity,
+                                    child: Center(
+                                      child: Text(
+                                        "Item is not available",
+                                        style: FoodigyTextStyle.homeHeadLine,
+                                      ),
+                                    ),
+                                  );
+                          }
+                          }
+                          return result![index].productStatus == false
+                              ? ItemAvailableProductDisable(
+                                  index: index,
+                                  result: result,
                                 )
-                              : SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height / 5,
-                                  width: double.infinity,
-                                  child: Center(
-                                    child: Text(
-                                      "Item is not available",
-                                      style: FoodigyTextStyle.homeHeadLine,
-                                    ),
-                                  ),
+                              : ItemAvailableNowProductDetails(
+                                  index: index,
+                                  result: result,
                                 );
-                        }
-                        }
-                        return result![index].productStatus == false
-                            ? ItemAvailableProductDisable(
-                                index: index,
-                                result: result,
-                              )
-                            : ItemAvailableNowProductDetails(
-                                index: index,
-                                result: result,
-                              );
-                      }),
-                );
-              }),
-        ],
+                        }),
+                  );
+                }),
+          ],
+        ),
       ),
     );
   }
