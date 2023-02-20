@@ -606,6 +606,8 @@ class _ItemAvailableSearchListState extends State<ItemAvailableSearchList> {
                                                                 ),
                                                               ],
                                                             ),
+                                                    
+                                                    
                                                       RichText(
                                                         text: TextSpan(
                                                           style: TextStyle(

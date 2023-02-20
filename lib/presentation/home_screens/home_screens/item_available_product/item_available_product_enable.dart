@@ -5,22 +5,16 @@ import 'package:foodigy/presentation/home_screens/home_screens/item_available_vi
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
-import 'package:foodigy/widgets/glass_blur.dart';
-import 'package:foodigy/widgets/rating_icon_widget.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:foodigy/model/item_available_search_model.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 
 class ItemAvailableNowProductDetails extends StatefulWidget {
   final List<Datum>? result;
   final int index;
-  const ItemAvailableNowProductDetails(
-      {super.key, this.result, required this.index});
-
+  const ItemAvailableNowProductDetails({super.key, this.result, required this.index});
   @override
-  State<ItemAvailableNowProductDetails> createState() =>
-      _ItemAvailableNowProductDetailsState();
+  State<ItemAvailableNowProductDetails> createState() =>  _ItemAvailableNowProductDetailsState();
 }
 
 class _ItemAvailableNowProductDetailsState
@@ -31,20 +25,16 @@ class _ItemAvailableNowProductDetailsState
     Timer(const Duration(seconds: 0), () {
       maaa();
     });
-
     super.initState();
   }
 
   DateTime now = DateTime.now();
 //DateTime date = DateTime(now.year, now.month, now.day);
-  DateTime dateToday =
-      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
-
+  DateTime dateToday =   DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
   int? groupValue;
   String title = '';
   int? typeValue;
   int? timeValue;
-
   String? productTime;
   String? pATIme = '';
 
@@ -288,9 +278,56 @@ class _ItemAvailableNowProductDetailsState
                       SizedBox(
                         height: 2,
                       ),
-                      Text(
-                        "By ${widget.result![widget.index].profileName.toString()}",
-                        style: FoodigyTextStyle.smallTextStyle,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "By ${widget.result![widget.index].profileName.toString()}",
+                            style: FoodigyTextStyle.smallTextStyle,
+                          ),
+                          widget.result![widget.index] .availableCustomization!
+                                                              .custom!
+                                                              .isEmpty
+                                                          ? SizedBox(
+                                                              child: Text(
+                                                                "Personalize",
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        10,
+                                                                    fontFamily:
+                                                                        'Poppins'),
+                                                              ),
+                                                            )
+                                                          : Row(
+                                                              // ignore: prefer_const_literals_to_create_immutables
+
+                                                              // ignore: prefer_const_literals_to_create_immutables
+                                                              children: [
+                                                                SizedBox(
+                                                                  child:Image(image: 
+                                                                    AssetImage("assets/images/personalize.png"),
+                                                                    width:24,
+                                                                  ), 
+                                                                ),
+                                                                SizedBox(
+                                                                  //   height: 25,
+                                                                  child: Text(
+                                                                    "Personalize",
+                                                                    style: TextStyle(
+                                                                        color: Colors
+                                                                            .grey,
+                                                                        fontSize:
+                                                                            10,
+                                                                        fontFamily:
+                                                                            'Poppins'),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                    
+                        ],
                       ),
                       SizedBox(
                         height: 2,
@@ -303,11 +340,6 @@ class _ItemAvailableNowProductDetailsState
                               ? Container()
                               : Row(
                                   children: [
-                                    // Icon(
-                                    //   MdiIcons.alarm,
-                                    //   size: 12,
-                                    //   color: Colors.red,
-                                    // ),
                                     Text(
                                       'Order before: ',
                                       style: FoodigyTextStyle.smallTextStyle,

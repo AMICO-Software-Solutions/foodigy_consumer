@@ -1,13 +1,10 @@
 import 'dart:async';
-
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/widgets/glass_blur.dart';
-
 import 'package:flutter/material.dart';
 import 'package:foodigy/model/item_available_search_model.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
-
 import 'package:foodigy/utilities/const_value.dart';
 
 class ItemAvailableProductDisable extends StatefulWidget {
@@ -21,14 +18,14 @@ class ItemAvailableProductDisable extends StatefulWidget {
       _ItemAvailableProductDisableState();
 }
 
-class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisable> {
+class _ItemAvailableProductDisableState
+    extends State<ItemAvailableProductDisable> {
   @override
   void initState() {
     productTime = widget.result![widget.index].productAvailableTime.toString();
     Timer(const Duration(seconds: 0), () {
       maaa();
     });
-
     super.initState();
   }
 
@@ -36,12 +33,10 @@ class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisabl
 //DateTime date = DateTime(now.year, now.month, now.day);
   DateTime dateToday =
       DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
-
   int? groupValue;
   String title = '';
   int? typeValue;
   int? timeValue;
-
   String? productTime;
   String? pATIme = '';
 
@@ -83,7 +78,7 @@ class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisabl
       child: InkWell(
         onTap: () {},
         child: Container(
-          height: 215,
+          height: 220,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -139,9 +134,14 @@ class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisabl
                                               padding:
                                                   const EdgeInsets.all(0.0),
                                               child: RatingBarIndicator(
-                                                rating: double.parse(widget.result![widget.index].productAverageRating.toString()).roundToDouble() ,
+                                                rating: double.parse(widget
+                                                        .result![widget.index]
+                                                        .productAverageRating
+                                                        .toString())
+                                                    .roundToDouble(),
                                                 itemBuilder: (context, index) =>
-                                                    Icon(Icons.star,
+                                                    Icon(
+                                                  Icons.star,
                                                   color: Colors.amber,
                                                 ),
                                                 itemCount: 5,
@@ -163,14 +163,6 @@ class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisabl
                                             )
                                           ],
                                         ),
-                                        // Text(
-                                        //   widget.result![widget.index]
-                                        //       .productAverageRating
-                                        //       .toString(),
-                                        //   style: TextStyle(
-                                        //       color: Colors.white,
-                                        //       fontWeight: FontWeight.bold),
-                                        // )
                                       ],
                                     ),
                                   ),
@@ -229,9 +221,46 @@ class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisabl
                       SizedBox(
                         height: 2,
                       ),
-                      Text(
-                        "By ${widget.result![widget.index].profileName.toString()}",
-                        style: FoodigyTextStyle.smallGreyTextStyle,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "By ${widget.result![widget.index].profileName.toString()}",
+                            style: FoodigyTextStyle.smallGreyTextStyle,
+                          ),
+                          widget.result![widget.index].availableCustomization!
+                                  .custom!.isEmpty
+                              ? SizedBox(
+                                  child: Text(
+                                    "",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 10,
+                                        fontFamily: 'Poppins'),
+                                  ),
+                                )
+                              : Row(
+                                  children: const [
+                                    SizedBox(
+                                      child: Image(
+                                        image: AssetImage(
+                                            "assets/images/personalize.png"),
+                                        width: 24,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      //   height: 25,
+                                      child: Text(
+                                        "Personalize",
+                                        style: TextStyle(
+                                            color: Colors.grey,
+                                            fontSize: 10,
+                                            fontFamily: 'Poppins'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                        ],
                       ),
                       SizedBox(
                         height: 2,
@@ -250,13 +279,14 @@ class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisabl
                                           FoodigyTextStyle.smallGreyTextStyle,
                                     ),
                                     Text(
-                                                        widget.result![widget.index].orderCutOffTime.toString(),
-                                                        style: TextStyle(
-                                                          fontSize: 10,
-                                                          color: Colors.red,
-                                                          fontFamily: 'Poppins',
-                                                        )),
-                                    
+                                        widget.result![widget.index]
+                                            .orderCutOffTime
+                                            .toString(),
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          color: Colors.red,
+                                          fontFamily: 'Poppins',
+                                        )),
                                     SizedBox(
                                       width: 10,
                                     ),
@@ -273,7 +303,7 @@ class _ItemAvailableProductDisableState extends State<ItemAvailableProductDisabl
                                       style:
                                           FoodigyTextStyle.smallGreyTextStyle,
                                     ),
-                                     pATIme == ""
+                                    pATIme == ""
                                         ? Container()
                                         : Text('$pATIme',
                                             style: TextStyle(

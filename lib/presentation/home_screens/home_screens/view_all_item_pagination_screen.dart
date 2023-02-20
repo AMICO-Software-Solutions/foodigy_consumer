@@ -57,13 +57,6 @@ class _ViewAllItemPaginationScreenState extends State<ViewAllItemPaginationScree
     fetchData(paraOffset: offset);
     handleNext();
   }
-
-  // @override
-  // void dispose() {
-  //   fetchData(paraOffset: offset, pTiming: widget.productTIming);
-  //   handleNext();
-  //   super.dispose();
-  // }
   Future fetchData({paraOffset}) async {
     try {
       setState(() {
