@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:foodigy/presentation/home_screens/home_screens/item_available_product/item_available_disable_product.dart';
 import 'package:foodigy/presentation/home_screens/home_screens/item_available_product/item_available_product_enable.dart';
+import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/widgets/bottom_filter_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -61,7 +62,7 @@ class _HomeSearchPaginationState extends State<HomeSearchPagination> {
       });
       var response = await http.post(
           Uri.parse(
-              "https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/inventory/mobile/search"),
+              "${ApiDomain.apiInventory}/itrustinventory/inventory/mobile/search"),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
             "Authorization": 'Bearer $cToken',

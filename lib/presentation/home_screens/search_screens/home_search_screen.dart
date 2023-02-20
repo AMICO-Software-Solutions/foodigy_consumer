@@ -51,7 +51,7 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
   //   isSearch = true;
   //   var response = await http.post(
   //       Uri.parse(
-  //           "https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/inventory/mobile/search"),
+  //           "${ApiDomain.apiInventory}/itrustinventory/inventory/mobile/search"),
   //       headers: {
   //         "content-type": "application/json; charset=utf-8",
   //         "Authorization": 'Bearer $cToken',

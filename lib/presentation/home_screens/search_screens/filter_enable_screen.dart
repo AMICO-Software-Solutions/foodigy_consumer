@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:foodigy/presentation/home_screens/home_screens/item_available_view_page_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
+import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/widgets/glass_blur.dart';
 import 'package:get/get.dart';
@@ -11,17 +12,16 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:foodigy/model/item_available_search_model.dart';
 import 'package:foodigy/utilities/const_value.dart';
+import 'package:intl/intl.dart';
 
 class FilterEnableScreen extends StatefulWidget {
   const FilterEnableScreen({super.key});
-
   @override
   State<FilterEnableScreen> createState() => _FilterEnableScreenState();
 }
 
 class _FilterEnableScreenState extends State<FilterEnableScreen> {
   List<Datum>? result = [];
-
   ScrollController scrollController = ScrollController();
   bool loading = true;
   bool isNoData=false;
@@ -32,10 +32,8 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
   @override
   void initState() {
     anySelected.addAll(selectedProductTiming);
-
     print(selectedProductTiming);
-    passValue =
-        selectedProductTiming.isEmpty ? selectedProductTiming : anySelected;
+    passValue = selectedProductTiming.isEmpty ? selectedProductTiming : anySelected;
     print(passValue);
     // print(widget.productTIming);
     super.initState();
@@ -51,9 +49,7 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
   }
 
   Future fetchData({paraOffset, pTiming}) async {
-
-    try{
-      
+    try{ 
     setState(() {
      // loading = true;
       isNoData == true ? loading = false : loading = true;
@@ -62,7 +58,7 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
 
     var response = await http.post(
         Uri.parse(
-            "https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/inventory/mobile/search"),
+            "${ApiDomain.apiInventory}/itrustinventory/inventory/mobile/search"),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
           "Authorization": 'Bearer $cToken',
@@ -88,7 +84,6 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
           "invType": "product",
           "timeZone": "Asia/Calcutta"
         }));
-
     print(response.statusCode);
     print(cToken);
     print(response.body);
@@ -129,38 +124,12 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
         print('no data');
         setState(() {
           loading = false;
-          // isNoData=true;
         });
       }
-
-    // ItemAvailableSearchFoodModel modelClass =
-    //     ItemAvailableSearchFoodModel.fromJson(json.decode(response.body));
-    // //  print(modelClass.data!.length);
-    // result = result! + modelClass.data!;
-    // int localOffset = offset + 10;
-    // setState(() {
-    //   result;
-    //   loading = false;
-    //   offset = localOffset;
-    //   print(offset);
-    //   print(modelClass.data!.length);
-    //   print(modelClass.data![0]);
-    // });
-  
-
     }catch(e){
       print(e);
-
     }finally{
-      //  setState(() {
-      //   //  loading = true;
-      //   print('value is $value');
-      // });
-
     }
-
-
-
   }
 
   void handleNext() {
@@ -174,6 +143,7 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
 
   @override
   Widget build(BuildContext context) {
+     var df =  DateFormat("h:mma");
     return SizedBox(
       height: MediaQuery.of(context).size.height / 1.2,
       child: FutureBuilder(
@@ -219,7 +189,6 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
                                     ),
                                   ),
                                 );
-
                         }
                          else {
                           return isNoData
@@ -349,7 +318,6 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: SizedBox(
-                                    //  height: ,
                                     width: double.infinity,
                                     child: Column(
                                       crossAxisAlignment:
@@ -439,6 +407,8 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
                                                     children: [
                                                       Text(
                                                         "Delivery Available from: ${result![index].productAvailableTime.toString()}",
+                                                        // ${DateFormat('HH:mm').format(df.parse('13:45PM'))}",
+                                                        
                                                         style: FoodigyTextStyle
                                                             .smallGreyTextStyle,
                                                       )
@@ -591,7 +561,6 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: SizedBox(
-                                    //  height: ,
                                     width: double.infinity,
                                     child: Column(
                                       crossAxisAlignment:
@@ -655,11 +624,6 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
                                                 ? Container()
                                                 : Row(
                                                     children: [
-                                                      // Icon(
-                                                      //   MdiIcons.alarm,
-                                                      //   size: 12,
-                                                      //   color: Colors.red,
-                                                      // ),
                                                       Text(
                                                         'Order before: ',
                                                         style: FoodigyTextStyle
@@ -684,18 +648,14 @@ class _FilterEnableScreenState extends State<FilterEnableScreen> {
                                                 ? Container()
                                                 : Row(
                                                     children: [
-                                                      // Icon(
-                                                      //   MdiIcons.motorbike,
-                                                      //   size: 12,
-                                                      //   color: Colors.red,
-                                                      // ),
                                                       Text(
                                                         "Delivery Available from: ",
                                                         style: FoodigyTextStyle
                                                             .smallTextStyle,
                                                       ),
-                                                      Text(
-                                                        result![index].productAvailableTime.toString(),
+                                                      Text(" ${result![index].productAvailableTime.toString()}",
+                                                      //  " ${DateFormat('HH:mm').format(DateFormat.jm().parse(result![index].productAvailableTime.toString()))}",
+                                                       // result![index].productAvailableTime.toString(),
                                                         style: TextStyle(
                                                           fontSize: 10,
                                                           color: firstColor,

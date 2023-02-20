@@ -22,7 +22,7 @@ class OrderProductListController extends GetxController {
       isDataLoading(true);
       var response = await http.post(
           Uri.parse(
-              'https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/product/productIdList'),
+              '${ApiDomain.apiInventory}/itrustinventory/product/productIdList'),
           headers: {
             'Content-Type': 'application/json',
             "Authorization": 'Bearer ${cToken.toString()}',

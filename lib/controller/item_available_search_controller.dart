@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'package:foodigy/controller/tokens.dart';
 import 'package:foodigy/model/item_available_search_model.dart';
+import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -18,7 +19,7 @@ class ItemAvailableSearchController extends GetxController {
 
       var response = await http.post(
           Uri.parse(
-              'https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/inventory/mobile/search'),
+              '${ApiDomain.apiInventory}/itrustinventory/inventory/mobile/search'),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
             "Authorization": 'Bearer $cToken',
@@ -75,7 +76,7 @@ class ItemAvailableViewSearchController extends GetxController {
 
       var response = await http.post(
           Uri.parse(
-              'https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/inventory/mobile/search'),
+              '${ApiDomain.apiInventory}/itrustinventory/inventory/mobile/search'),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
             "Authorization": 'Bearer $cToken',

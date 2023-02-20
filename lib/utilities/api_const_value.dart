@@ -5,6 +5,7 @@ class ApiDomain {
   static const String apiAuth =  'https://itrustauth-mko4ihns5q-el.a.run.app/api/v1';
 
       static const String apiUser="https://itrustusers-mko4ihns5q-el.a.run.app/api/v1";
+      static const String apiInventory ="https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1";
 
   //client token const
   static const String username = 'k1c6CezS74Q3Zv9KZdKiMzxLtDZr3IDl';

@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'package:foodigy/model/chef_rating_model.dart';
+import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:http/http.dart' as http;
 import 'package:foodigy/model/chef_details_model.dart';
@@ -16,7 +17,7 @@ class ChefDetailsControllerList extends GetxController {
       isDataLoading(true);
       var response = await http.post(
           Uri.parse(
-              'https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/inventory/search'),
+              '${ApiDomain.apiInventory}/itrustinventory/inventory/search'),
           headers: {
             'Content-Type': 'application/json; charset=UTF-8',
             "Authorization": 'Bearer $cToken',

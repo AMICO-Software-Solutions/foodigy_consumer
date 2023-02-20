@@ -5,6 +5,7 @@ import 'package:foodigy/presentation/home_screens/home.dart';
 import 'package:foodigy/presentation/home_screens/home_screens/item_available_product/item_available_disable_product.dart';
 import 'package:foodigy/presentation/home_screens/home_screens/item_available_product/item_available_product_enable.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
+import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:foodigy/widgets/bottom_filter_screen.dart';
@@ -66,7 +67,7 @@ class _ViewAllItemPaginationScreenState extends State<ViewAllItemPaginationScree
 
       var response = await http.post(
           Uri.parse(
-              "https://itrustinventory-mko4ihns5q-el.a.run.app/api/v1/itrustinventory/inventory/mobile/search"),
+              "${ApiDomain.apiInventory}/itrustinventory/inventory/mobile/search"),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
             "Authorization": 'Bearer $cToken',
