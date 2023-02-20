@@ -1,18 +1,12 @@
+// ignore_for_file: avoid_print
+
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
-import 'package:foodigy/presentation/chef_screens/payment_suceess_screen.dart';
-import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class CartTimerController extends GetxController {
   GetCartDetailsController cartListController =
       Get.put(GetCartDetailsController());
-  // @override
-  // void onInit() {
-  //   //  updateItemTimingList();
-  //   getMaxTiming();
-  //   super.onInit();
-  // }
 
   void updateItemTimingList() {
     if (cartListController.cartList == null) {
@@ -29,7 +23,7 @@ class CartTimerController extends GetxController {
                   .cartList!.data!.cartDetails![0].productAvailableTime
                   .toString()
                   .indexOf(':')));
-      var addTimeIndex = timeIndex + 1;
+    //  var addTimeIndex = timeIndex + 1;
       for (int i = timeIndex; i < 10; i++) {
         // print('hello ${i + 1}');
         // print('hello ${i + 1}:30');
@@ -203,52 +197,41 @@ String current=formattedDate.substring(0, formattedDate.indexOf(':'));
 //  print(allTime);
 //  print(timing);
     for (var i = 0; i < allTime.length; i++) {
-     
       int valu = int.parse(allTime[i].substring(0, allTime[i].indexOf(':')));
-
       if(curentDate ==selectedDate){
         print('true');
-        
-      if(int.parse(curent.toString())+1 <= int.parse(valu.toString())){
+      if(int.parse(curent.toString())+1 < int.parse(valu.toString())){
             if (int.parse(timing) <= int.parse(valu.toString())) {
         if (valu <= 11) {
           allTimes.add("${allTime[i]} am");
-            //print("${allTime[i]} am");
-//        if(valu >= time){
-//       print(allTime[i]);
-//     }
         } else if (valu == 12) {
           allTimes.add("${allTime[i]} pm");
         } else {
           String two = allTime[i].substring(2, 5);
           int data = valu - 12;
           // print("${allTime[i]} pm");
-          allTimes.add("${data}$two pm");
+          allTimes.add("${data.toString()}$two pm");
           //   print("check");
-
           //  print("${data}$two pm");
         }
       } else {}
 
       }else{
-
       }
 
       }else{
-           if (int.parse(timing) <= int.parse(valu.toString())) {
+        print('false');
+           if (10 <= int.parse(valu.toString())) {
         if (valu <= 11) {
           allTimes.add("${allTime[i]} am");
             //print("${allTime[i]} am");
-//        if(valu >= time){
-//       print(allTime[i]);
-//     }
         } else if (valu == 12) {
           allTimes.add("${allTime[i]} pm");
         } else {
           String two = allTime[i].substring(2, 5);
           int data = valu - 12;
           // print("${allTime[i]} pm");
-          allTimes.add("${data}$two pm");
+          allTimes.add("${data.toString()}$two pm");
           //   print("check");
 
           //  print("${data}$two pm");
@@ -265,73 +248,4 @@ String current=formattedDate.substring(0, formattedDate.indexOf(':'));
 
 
 
-//   int time = 3;
-//   String timing = "13";
-//   List allTimes = [];
-
-//   void fo() {
-//     List<String> allTime = [
-//       "1:00",
-//       "1:30",
-//       "2:00",
-//       "2:30",
-//       "3:00",
-//       "3:30",
-//       "4:00",
-//       "4:30",
-//       "5:00",
-//       "5:30",
-//       "6:00",
-//       "6:30"
-//           "7:00",
-//       "7:30",
-//       "8:00",
-//       "8:30",
-//       "9:00",
-//       "9:30",
-//       "10:00",
-//       "10:30",
-//       "11:00",
-//       "11:30",
-//       "12:00",
-//       "12:30",
-//       "13:00",
-//       "13:30",
-//       "14:00",
-//       "14:30",
-//       "15:00",
-//       "15:30",
-//       "16:00",
-//       "16:30",
-//       "17:00",
-//       "17:30",
-//       "18:00",
-//       "18:30",
-//       "19:00",
-//       "19:30",
-//       "20:00"
-//     ];
-
-//     for (var i = 0; i < allTime.length; i++) {
-//       int valu = int.parse(allTime[i].substring(0, allTime[i].indexOf(':')));
-
-//       if (int.parse(timing) <= int.parse(valu.toString())) {
-//         if (valu < 12) {
-//           allTimes.add("${allTime[i]} am");
-//           //print("${allTime[i]} am");
-// //        if(valu >= time){
-// //       print(allTime[i]);
-// //     }
-//         } else {
-//           String two = allTime[i].substring(2, 5);
-//           int data = valu - 12;
-//           // print("${allTime[i]} pm");
-//           allTimes.add("${data} $two pm");
-
-//           // print("${data} $two pm");
-
-//         }
-//       } else {}
-//     }
-//   }
 
