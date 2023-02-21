@@ -17,7 +17,6 @@ class GoogleLoginController extends GetxController {
   GoogleSignInAccount? currentUserGoogle;
 //google authentication
 var isLoading = false.obs;
-
 //step 1
   registerWithGoogle() async {
     // ignore: no_leading_underscores_for_local_identifiers
@@ -37,12 +36,12 @@ var isLoading = false.obs;
        isLoading(true);
       GoogleSignInAuthentication currentUserAuth =
           await currentUserGoogle!.authentication;
-
-      // print("current user list ${currentUserAuth.accessToken}");
-      // print("email ${currentUserGoogle!.email}");
-      // print("id is ${currentUserGoogle!.id.toString()}");
-      // print("id is ${currentUserGoogle!.photoUrl.toString()}");
+     //// print("current user list ${currentUserAuth.accessToken}");
+      //// print("email ${currentUserGoogle!.email}");
+      //// print("id is ${currentUserGoogle!.id.toString()}");
+      //// print("id is ${currentUserGoogle!.photoUrl.toString()}");
       Timer(const Duration(seconds: 1), () {
+        print('google veriication success');
         postGoogleApiRegister(
             username: currentUserGoogle!.email,
             email: currentUserGoogle!.email,
@@ -50,9 +49,8 @@ var isLoading = false.obs;
             id: currentUserGoogle!.id,
             image: currentUserGoogle!.photoUrl);
       });
-
-      //  Get.offAll(CurrentLocationScreen());
-      //   Get.offAllNamed(HomePage.routeName);
+      ////  Get.offAll(CurrentLocationScreen());
+      ////   Get.offAllNamed(HomePage.routeName);
     }
   }
 
@@ -68,8 +66,7 @@ var isLoading = false.obs;
   }) async {
     var url =
         Uri.parse("${ApiDomain.apiAuth}/itrustauth/user/loginGoogleMobile");
-    try {
-       
+    try {       
       final responseData = await http.post(url,
           headers: {
             "content-type": "application/json",
@@ -86,7 +83,7 @@ var isLoading = false.obs;
             "provider": "Mobile[Flutter]",
             "picture": image
           }));
-      print("status code is ${responseData.statusCode.toString()}");
+      print(" login google mobile  api status code is ${responseData.statusCode.toString()}");
       if (responseData.statusCode == 200 ||
           responseData.statusCode == 201 ||
           responseData.statusCode == 202 ||
@@ -151,7 +148,7 @@ var isLoading = false.obs;
             //    "scope": "subscription"
           },
           body: jsonEncode({}));
-      print("status code is ${responseData.statusCode.toString()}");
+      print("google signup token check status code is ${responseData.statusCode.toString()}");
       if (responseData.statusCode == 200|| responseData.statusCode==201||responseData.statusCode==202|| responseData.statusCode==203||responseData.statusCode==204 ) {
         getGoogleSigupUpdate();
         print(responseData.body);
@@ -216,17 +213,9 @@ var isLoading = false.obs;
         //  postGoogleUpdate(id: currentUserId.toString());
       } else {
         print(response.body);
-        // Fluttertoast.showToast(
-        //     backgroundColor: firstColor,
-        //     msg: "session error",
-        //     toastLength: Toast.LENGTH_SHORT,
-        //     gravity: ToastGravity.BOTTOM,
-        //     timeInSecForIosWeb: 1);
       }
     } catch (e) {
-      //  return null;
-      // return addressGetFromJson(data);
-      // print(e.toString());
+      print(e);
     } finally {
       //   isLoading(false);
     }
@@ -249,8 +238,8 @@ var isLoading = false.obs;
           'api_key': 'gUxXfqhrr6xxoWwnz5m4cAtzH24eHIfh',
         },
       );
-      // print(" reponse is ${response.statusCode}");
-      print("token is ${auth_token.toString()}");
+     print("already login reponse is ${response.statusCode}");
+      //print("token is ${auth_token.toString()}");
 
       if (response.statusCode == 200 ||
           response.statusCode == 201 ||
@@ -269,17 +258,9 @@ var isLoading = false.obs;
         //   postGoogle(id: data['id'].toString());
       } else {
         print(response.body);
-        // Fluttertoast.showToast(
-        //     backgroundColor: firstColor,
-        //     msg: "session error",
-        //     toastLength: Toast.LENGTH_SHORT,
-        //     gravity: ToastGravity.BOTTOM,
-        //     timeInSecForIosWeb: 1);
       }
     } catch (e) {
-      //  return null;
-      // return addressGetFromJson(data);
-      // print(e.toString());
+      print(e);
     } finally {
       //   isLoading(false);
     }
@@ -310,30 +291,18 @@ var isLoading = false.obs;
         // isLoading(false);
         print("Succes session");
          mapSession = json.decode(responseData.body);
-         print(responseData.body);
-
-        print("session id");
         String session=mapSession["data"]["sessionId"].toString();
-        print(session);
+       //// print(session);
         box.write('sessionId',session);
-        print(sessionId);
-        //  print(responseData.body);
+       //// print(sessionId);
         Get.offAll(CurrentLocationScreen(
           isSearch: false,
         ));
       } else {
         print(responseData.body);
-        // Fluttertoast.showToast(
-        //     backgroundColor: firstColor,
-        //     msg: "please enter valid details",
-        //     toastLength: Toast.LENGTH_SHORT,
-        //     gravity: ToastGravity.BOTTOM,
-        //     timeInSecForIosWeb: 1);
       }
     } catch (e) {
-      //  return null;
-      // return addressGetFromJson(data);
-      // print(e.toString());
+      print(e);
     } finally {
       //  isLoading(false);
     }

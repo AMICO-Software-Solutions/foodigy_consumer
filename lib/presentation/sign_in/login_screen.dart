@@ -5,6 +5,7 @@ import 'package:foodigy/controller/tokens.dart';
 import 'package:foodigy/controller/user_contoller/google_login_controller.dart';
 import 'package:foodigy/controller/user_contoller/login_controller.dart';
 import 'package:foodigy/presentation/sign_in/forgot_password_screen.dart';
+import 'package:foodigy/presentation/sign_in/google_signup_screen.dart';
 import 'package:foodigy/presentation/sign_in/phone_login_screen.dart';
 import 'package:foodigy/presentation/sign_in/register_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
@@ -254,13 +255,18 @@ class _LoginSCreenState extends State<LoginSCreen> {
                         SizedBox(
                           width: 10,
                         ),
-                        Text(
-                          'Or sign in with ',
-                          style: TextStyle(
-                              fontFamily: 'Poppins',
-                              color: Colors.grey.shade400,
-                              fontSize: 9,
-                              fontWeight: FontWeight.w300),
+                        InkWell(
+                          onTap: (){
+                            Get.to(GoogleSignUpScreen());
+                          },
+                          child: Text(
+                            'Or sign in with ',
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                color: Colors.grey.shade400,
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300),
+                          ),
                         ),
                         SizedBox(
                           width: 10,

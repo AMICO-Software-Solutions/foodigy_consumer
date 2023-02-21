@@ -49,12 +49,8 @@ class CurrentUserProfileController extends GetxController {
         currentProfile = CurrentUserProfileModel.fromJson(map);
         print('current user is ${currentProfile!.data!.userId}}');
       } else {
-        // Fluttertoast.showToast(
-        //     backgroundColor: firstColor,
-        //     msg: "Current user api error",
-        //     toastLength: Toast.LENGTH_SHORT,
-        //     gravity: ToastGravity.BOTTOM,
-        //     timeInSecForIosWeb: 1);
+   
+   print(response.body);
       }
      // return "Success";
     } catch (e) {

@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_print
 //import 'package:device_info_plus/device_info_plus.dart';
 import 'dart:async';
-
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -21,7 +20,6 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
 
 class InitializerWidget extends StatefulWidget {
   const InitializerWidget({Key? key}) : super(key: key);
-
   @override
   // ignore: library_private_types_in_public_api
   _InitializerWidgetState createState() => _InitializerWidgetState();
@@ -29,9 +27,7 @@ class InitializerWidget extends StatefulWidget {
 
 class _InitializerWidgetState extends State<InitializerWidget> {
   GoogleSignInAccount? currentUserGoogle;
-
   bool isLoading = true;
-
 
   Widget getData() {
     UserLoginController().postUser(
@@ -56,7 +52,6 @@ class _InitializerWidgetState extends State<InitializerWidget> {
   Widget getGoogleAccount(){
     Timer(Duration(seconds: 0), (){
         GoogleLoginController().registerWithGoogle();
-
     });
   
      return CurrentLocationScreen(

@@ -1,5 +1,4 @@
-// ignore_for_file: avoid_print
-
+// ignore_for_file: avoid_print, library_private_types_in_public_api
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
@@ -16,23 +15,19 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
-
 import 'package:intl/intl.dart';
 
 class CurrentLocationScreen extends StatefulWidget {
   final bool isSearch;
   const CurrentLocationScreen({Key? key, required this.isSearch})
       : super(key: key);
-
   @override
   _CurrentLocationScreenState createState() => _CurrentLocationScreenState();
 }
 
 class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
-    CurrentUserProfileController registerController =
+  CurrentUserProfileController registerController =
       Get.put(CurrentUserProfileController());
-//  double long = 0.1;
-  // double lat = 0.1;
   Future getlocation() async {
     LocationPermission per = await Geolocator.requestPermission();
     if (per == LocationPermission.denied) {
@@ -49,7 +44,7 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
       // Permissions are denied forever, handle appropriately.
       print("permission denied for ever");
       return CustomDialogueBox(
-        title: "YOu Not able to run",
+        title: "You Not able to run",
       );
       // return Future.error(  'Location permissions are permanently denied, we cannot request permissions.');
     } else if (per == LocationPermission.unableToDetermine) {
@@ -60,7 +55,6 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
       );
       // return Future.error(  'Location permissions are permanently denied, we cannot request permissions.');
     }
-
     print("permission allowed");
     Position currentLoc = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.best);
@@ -76,36 +70,40 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
       });
     });
   }
+
   DateTime now = DateTime.now();
 
   @override
   void initState() {
     super.initState();
-      var formatter =  DateFormat('MM-dd-yyyy');
+    var formatter = DateFormat('MM-dd-yyyy');
     String formattedDate = formatter.format(now);
-    print(formattedDate); 
-     var inputFormat = DateFormat('dd/MM/yyyy');
+    print(formattedDate);
+    var inputFormat = DateFormat('dd/MM/yyyy');
     String formattedDisplayDate = inputFormat.format(now);
-    print(formattedDate); 
-    selectDisaplayDate =formattedDisplayDate.toString();
+    print(formattedDate);
+    selectDisaplayDate = formattedDisplayDate.toString();
     selectDate = formattedDate.toString();
-    passDate= formattedDate.toString();
-
+    passDate = formattedDate.toString();
     widget.isSearch == true ? null : getlocation();
-    registerController.getProfile();
-    TokenGeneretor().postClientId();
-    getAppoint();
+    Timer(const Duration(seconds: 0), () {
+      registerController.getProfile();
+    });
+    Timer(const Duration(seconds: 0), () {
+      TokenGeneretor().postClientId();
+    });
+    Timer(const Duration(seconds: 0), () {
+      getAppoint();
+    });
   }
 
   Map<String, dynamic> map = {};
   String location = 'Fetching location......';
-
   //get current location using logtitude lattitude
 
   Future<http.Response?> getAddress(double lat, double log) async {
     var response = await http.post(
-        Uri.parse(
-            "${ApiDomain.apiUser}/itrustusers/reversegeocode"),
+        Uri.parse("${ApiDomain.apiUser}/itrustusers/reversegeocode"),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
@@ -114,7 +112,6 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
         // body: data
         );
     //  print(" reponse is ${response.statusCode}");
-
     if (response.statusCode == 200 ||
         response.statusCode == 201 ||
         response.statusCode == 202 ||
@@ -124,25 +121,26 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
         map = json.decode(response.body);
         // ignore: unused_local_variable
         List<dynamic> data = map["AdditionalData"];
-        // print(map);
-        //print(data[0]["value"]);
         location = "${map["Label"]}";
         print("Lat long value is ${response.body}");
         Timer(const Duration(seconds: 1), () {
-       registerController.currentProfile!.data!.user!.userType=="consumer"?   userAuth() : showExitPopup();
+          registerController.currentProfile!.data!.user!.userType == "consumer"
+              ? userAuth()
+              : showExitPopup();
         });
       });
     } else {
       return null;
     }
+    return null;
   }
 
   Future<void> userAuth() async {
     print('Location is ${location.toString()}');
     add = location;
     Get.offAll(Home());
-    //  Get.to(BottomScreen(address: location.toString(),));
   }
+
   Future<bool> showExitPopup() async {
     return await showDialog(
           //show confirm dialogue
@@ -165,14 +163,18 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
                 style: ButtonStyle(
                   foregroundColor:
                       MaterialStateProperty.all<Color>(Colors.white),
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
                 ),
-                child: Text('Login', style: FoodigyTextStyle.addressTextStyle,),
+                child: Text(
+                  'Login',
+                  style: FoodigyTextStyle.addressTextStyle,
+                ),
               ),
             ],
           ),
@@ -241,7 +243,6 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
       ),
     );
   }
-
 
   Future<String> getAppoint() async {
     var responseData = await http.get(

@@ -13,13 +13,10 @@ class TokenGeneretor extends GetxController {
   Future createCMSToken() async {
     var url = Uri.parse("https://cms-mko4ihns5q-el.a.run.app/auth/local");
     try {
-      //  String token = box.read('auth_token');
-      //  isLoading(true);
       final responseData = await http.post(url, body: {
         "identifier": "access@itrustsol.com",
         "password": "Admin@1234"
       });
-      //     print("status code is ${responseData.statusCode.toString()}");
       if (responseData.statusCode == 200 ||
           responseData.statusCode == 201 ||
           responseData.statusCode == 202 ||
@@ -31,16 +28,10 @@ class TokenGeneretor extends GetxController {
         box.write('cms_token', cmsToken);
       } else {
         print(responseData.body);
-
-        //  return null;
       }
     } catch (e) {
-      //  return null;
-      // return addressGetFromJson(data);
       print(e.toString());
     } finally {
-      // isLoading(false);
-      //  print(isLoading);
     }
   }
 
@@ -50,10 +41,8 @@ class TokenGeneretor extends GetxController {
     var url = Uri.parse("${ApiDomain.apiAuth}/itrustauth/auth/login");
     try {
       String username = 'k1c6CezS74Q3Zv9KZdKiMzxLtDZr3IDl';
-      String password =
-          'LmNnPQ5m0QIW2H2myrSh1XmkPEmJC64qNSEkBnmXt8uiDooRx4O60J1deYh6700C';
-      String basicAuth =
-          'Basic ${base64.encode(utf8.encode('$username:$password'))}';
+      String password = 'LmNnPQ5m0QIW2H2myrSh1XmkPEmJC64qNSEkBnmXt8uiDooRx4O60J1deYh6700C';
+      String basicAuth =  'Basic ${base64.encode(utf8.encode('$username:$password'))}';
       //   print(basicAuth);
       final responseData = await http.post(url, headers: <String, String>{
         //   "content-type": "application/json",
@@ -63,27 +52,21 @@ class TokenGeneretor extends GetxController {
         "grant_type": "client_credentials",
         "api_key": "gUxXfqhrr6xxoWwnz5m4cAtzH24eHIfh"
       });
-      //   print("status code is ${responseData.statusCode.toString()}");
+        print("client id status code is ${responseData.statusCode.toString()}");
       if (responseData.statusCode == 200 ||
           responseData.statusCode == 201 ||
           responseData.statusCode == 202 ||
           responseData.statusCode == 203) {
-        //   print(responseData.body);
         Map<String, dynamic> map = {};
         map = json.decode(responseData.body);
-
         String tokenClient = map["auth_token"];
         String clientId = tokenClient.toString();
         cToken = clientId.toString();
         googleClientToken = clientId;
-        //  setState(() {
         box.remove('tokenClient');
         box.write('tokenClient', tokenClient);
-        //   });
         print("CLient id");
         print(clientId);
-        // print(userId);
-
       } else {
         print(responseData.body);
         Fluttertoast.showToast(
@@ -94,8 +77,6 @@ class TokenGeneretor extends GetxController {
         return null;
       }
     } catch (e) {
-      //  return null;
-      // return addressGetFromJson(data);
       print(e.toString());
     } finally {
       print("success");

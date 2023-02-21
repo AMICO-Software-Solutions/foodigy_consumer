@@ -50,8 +50,7 @@ class _OtpScreenState extends State<OtpScreen> {
           _comingSms[34] +
           _comingSms[35] +
           _comingSms[36] +
-          _comingSms[
-              37]; //used to set the code in the message to a string and setting it to a textcontroller. message length is 38. so my code is in string index 32-37.
+          _comingSms[37]; //used to set the code in the message to a string and setting it to a textcontroller. message length is 38. so my code is in string index 32-37.
     });
   }
 
