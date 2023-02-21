@@ -190,6 +190,9 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
 
   void getChefProfile() {
     Timer(const Duration(seconds: 2), () {
+      print("provider id ${cartListController
+          .cartList!.data!.cartDetails![0].providerId
+          .toString()}");
       chefProfileController.getProfile(cartListController
           .cartList!.data!.cartDetails![0].providerId
           .toString());
@@ -1229,8 +1232,16 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                           : selecteAddressId
                                                                               .toString(),
                                                                       address: selectPayType == "Takeaway"
-                                                                          ? chefProfileController.currentchefProfile!.data!.address![0].addressLine1
-                                                                              .toString()
+                                                                          ?(selectedAddress.toString() == ""
+                                                                              ? add
+                                                                              : selectedAddress)
+                                                                          // "${chefProfileController.currentchefProfile!.data!.address![0].addressLine1
+                                                                          //     .toString()}, ${chefProfileController.currentchefProfile!.data!.address![0].addressLine2
+                                                                          //     .toString()}, ${chefProfileController.currentchefProfile!.data!.address![0].city
+                                                                          //     .toString()}, ${chefProfileController.currentchefProfile!.data!.address![0].state
+                                                                          //     .toString()}, ${chefProfileController.currentchefProfile!.data!.address![0].country
+                                                                          //     .toString()}, ${chefProfileController.currentchefProfile!.data!.address![0].pincode
+                                                                          //     .toString()}" 
                                                                           : (selectedAddress.toString() == ""
                                                                               ? add
                                                                               : selectedAddress),

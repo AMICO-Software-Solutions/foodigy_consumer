@@ -2,19 +2,12 @@
 
 import 'package:foodigy/model/chef_profile_model.dart';
 import 'package:foodigy/utilities/api_const_value.dart';
-import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ChefProfileController extends GetxController{
 
-
-  //   @override
-  // void onInit() {
-  //   getProfile();
-  //   super.onInit();
-  // }
 
  ChefProfileDetailsModel? currentchefProfile;
   var isDataLoading = false.obs;

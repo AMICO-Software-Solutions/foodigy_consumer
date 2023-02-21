@@ -104,14 +104,12 @@ class CartTimerController extends GetxController {
 
   // Main function
   void maximumValu(String? selectedDate) {
-   
-
     DateTime now = DateTime.now();
 String formattedDate = DateFormat('kk:mm:ss \n EEE d MMM').format(now);
   var inputFormat = DateFormat('dd-MM-yyyy');
    String curentDisaplayDate =inputFormat.format(now).toString();
-  print(curentDisaplayDate);
-   print(selectedDate);
+  // print(curentDisaplayDate);
+  //  print(selectedDate);
 //print('formated date');
 //print(formattedDate);
 String current=formattedDate.substring(0, formattedDate.indexOf(':'));
@@ -199,7 +197,7 @@ String current=formattedDate.substring(0, formattedDate.indexOf(':'));
     for (var i = 0; i < allTime.length; i++) {
       int valu = int.parse(allTime[i].substring(0, allTime[i].indexOf(':')));
       if(curentDate ==selectedDate){
-        print('true');
+       // print('true');
       if(int.parse(curent.toString())+1 < int.parse(valu.toString())){
             if (int.parse(timing) <= int.parse(valu.toString())) {
         if (valu <= 11) {

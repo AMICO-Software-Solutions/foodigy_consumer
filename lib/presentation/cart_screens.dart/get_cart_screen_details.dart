@@ -8,13 +8,10 @@ class GetCartScreenDetails extends StatelessWidget {
   final String? uId;
    final CartDetailsModel? cartData;
   const GetCartScreenDetails({super.key, this.uId, this.cartData});
-
   // GetCartDetailsController cartListController =
   @override
   Widget build(BuildContext context) {
     totalValue = 0;
-  //  cartCOntroller.totValu.value = 0;
-  
         double height = 80;
         double legnth = cartData!.data!.cartDetails!.length == null
             ? 0

@@ -348,6 +348,9 @@ class _CartBuildDataState extends State<CartBuildData> {
                             ),
                             InkWell(
                               onTap: () {
+                                setState(() {
+                                  isDeliveryCharge=false;
+                                });
                                 deleteCartItem(
                                     cartDetailsID: widget
                                         .cartData!

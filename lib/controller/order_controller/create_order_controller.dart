@@ -2,11 +2,9 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:foodigy/controller/address_controller/address_controller.dart';
 import 'package:foodigy/controller/cart_controller/cart_count_controller.dart';
-import 'package:foodigy/controller/cart_controller/cart_time_controller.dart';
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
 import 'package:foodigy/controller/chef_profile_controller.dart';
 import 'package:foodigy/controller/user_contoller/current_user_profie_controller.dart';
@@ -15,7 +13,6 @@ import 'package:foodigy/model/create_order_model.dart';
 import 'package:foodigy/model/curent_user_profile_model.dart';
 import 'package:foodigy/model/order_completed_model.dart';
 import 'package:foodigy/presentation/chef_screens/order_placed.dart';
-import 'package:foodigy/presentation/home_screens/home.dart';
 import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
@@ -25,23 +22,6 @@ import 'package:http/http.dart' as http;
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class CreateOrderController extends GetxController {
-  //var _razorpay = Razorpay();
-
-  // @override
-  // void onInit() {
-  //   var _razorpay = Razorpay();
-  //   _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, handlePaymentSuccess);
-  //   _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, handlePaymentError);
-  //   _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, handleExternalWallet);
-  //   // TODO: implement onInit
-  //   super.onInit();
-  // }
-
-  // @override
-  // void onClose() {
-  //   _razorpay.clear();
-  //   super.onClose();
-  // }
 
   CreateOrderModel? createList;
   var isDataLoading = false.obs;
