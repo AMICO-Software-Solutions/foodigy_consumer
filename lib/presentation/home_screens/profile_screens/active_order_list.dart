@@ -1,5 +1,4 @@
 // ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/order_controller/active_order_controller.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/active_order_list_design.dart';
@@ -8,22 +7,18 @@ import 'package:get/get.dart';
 
 class ActiveOrderList extends StatefulWidget {
   const ActiveOrderList({super.key});
-
   @override
   State<ActiveOrderList> createState() => _ActiveOrderListState();
 }
 
 class _ActiveOrderListState extends State<ActiveOrderList> {
   ActiveOrderController activeController = Get.put(ActiveOrderController());
-
   @override
   void initState() {
     activeController.activeOrderList();
     super.initState();
   }
-
   DateTime? date = DateTime.now();
-
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -63,9 +58,7 @@ class _ActiveOrderListState extends State<ActiveOrderList> {
                               ),
                               SizedBox(
                                 height: 20,
-                              ),
-                            
-                                
+                              ),   
                             ],
                           ),
                         );

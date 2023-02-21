@@ -6,7 +6,6 @@ import 'package:foodigy/widgets/profile/profile_appbar.dart';
 
 class OrdersScreen extends StatefulWidget {
   const OrdersScreen({super.key});
-
   @override
   State<OrdersScreen> createState() => _OrdersScreenState();
 }

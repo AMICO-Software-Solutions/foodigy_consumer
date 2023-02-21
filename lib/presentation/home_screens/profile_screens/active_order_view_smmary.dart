@@ -1,5 +1,4 @@
-// ignore_for_file: avoid_print
-
+// ignore_for_file: avoid_print, depend_on_referenced_packages, must_be_immutable
 import 'dart:async';
 import 'dart:convert';
 import 'package:declarative_refresh_indicator/declarative_refresh_indicator.dart';
@@ -135,22 +134,15 @@ class _ActiveOrderViewSummaryState extends State<ActiveOrderViewSummary> {
   tapped(int step) {
     setState(() => _currentStep = step);
   }
-
   continued() {
     _currentStep < 2 ? setState(() => _currentStep += 1) : null;
   }
-
   cancel() {
     _currentStep > 0 ? setState(() => _currentStep -= 1) : null;
   }
 
   DateTime? now = DateTime.now();
   DateTime? placedTime;
- // DateTime? acceptedTime = DateTime.now();
- /// DateTime? pickupTime = DateTime.now();
-  //DateTime? orderPlaced;
- // DateTime? orderAccepted;
- // DateTime? orderPicked;
 
 //get timing
 String? takeAwayOrderDeliveryTime='';
@@ -262,7 +254,8 @@ String? takeAwayOrderDeliveryTime='';
     int discountValue = widget.pastOrder!.data![widget.index].couponCost
                 .toString() ==
             "null"
-        ? 0
+        ? int.parse(widget.pastOrder!.data![widget.index].productTotalCost
+                .toString())
         : int.parse(widget.pastOrder!.data![widget.index].productTotalCost
                 .toString()) -
             int.parse(
@@ -843,23 +836,25 @@ String? takeAwayOrderDeliveryTime='';
                       SizedBox(
                         height: 10,
                       ),
+                      
                       paymentCard(
                           title: "Discount",
-                          value: widget.pastOrder!.data![widget.index]
-                                      .productTotalCost ==
-                                  null
-                              ? '0'
-                              : discountValue.toString()),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      paymentCard(
-                          title: "After Discount",
                           value: widget.pastOrder!.data![widget.index]
                                       .couponCost ==
                                   null
                               ? '0'
                               : "${int.parse(widget.pastOrder!.data![widget.index].couponCost.toString())}"),
+                               SizedBox(
+                        height: 10,
+                      ),
+                      paymentCard(
+                          title:  "After Discount",
+                          value: widget.pastOrder!.data![widget.index]
+                                      .productTotalCost ==
+                                  null
+                              ? '0'
+                              : discountValue.toString()),
+                     
                       SizedBox(
                         height: 10,
                       ),

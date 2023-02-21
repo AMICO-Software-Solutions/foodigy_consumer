@@ -15,7 +15,6 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
-
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
@@ -23,15 +22,12 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   CurrentUserProfileController registerController =
       Get.put(CurrentUserProfileController());
-
   ///CartTimerController cartTimer = Get.put(CartTimerController());
   @override
   void initState() {
    // registerController.getProfile();
-
     //  cartTimer.getMaxTiming();
     //cartTimer.updateItemTimingList();
-
     super.initState();
          _load();
   }
@@ -60,8 +56,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           } else if (registerController.currentProfile == null) {
             return Container();
           } else {
-            return Row(
-              
+            return Row(            
               children: [
                 SizedBox(
                   height: 30,
@@ -107,8 +102,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         color: firstColor,
         child: SingleChildScrollView(
               child: Column(
-                children: [
-                 
+                children: [                
                   Obx(() {
                     if (registerController.isDataLoading.isTrue) {
                       return Center(
@@ -199,7 +193,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 },
                                 child: AccountContainer(
                                   isNext: true,
-                                  text: 'Reword Rate us to Rate Foodigy',
+                                  text: 'Rate Foodigy',
                                   icon: MdiIcons.star,
                                 )),
                             Divider(
@@ -277,7 +271,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
              Container(
                     height: 400,
                   ),
-            
                 ],
               ),
             )

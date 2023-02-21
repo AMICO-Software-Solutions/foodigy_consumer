@@ -15,16 +15,13 @@ class ActiveOrderListDesign extends StatefulWidget {
   final String? date;
   final ActiveOrderModel? activeOrder;
   final int index;
-  const ActiveOrderListDesign(
-      {super.key, this.date, this.activeOrder, required this.index});
-
+  const ActiveOrderListDesign({super.key, this.date, this.activeOrder, required this.index});
   @override
   State<ActiveOrderListDesign> createState() => _ActiveOrderListDesignState();
 }
 
 class _ActiveOrderListDesignState extends State<ActiveOrderListDesign> {
   //  ActiveOrderController activeController = Get.put(ActiveOrderController());
- 
   DateTime? date = DateTime.now();
   List? productIdList = [];
   @override
@@ -61,8 +58,6 @@ class _ActiveOrderListDesignState extends State<ActiveOrderListDesign> {
           : DateTime.parse(
               widget.activeOrder!.data![widget.index].deliveredTime.toString());
     });
-    
-
     super.initState();
   }
 
@@ -164,23 +159,6 @@ class _ActiveOrderListDesignState extends State<ActiveOrderListDesign> {
           }
         }
       }
-
-      // second =int.parse( productTime.toString().substring(3,6));
-      // third = productTime
-      //     .toString();
-
-      //  int pTIme = int.parse(productTime.toString());
-      // DateTime date = DateTime(
-      //     2021, 3, 28, 1, 50, 30); // Setting the DateTime to 2021-03-28, 1 AM
-      // print(date.add(Duration(minutes: 60)));
-      // DateTime dateTime = DateTime(
-      //     date.year, date.month, date.day + 1, date.hour + 1, date.minute);
-      // // print(dateTime.day);
-      // var time = "${dateTime.day}, ${dateTime.hour}, ${dateTime.minute}";
-
-      //  print("afetr 5 hours");
-      //  print('${valu.toString()}${second.toString()}');
-      //  pATIme = "${valu.toString()}:${second.toString()}";
     });
   }
 
@@ -206,9 +184,6 @@ class _ActiveOrderListDesignState extends State<ActiveOrderListDesign> {
         "ratingType": "FOOD",
       };
       productsList.add(proList);
-
-      // Product(i.toString(), quotationList[i][0], quotationList[i][1],
-      //     quotationList[i][2]),
     }
     // chefList = {
     //   "consumerId": int.parse(
@@ -230,8 +205,6 @@ class _ActiveOrderListDesignState extends State<ActiveOrderListDesign> {
       productIdList!.add(
           widget.activeOrder!.data![widget.index].orderDetail![i].productId);
     }
-    // print('product id');
-    // print(productIdList);
   }
 
   @override
