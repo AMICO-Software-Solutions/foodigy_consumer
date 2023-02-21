@@ -1,0 +1,554 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.foodigy.consumer"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:3:5-67
+15-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:3:22-64
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:4:5-79
+16-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:4:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:5:5-81
+17-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:5:22-78
+18    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+18-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:6:5-85
+18-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:6:22-82
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:7:5-79
+19-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:7:22-77
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+20-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:8:5-80
+20-->D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:8:22-78
+21    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+21-->[:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-75
+21-->[:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-72
+22    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+22-->[:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-77
+22-->[:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-74
+23    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+23-->[:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-70
+23-->[:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-67
+24    <uses-permission android:name="android.permission.WAKE_LOCK" />
+24-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+24-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
+25-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+25-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+26-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+26-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-74
+27    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+27-->[:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
+27-->[:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-74
+28
+29    <queries>
+29-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:15
+30        <intent>
+30-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:18
+31            <action android:name="android.intent.action.GET_CONTENT" />
+31-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-72
+31-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:21-69
+32
+33            <data android:mimeType="*/*" />
+33-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-44
+33-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:19-41
+34        </intent>
+35        <intent>
+35-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:13:9-19:18
+36            <action android:name="android.intent.action.VIEW" />
+36-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:14:13-65
+36-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:14:21-62
+37
+38            <data
+38-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-44
+39                android:mimeType="*/*"
+39-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:19-41
+40                android:scheme="*" />
+41        </intent>
+42        <intent>
+42-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:20:9-29:18
+43            <action android:name="android.intent.action.VIEW" />
+43-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:14:13-65
+43-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:14:21-62
+44
+45            <category android:name="android.intent.category.BROWSABLE" />
+45-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:23:13-74
+45-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:23:23-71
+46
+47            <data
+47-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-44
+48                android:host="pay"
+49                android:mimeType="*/*"
+49-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:19-41
+50                android:scheme="upi" />
+51        </intent>
+52        <intent>
+52-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:30:9-32:18
+53            <action android:name="android.intent.action.MAIN" />
+53-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:13-65
+53-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:21-62
+54        </intent>
+55        <intent>
+55-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:33:9-37:18
+56            <action android:name="android.intent.action.SEND" />
+56-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:34:13-65
+56-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:34:21-62
+57
+58            <data android:mimeType="*/*" />
+58-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-44
+58-->[:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:19-41
+59        </intent>
+60        <intent>
+60-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:38:9-40:18
+61            <action android:name="rzp.device_token.share" />
+61-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:39:13-61
+61-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:39:21-58
+62        </intent>
+63    </queries>
+64
+65    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+65-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+65-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
+66    <uses-permission android:name="android.permission.VIBRATE" />
+66-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
+66-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-63
+67    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+67-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
+67-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-78
+68    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+68-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-79
+68-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-76
+69    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+69-->[:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-83
+69-->[:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-80
+70    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+70-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:28:5-82
+70-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:28:22-79
+71
+72    <uses-feature
+72-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+73        android:glEsVersion="0x00020000"
+73-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+74        android:required="true" />
+74-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+75
+76    <application
+77        android:name="android.app.Application"
+78        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+78-->[androidx.core:core:1.8.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b6e6afe79ad4497b662c07a01c55c652\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+79        android:debuggable="true"
+80        android:icon="@mipmap/ic_launcher"
+81        android:label="foodigy"
+82        android:requestLegacyExternalStorage="true" >
+83        <activity
+84            android:name="com.foodigy.consumer.MainActivity"
+85            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+86            android:exported="true"
+87            android:hardwareAccelerated="true"
+88            android:launchMode="singleTop"
+89            android:theme="@style/LaunchTheme"
+90            android:windowSoftInputMode="stateVisible" >
+91
+92            <!--
+93           android:windowSoftInputMode="stateVisible">
+94            android:windowSoftInputMode="adjustResize">
+95           Specifies an Android theme to apply to this Activity as soon as
+96                 the Android process has started. This theme is visible to the user
+97                 while the Flutter UI initializes. After that, this theme continues
+98                 to determine the Window background behind the Flutter UI.
+99            -->
+100            <meta-data
+101                android:name="io.flutter.embedding.android.NormalTheme"
+102                android:resource="@style/NormalTheme" />
+103
+104            <intent-filter>
+105                <action android:name="android.intent.action.MAIN" />
+105-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:13-65
+105-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:21-62
+106
+107                <category android:name="android.intent.category.LAUNCHER" />
+108            </intent-filter>
+109        </activity>
+110        <!--
+111             Don't delete the meta-data below.
+112             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+113        -->
+114        <meta-data
+115            android:name="flutterEmbedding"
+116            android:value="2" />
+117
+118        <service
+118-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:72
+119            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+119-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-107
+120            android:exported="false"
+120-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+121            android:permission="android.permission.BIND_JOB_SERVICE" />
+121-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-69
+122        <service
+122-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-26:19
+123            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+123-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-97
+124            android:exported="false" >
+124-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
+125            <intent-filter>
+125-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+126                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+126-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+126-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+127            </intent-filter>
+128        </service>
+129
+130        <receiver
+130-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-35:20
+131            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+131-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-98
+132            android:exported="true"
+132-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-36
+133            android:permission="com.google.android.c2dm.permission.SEND" >
+133-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-73
+134            <intent-filter>
+134-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+135                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+135-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+135-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+136            </intent-filter>
+137        </receiver>
+138
+139        <service
+139-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-41:19
+140            android:name="com.google.firebase.components.ComponentDiscoveryService"
+140-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:18-89
+141            android:directBootAware="true"
+141-->[com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+142            android:exported="false" >
+142-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:54:13-37
+143            <meta-data
+143-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-40:85
+144                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+144-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:39:17-128
+145                android:value="com.google.firebase.components.ComponentRegistrar" />
+145-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:40:17-82
+146            <meta-data
+146-->[:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+147                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+147-->[:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+148                android:value="com.google.firebase.components.ComponentRegistrar" />
+148-->[:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+149            <meta-data
+149-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:55:13-57:85
+150                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+150-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:56:17-119
+151                android:value="com.google.firebase.components.ComponentRegistrar" />
+151-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:57:17-82
+152            <meta-data
+152-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+153                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+153-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+154                android:value="com.google.firebase.components.ComponentRegistrar" />
+154-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+155            <meta-data
+155-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+156                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+156-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+157                android:value="com.google.firebase.components.ComponentRegistrar" />
+157-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+158            <meta-data
+158-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+159                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+159-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+160                android:value="com.google.firebase.components.ComponentRegistrar" />
+160-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+161        </service>
+162
+163        <provider
+163-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-47:38
+164            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+164-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-102
+165            android:authorities="com.foodigy.consumer.flutterfirebasemessaginginitprovider"
+165-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-88
+166            android:exported="false"
+166-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-37
+167            android:initOrder="99" />
+167-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-35
+168
+169        <service
+169-->[:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:56
+170            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+170-->[:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-77
+171            android:enabled="true"
+171-->[:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-35
+172            android:exported="false"
+172-->[:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-37
+173            android:foregroundServiceType="location" />
+173-->[:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-53
+174
+175        <provider
+175-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+176            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+176-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+177            android:authorities="com.foodigy.consumer.flutter.image_provider"
+177-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+178            android:exported="false"
+178-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+179            android:grantUriPermissions="true" >
+179-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+180            <meta-data
+180-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+181                android:name="android.support.FILE_PROVIDER_PATHS"
+181-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+182                android:resource="@xml/flutter_image_picker_file_paths" />
+182-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+183        </provider>
+184
+185        <receiver
+185-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-18:40
+186            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+186-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-91
+187            android:exported="false" />
+187-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+188        <receiver
+188-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-21:40
+189            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+189-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-97
+190            android:exported="false" />
+190-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
+191        <receiver
+191-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-31:20
+192            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+192-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-101
+193            android:exported="false" >
+193-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+194            <intent-filter>
+194-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-30:29
+195                <action android:name="android.intent.action.BOOT_COMPLETED" />
+195-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-79
+195-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-76
+196                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+196-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-84
+196-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-81
+197                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+197-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
+197-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
+198                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+198-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
+198-->[:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
+199            </intent-filter>
+200        </receiver>
+201
+202        <activity
+202-->[:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+203            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+203-->[:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+204            android:exported="false"
+204-->[:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+205            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+205-->[:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+206
+207        <provider
+207-->[:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-23:20
+208            android:name="com.crazecoder.openfile.FileProvider"
+208-->[:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-64
+209            android:authorities="com.foodigy.consumer.fileProvider.com.crazecoder.openfile"
+209-->[:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-88
+210            android:exported="false"
+210-->[:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-37
+211            android:grantUriPermissions="true" >
+211-->[:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-47
+212            <meta-data
+212-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+213                android:name="android.support.FILE_PROVIDER_PATHS"
+213-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+214                android:resource="@xml/filepaths" />
+214-->[:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+215        </provider>
+216
+217        <receiver
+217-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:44:9-51:20
+218            android:name="com.razorpay.RzpTokenReceiver"
+218-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:45:13-57
+219            android:exported="true" >
+219-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:46:13-36
+220            <intent-filter>
+220-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:48:13-50:29
+221                <action android:name="rzp.device_token.share" />
+221-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:39:13-61
+221-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:39:21-58
+222            </intent-filter>
+223        </receiver>
+224
+225        <activity
+225-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:53:9-61:20
+226            android:name="com.razorpay.CheckoutActivity"
+226-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:54:13-57
+227            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+227-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:55:13-83
+228            android:exported="true"
+228-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:56:13-36
+229            android:theme="@style/CheckoutTheme" >
+229-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:57:13-49
+230            <intent-filter>
+230-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:58:13-60:29
+231                <action android:name="android.intent.action.MAIN" />
+231-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:13-65
+231-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:21-62
+232            </intent-filter>
+233        </activity>
+234
+235        <meta-data
+235-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:63:9-65:58
+236            android:name="com.razorpay.plugin.googlepay_all"
+236-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:64:13-61
+237            android:value="com.razorpay.RzpGpayMerged" />
+237-->[com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:65:13-55
+238
+239        <uses-library
+239-->[androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+240            android:name="androidx.window.extensions"
+240-->[androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+241            android:required="false" />
+241-->[androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+242        <uses-library
+242-->[androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+243            android:name="androidx.window.sidecar"
+243-->[androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+244            android:required="false" />
+244-->[androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+245
+246        <receiver
+246-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:31:9-38:20
+247            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+247-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:32:13-78
+248            android:exported="true"
+248-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:33:13-36
+249            android:permission="com.google.android.c2dm.permission.SEND" >
+249-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:34:13-73
+250            <intent-filter>
+250-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+251                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+251-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+251-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+252            </intent-filter>
+253        </receiver>
+254        <!--
+255             FirebaseMessagingService performs security checks at runtime,
+256             but set to not exported to explicitly avoid allowing another app to call it.
+257        -->
+258        <service
+258-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:44:9-51:19
+259            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+259-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:45:13-82
+260            android:directBootAware="true"
+260-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:46:13-43
+261            android:exported="false" >
+261-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:47:13-37
+262            <intent-filter android:priority="-500" >
+262-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+263                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+263-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+263-->[:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+264            </intent-filter>
+265        </service>
+266        <service
+266-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+267            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+267-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+268            android:exported="false" >
+268-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+269            <meta-data
+269-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+270                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+270-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+271                android:value="cct" />
+271-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+272        </service>
+273        <service
+273-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+274            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+274-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+275            android:exported="false"
+275-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+276            android:permission="android.permission.BIND_JOB_SERVICE" >
+276-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+277        </service>
+278
+279        <receiver
+279-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+280            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+280-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+281            android:exported="false" />
+281-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+282
+283        <provider
+283-->[com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+284            android:name="com.google.firebase.provider.FirebaseInitProvider"
+284-->[com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+285            android:authorities="com.foodigy.consumer.firebaseinitprovider"
+285-->[com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+286            android:directBootAware="true"
+286-->[com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+287            android:exported="false"
+287-->[com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+288            android:initOrder="100" />
+288-->[com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+289
+290        <activity
+290-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:23:9-27:75
+291            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+291-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:24:13-93
+292            android:excludeFromRecents="true"
+292-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:25:13-46
+293            android:exported="false"
+293-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:26:13-37
+294            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+294-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:27:13-72
+295        <!--
+296            Service handling Google Sign-In user revocation. For apps that do not integrate with
+297            Google Sign-In, this service will never be started.
+298        -->
+299        <service
+299-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:33:9-37:51
+300            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+300-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:34:13-89
+301            android:exported="true"
+301-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:35:13-36
+302            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+302-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:36:13-107
+303            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
+303-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:37:13-48
+304        <uses-library
+304-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+305            android:name="org.apache.http.legacy"
+305-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+306            android:required="false" />
+306-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+307
+308        <activity
+308-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+309            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+309-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+310            android:exported="false"
+310-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+311            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+311-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+312
+313        <meta-data
+313-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+314            android:name="com.google.android.gms.version"
+314-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+315            android:value="@integer/google_play_services_version" />
+315-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+316    </application>
+317
+318</manifest>

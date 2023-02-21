@@ -187,6 +187,7 @@ class _ItemAvaliableViewScreenState extends State<ItemAvaliableViewScreen> {
               .toString()
               .substring(0, productTime.toString().indexOf(':'))) +
           1;
+          valu = valu == 13 ? 1 :valu;
       //  one = productTime.toString().substring(2, 5);
       one = productTime
           .toString()

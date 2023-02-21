@@ -1,0 +1,847 @@
+-- Merging decision tree log ---
+application
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:9:4-42:19
+MERGED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-48:19
+MERGED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-48:19
+MERGED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:19
+MERGED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:19
+MERGED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
+MERGED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
+MERGED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-32:19
+MERGED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-32:19
+MERGED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-14:19
+MERGED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-24:19
+MERGED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-24:19
+MERGED from [:razorpay_flutter] D:\nish_git_clone_new\foodigy_consumer\build\razorpay_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-10:19
+MERGED from [:razorpay_flutter] D:\nish_git_clone_new\foodigy_consumer\build\razorpay_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-10:19
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:43:5-66:19
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:43:5-66:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-location:20.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ab73b6c9cbb15bbfef4cefba6b3e7d3b\transformed\jetified-play-services-location-20.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:20.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ab73b6c9cbb15bbfef4cefba6b3e7d3b\transformed\jetified-play-services-location-20.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4898a9bfe95a84b6355e1126d9f25ded\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4898a9bfe95a84b6355e1126d9f25ded\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3d9cd8a3d1b05a0665ea458713b72df8\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3d9cd8a3d1b05a0665ea458713b72df8\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\342007fbc38da5cae1c4573c3573f9a5\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\342007fbc38da5cae1c4573c3573f9a5\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\c721373c354e0ab6008c8cae2ccbb7a0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\c721373c354e0ab6008c8cae2ccbb7a0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\NISHANTH\.gradle\caches\transforms-3\a79b942dd1443bf5b0f3bc5d6316d518\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\NISHANTH\.gradle\caches\transforms-3\a79b942dd1443bf5b0f3bc5d6316d518\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\223e67ee85c3ed9d64d424c1c3f36c6f\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\223e67ee85c3ed9d64d424c1c3f36c6f\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.8.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b6e6afe79ad4497b662c07a01c55c652\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b6e6afe79ad4497b662c07a01c55c652\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\fb441e6c6db529aa542dbbe0170b1580\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\fb441e6c6db529aa542dbbe0170b1580\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.8.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b6e6afe79ad4497b662c07a01c55c652\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+	android:name
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+manifest
+ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:1-43:12
+MERGED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:1-43:12
+MERGED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-13:12
+MERGED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-50:12
+MERGED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:flutter_pdfview] D:\nish_git_clone_new\foodigy_consumer\build\flutter_pdfview\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:platform_device_id] D:\nish_git_clone_new\foodigy_consumer\build\platform_device_id\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
+MERGED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
+MERGED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
+MERGED from [:flutter_plugin_android_lifecycle] D:\nish_git_clone_new\foodigy_consumer\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-34:12
+MERGED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-16:12
+MERGED from [:path_provider_android] D:\nish_git_clone_new\foodigy_consumer\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:google_sign_in_android] D:\nish_git_clone_new\foodigy_consumer\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:webview_flutter_android] D:\nish_git_clone_new\foodigy_consumer\build\webview_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:permission_handler_android] D:\nish_git_clone_new\foodigy_consumer\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:device_info] D:\nish_git_clone_new\foodigy_consumer\build\device_info\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:downloads_path_provider_28] D:\nish_git_clone_new\foodigy_consumer\build\downloads_path_provider_28\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-26:12
+MERGED from [:razorpay_flutter] D:\nish_git_clone_new\foodigy_consumer\build\razorpay_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-12:12
+MERGED from [:package_info_plus] D:\nish_git_clone_new\foodigy_consumer\build\package_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:fluttertoast] D:\nish_git_clone_new\foodigy_consumer\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:2:1-68:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\e6ae9c46935e5340658f029ec29a18df\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:17:1-61:12
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:15:1-33:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\218193f1550bf7c6308b91600521b841\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:17:1-40:12
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\27010fd594559c41d4c4a7e2373f0460\transformed\jetified-android-pdf-viewer-3.2.0-beta.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\c08ca6770484b0063af0a6a15bf82496\transformed\jetified-pdfium-android-1.9.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b582b0bfe4d1c1a3dd756321cd2a4e3b\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd3ab80cfae81497d815d3519d5d461\transformed\media-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.webkit:webkit:1.5.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b0f7910d4f53d78c27c4ddb69dd0b6e2\transformed\webkit-1.5.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:20.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ab73b6c9cbb15bbfef4cefba6b3e7d3b\transformed\jetified-play-services-location-20.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\2bd82a61d85471a4406c24b9e4e0c2f6\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\NISHANTH\.gradle\caches\transforms-3\048f006ca67f81c0193848e855a0f564\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4898a9bfe95a84b6355e1126d9f25ded\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-wallet:18.1.3] C:\Users\NISHANTH\.gradle\caches\transforms-3\12815f9c730fc716c1492c6c62638f9b\transformed\jetified-play-services-wallet-18.1.3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3d9cd8a3d1b05a0665ea458713b72df8\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\342007fbc38da5cae1c4573c3573f9a5\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\6020301e3b0ca5088203fdc257a2166a\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\c721373c354e0ab6008c8cae2ccbb7a0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\NISHANTH\.gradle\caches\transforms-3\a79b942dd1443bf5b0f3bc5d6316d518\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\223e67ee85c3ed9d64d424c1c3f36c6f\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2607933799022eb2158f70f7d762949f\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f029361c362c10d9e9f99c91e9eddd87\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2583db35e1bd0d48c3ec68e408c4fc2e\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4c3cbfddd6f2ae83c7cccb07c484a2cb\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\86828aef987374027f0698adc2952828\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\38aa59a316478c117e8ca68c5a768a06\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b91b6b90be2500b72d195ad7eb4c5fa6\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\165eb68215375982f476051c768fd430\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\a22d248fab9ed6d09b48a9ef22bc7834\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\5bc7056a846e97a782ad0c954e0e1b91\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f7acc2c7c761ac8aeca2f9a145589092\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\df4b6b1cea08c25b91c0ae2671ab231c\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.8.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b6e6afe79ad4497b662c07a01c55c652\transformed\core-1.8.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\NISHANTH\.gradle\caches\transforms-3\f338c13e841382f73a69f278c1a7bd8c\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\73a5b4133a073374ba493dac60368db3\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\c1d50d3e4800c082c1d19ea5353d0879\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\2182ecb2c2a93a552f6777b779a425bd\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\3da028f06c4a417e410e31a0fa5ff8c6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\fb441e6c6db529aa542dbbe0170b1580\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b0488a418eb7b7073f71af7ac2a8cf5\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f1c7d5156ef72d74145269a44f6fadac\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b2a47bf96dbca6a98340b781d4dc5cae\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7f3327b86ae29cbcc2876014a65c3cda\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3e025a448c0c0757ff23071b43ecc0fe\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\680bffcd00f8aa53e2f3d66c75c03543\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fed790bc82ac8d650db9c538620826f\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\9243b54779c13bf6b9a7eb2d0e23fa1a\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\d4960cb5ce54974341c2e4ac1993cc6d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\872208a837770942352a4df7b40be14d\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ef2346ada312a1d9baddaa854b5ffa45\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml:1:1-8:12
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml:1:1-8:12
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml:1:1-8:12
+	package
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:2:5-35
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:1-43:12
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:1-43:12
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:3:5-67
+MERGED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:3:5-67
+MERGED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:3:5-67
+MERGED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:google_sign_in_android] D:\nish_git_clone_new\foodigy_consumer\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:google_sign_in_android] D:\nish_git_clone_new\foodigy_consumer\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:10:5-67
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:3:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:4:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:6:5-85
+	android:name
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:6:22-82
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:7:5-79
+MERGED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-80
+MERGED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-80
+MERGED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-80
+MERGED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml:8:22-78
+uses-sdk
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+MERGED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_pdfview] D:\nish_git_clone_new\foodigy_consumer\build\flutter_pdfview\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_pdfview] D:\nish_git_clone_new\foodigy_consumer\build\flutter_pdfview\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:platform_device_id] D:\nish_git_clone_new\foodigy_consumer\build\platform_device_id\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:platform_device_id] D:\nish_git_clone_new\foodigy_consumer\build\platform_device_id\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] D:\nish_git_clone_new\foodigy_consumer\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] D:\nish_git_clone_new\foodigy_consumer\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] D:\nish_git_clone_new\foodigy_consumer\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] D:\nish_git_clone_new\foodigy_consumer\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:google_sign_in_android] D:\nish_git_clone_new\foodigy_consumer\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:google_sign_in_android] D:\nish_git_clone_new\foodigy_consumer\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] D:\nish_git_clone_new\foodigy_consumer\build\webview_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] D:\nish_git_clone_new\foodigy_consumer\build\webview_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] D:\nish_git_clone_new\foodigy_consumer\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] D:\nish_git_clone_new\foodigy_consumer\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:device_info] D:\nish_git_clone_new\foodigy_consumer\build\device_info\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:device_info] D:\nish_git_clone_new\foodigy_consumer\build\device_info\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:downloads_path_provider_28] D:\nish_git_clone_new\foodigy_consumer\build\downloads_path_provider_28\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:downloads_path_provider_28] D:\nish_git_clone_new\foodigy_consumer\build\downloads_path_provider_28\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:razorpay_flutter] D:\nish_git_clone_new\foodigy_consumer\build\razorpay_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:razorpay_flutter] D:\nish_git_clone_new\foodigy_consumer\build\razorpay_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:package_info_plus] D:\nish_git_clone_new\foodigy_consumer\build\package_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:package_info_plus] D:\nish_git_clone_new\foodigy_consumer\build\package_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] D:\nish_git_clone_new\foodigy_consumer\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] D:\nish_git_clone_new\foodigy_consumer\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:6:5-8:41
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\e6ae9c46935e5340658f029ec29a18df\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\e6ae9c46935e5340658f029ec29a18df\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\218193f1550bf7c6308b91600521b841\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\218193f1550bf7c6308b91600521b841\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\27010fd594559c41d4c4a7e2373f0460\transformed\jetified-android-pdf-viewer-3.2.0-beta.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\27010fd594559c41d4c4a7e2373f0460\transformed\jetified-android-pdf-viewer-3.2.0-beta.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\c08ca6770484b0063af0a6a15bf82496\transformed\jetified-pdfium-android-1.9.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\c08ca6770484b0063af0a6a15bf82496\transformed\jetified-pdfium-android-1.9.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b582b0bfe4d1c1a3dd756321cd2a4e3b\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b582b0bfe4d1c1a3dd756321cd2a4e3b\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd3ab80cfae81497d815d3519d5d461\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd3ab80cfae81497d815d3519d5d461\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.5.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b0f7910d4f53d78c27c4ddb69dd0b6e2\transformed\webkit-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.5.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b0f7910d4f53d78c27c4ddb69dd0b6e2\transformed\webkit-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:20.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ab73b6c9cbb15bbfef4cefba6b3e7d3b\transformed\jetified-play-services-location-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:20.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ab73b6c9cbb15bbfef4cefba6b3e7d3b\transformed\jetified-play-services-location-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\2bd82a61d85471a4406c24b9e4e0c2f6\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\2bd82a61d85471a4406c24b9e4e0c2f6\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\NISHANTH\.gradle\caches\transforms-3\048f006ca67f81c0193848e855a0f564\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\NISHANTH\.gradle\caches\transforms-3\048f006ca67f81c0193848e855a0f564\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4898a9bfe95a84b6355e1126d9f25ded\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4898a9bfe95a84b6355e1126d9f25ded\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-wallet:18.1.3] C:\Users\NISHANTH\.gradle\caches\transforms-3\12815f9c730fc716c1492c6c62638f9b\transformed\jetified-play-services-wallet-18.1.3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:18.1.3] C:\Users\NISHANTH\.gradle\caches\transforms-3\12815f9c730fc716c1492c6c62638f9b\transformed\jetified-play-services-wallet-18.1.3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3d9cd8a3d1b05a0665ea458713b72df8\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3d9cd8a3d1b05a0665ea458713b72df8\transformed\jetified-play-services-identity-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\342007fbc38da5cae1c4573c3573f9a5\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\342007fbc38da5cae1c4573c3573f9a5\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\6020301e3b0ca5088203fdc257a2166a\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\6020301e3b0ca5088203fdc257a2166a\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\c721373c354e0ab6008c8cae2ccbb7a0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\c721373c354e0ab6008c8cae2ccbb7a0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\NISHANTH\.gradle\caches\transforms-3\a79b942dd1443bf5b0f3bc5d6316d518\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\NISHANTH\.gradle\caches\transforms-3\a79b942dd1443bf5b0f3bc5d6316d518\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\223e67ee85c3ed9d64d424c1c3f36c6f\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\223e67ee85c3ed9d64d424c1c3f36c6f\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2607933799022eb2158f70f7d762949f\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2607933799022eb2158f70f7d762949f\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f029361c362c10d9e9f99c91e9eddd87\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f029361c362c10d9e9f99c91e9eddd87\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2583db35e1bd0d48c3ec68e408c4fc2e\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2583db35e1bd0d48c3ec68e408c4fc2e\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4c3cbfddd6f2ae83c7cccb07c484a2cb\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\4c3cbfddd6f2ae83c7cccb07c484a2cb\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\86828aef987374027f0698adc2952828\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\86828aef987374027f0698adc2952828\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\38aa59a316478c117e8ca68c5a768a06\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\38aa59a316478c117e8ca68c5a768a06\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b91b6b90be2500b72d195ad7eb4c5fa6\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b91b6b90be2500b72d195ad7eb4c5fa6\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\165eb68215375982f476051c768fd430\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\165eb68215375982f476051c768fd430\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\a22d248fab9ed6d09b48a9ef22bc7834\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\a22d248fab9ed6d09b48a9ef22bc7834\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\5bc7056a846e97a782ad0c954e0e1b91\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\5bc7056a846e97a782ad0c954e0e1b91\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f7acc2c7c761ac8aeca2f9a145589092\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f7acc2c7c761ac8aeca2f9a145589092\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\df4b6b1cea08c25b91c0ae2671ab231c\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\df4b6b1cea08c25b91c0ae2671ab231c\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.8.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b6e6afe79ad4497b662c07a01c55c652\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b6e6afe79ad4497b662c07a01c55c652\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\NISHANTH\.gradle\caches\transforms-3\f338c13e841382f73a69f278c1a7bd8c\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\NISHANTH\.gradle\caches\transforms-3\f338c13e841382f73a69f278c1a7bd8c\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\73a5b4133a073374ba493dac60368db3\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\73a5b4133a073374ba493dac60368db3\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\c1d50d3e4800c082c1d19ea5353d0879\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\c1d50d3e4800c082c1d19ea5353d0879\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\2182ecb2c2a93a552f6777b779a425bd\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\2182ecb2c2a93a552f6777b779a425bd\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\3da028f06c4a417e410e31a0fa5ff8c6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\3da028f06c4a417e410e31a0fa5ff8c6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\fb441e6c6db529aa542dbbe0170b1580\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\fb441e6c6db529aa542dbbe0170b1580\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b0488a418eb7b7073f71af7ac2a8cf5\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b0488a418eb7b7073f71af7ac2a8cf5\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f1c7d5156ef72d74145269a44f6fadac\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f1c7d5156ef72d74145269a44f6fadac\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b2a47bf96dbca6a98340b781d4dc5cae\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\b2a47bf96dbca6a98340b781d4dc5cae\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7f3327b86ae29cbcc2876014a65c3cda\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7f3327b86ae29cbcc2876014a65c3cda\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3e025a448c0c0757ff23071b43ecc0fe\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\3e025a448c0c0757ff23071b43ecc0fe\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\680bffcd00f8aa53e2f3d66c75c03543\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\680bffcd00f8aa53e2f3d66c75c03543\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fed790bc82ac8d650db9c538620826f\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fed790bc82ac8d650db9c538620826f\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\9243b54779c13bf6b9a7eb2d0e23fa1a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\9243b54779c13bf6b9a7eb2d0e23fa1a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\d4960cb5ce54974341c2e4ac1993cc6d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\d4960cb5ce54974341c2e4ac1993cc6d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\872208a837770942352a4df7b40be14d\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\872208a837770942352a4df7b40be14d\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ef2346ada312a1d9baddaa854b5ffa45\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\ef2346ada312a1d9baddaa854b5ffa45\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\nish_git_clone_new\foodigy_consumer\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-75
+	android:name
+		ADDED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-72
+uses-permission#android.permission.READ_PHONE_NUMBERS
+ADDED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-77
+	android:name
+		ADDED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-74
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-70
+	android:name
+		ADDED from [:alt_sms_autofill] D:\nish_git_clone_new\foodigy_consumer\build\alt_sms_autofill\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-67
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:26:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:26:5-68
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+MERGED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+MERGED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:25:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:25:5-77
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-74
+service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:72
+	android:exported
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+	android:permission
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-69
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-107
+service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-26:19
+	android:exported
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-97
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+receiver#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-35:20
+	android:exported
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-36
+	android:permission
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-73
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-98
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-41:19
+MERGED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:52:9-58:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:52:9-58:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:54:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-40:85
+	android:value
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:40:17-82
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:39:17-128
+provider#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider
+ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-47:38
+	android:authorities
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-88
+	android:exported
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-37
+	android:initOrder
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-35
+	android:name
+		ADDED from [:firebase_messaging] D:\nish_git_clone_new\foodigy_consumer\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-102
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
+ADDED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_core] D:\nish_git_clone_new\foodigy_consumer\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
+	android:name
+		ADDED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-74
+service#com.baseflow.geolocator.GeolocatorLocationService
+ADDED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:56
+	android:enabled
+		ADDED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-35
+	android:exported
+		ADDED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-37
+	android:foregroundServiceType
+		ADDED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-53
+	android:name
+		ADDED from [:geolocator_android] D:\nish_git_clone_new\foodigy_consumer\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-77
+queries
+ADDED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:15
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:12:5-41:15
+MERGED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:12:5-41:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-72
+	android:name
+		ADDED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:21-69
+data
+ADDED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-44
+	android:mimeType
+		ADDED from [:file_picker] D:\nish_git_clone_new\foodigy_consumer\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:19-41
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+	android:exported
+		ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+	android:resource
+		ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+	android:name
+		ADDED from [:image_picker_android] D:\nish_git_clone_new\foodigy_consumer\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-63
+uses-permission#android.permission.USE_FULL_SCREEN_INTENT
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-76
+receiver#com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-91
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-97
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-31:20
+	android:exported
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-101
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-30:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-79
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-84
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-81
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] D:\nish_git_clone_new\foodigy_consumer\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] D:\nish_git_clone_new\foodigy_consumer\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-83
+	android:name
+		ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-80
+provider#com.crazecoder.openfile.FileProvider
+ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-23:20
+	android:grantUriPermissions
+		ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-47
+	android:authorities
+		ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-88
+	android:exported
+		ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-37
+	tools:replace
+		ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-48
+	android:name
+		ADDED from [:open_file] D:\nish_git_clone_new\foodigy_consumer\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-64
+intent#action:name:android.intent.action.VIEW+data:mimeType:*/*+data:scheme:*
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:13:9-19:18
+action#android.intent.action.VIEW
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:14:13-65
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:14:21-62
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:host:pay+data:mimeType:*/*+data:scheme:upi
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:20:9-29:18
+category#android.intent.category.BROWSABLE
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:23:13-74
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:23:23-71
+intent#action:name:android.intent.action.MAIN
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:30:9-32:18
+action#android.intent.action.MAIN
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:13-65
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:31:21-62
+intent#action:name:android.intent.action.SEND+data:mimeType:*/*
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:33:9-37:18
+action#android.intent.action.SEND
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:34:13-65
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:34:21-62
+intent#action:name:rzp.device_token.share
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:38:9-40:18
+action#rzp.device_token.share
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:39:13-61
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:39:21-58
+receiver#com.razorpay.RzpTokenReceiver
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:44:9-51:20
+	android:exported
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:46:13-36
+	tools:ignore
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:47:13-44
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:45:13-57
+intent-filter#action:name:rzp.device_token.share
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:48:13-50:29
+activity#com.razorpay.CheckoutActivity
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:53:9-61:20
+	android:exported
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:56:13-36
+	android:configChanges
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:55:13-83
+	android:theme
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:57:13-49
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:54:13-57
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:58:13-60:29
+meta-data#com.razorpay.plugin.googlepay_all
+ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:63:9-65:58
+	android:value
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:65:13-55
+	android:name
+		ADDED from [com.razorpay:checkout:1.6.29] C:\Users\NISHANTH\.gradle\caches\transforms-3\8e1aa51044e172ab5c55ef54cc976570\transformed\jetified-checkout-1.6.29\AndroidManifest.xml:64:13-61
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\NISHANTH\.gradle\caches\transforms-3\273fe2f040bb22068b2f4adcf3624193\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:28:5-82
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\d13a1ebc26ddefd8eaa9f8dfe7669b4c\transformed\jetified-play-services-cloud-messaging-17.0.1\AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:28:22-79
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:31:9-38:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:33:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:34:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:32:13-78
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:44:9-51:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:47:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:46:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:45:13-82
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
+ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:55:13-57:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:57:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\7ac41b3b4c82238576a835b3b47bdde3\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:56:17-119
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\NISHANTH\.gradle\caches\transforms-3\d8ffed4e854c9807a3aa4acdc97eefea\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\62b3fc2b8fd72e3789e5cf422504f746\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\NISHANTH\.gradle\caches\transforms-3\3b3c98d12cbb1b1951bbc2b9ae1b96b5\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\e97d4b314d6b7d967ebe54142bfb20d7\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\84cecd648d067e5f421e5a893f2b9594\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\390252053a2680ae66a80d4290d13b20\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\428f304822d3f047b86b31360a673dc9\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:34:13-89
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\f95c6437e3fb7bffdf0d6c8a7b74857f\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\NISHANTH\.gradle\caches\transforms-3\a66066d6df90ff021dc083359f60eca7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\NISHANTH\.gradle\caches\transforms-3\2fd134c02efa7c9a9e15674081635624\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58

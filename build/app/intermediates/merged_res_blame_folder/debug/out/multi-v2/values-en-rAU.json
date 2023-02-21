@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\nish_git_clone_new\\foodigy_consumer\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\NISHANTH\\.gradle\\caches\\transforms-3\\12815f9c730fc716c1492c6c62638f9b\\transformed\\jetified-play-services-wallet-18.1.3\\res\\values-en-rAU\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "206",
+                        "endColumns": "70",
+                        "endOffsets": "276"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "156",
+                        "endColumns": "74",
+                        "endOffsets": "226"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\NISHANTH\\.gradle\\caches\\transforms-3\\b6e6afe79ad4497b662c07a01c55c652\\transformed\\core-1.8.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

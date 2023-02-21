@@ -39,11 +39,15 @@ class _ItemAvailableNowProductDetailsState
   String? pATIme = '';
 
   void maaa() {
+   
     setState(() {
       int valu = int.parse(productTime
               .toString()
               .substring(0, productTime.toString().indexOf(':'))) +
           1;
+          valu = valu == 13 ? 1 :valu;
+          print(productTime);
+          print("valu $valu");
       String one = productTime.toString().substring(2, 5);
       String second =
           productTime.toString().substring(productTime.toString().indexOf(':'));
