@@ -125,53 +125,7 @@ class _ChefMenuState extends State<ChefMenu> {
                           //     ))
                         ],
                       ),
-                      // Container(
-                      //   height: 60,
-                      //   width: double.infinity,
-                      //   decoration: BoxDecoration(
-                      //       border: Border.all(color: Colors.grey.shade400),
-                      //       borderRadius: BorderRadius.circular(10)),
-                      //   child: InkWell(
-                      //     onTap: () {
-                      //       foodigyBottomSheet(context);
-                      //       //  Get.to(TableBasicsExample());
-                      //     },
-                      //     child: Padding(
-                      //       padding: const EdgeInsets.all(8.0),
-                      //       child: Row(
-                      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //         children: [
-                      //           Column(
-                      //             mainAxisAlignment: MainAxisAlignment.start,
-                      //             crossAxisAlignment: CrossAxisAlignment.start,
-                      //             children: const [
-                      //               Text(
-                      //                 'Delivery Day',
-                      //                 style: TextStyle(
-                      //                     color: Colors.black,
-                      //                     fontFamily: 'Poppins',
-                      //                     fontSize: 13,
-                      //                     fontWeight: FontWeight.w500),
-                      //               ),
-                      //               Text(
-                      //                 'Choose exact delivry time to checkout',
-                      //                 style: TextStyle(
-                      //                     color: Colors.grey,
-                      //                     fontFamily: 'Poppins',
-                      //                     fontSize: 10,
-                      //                     fontWeight: FontWeight.w400),
-                      //               )
-                      //             ],
-                      //           ),
-                      //           Icon(
-                      //             MdiIcons.creditCardClockOutline,
-                      //             color: Colors.grey.shade400,
-                      //           )
-                      //         ],
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
+                     
                       SizedBox(
                         height: 10,
                       ),
@@ -413,7 +367,7 @@ class _ChefScreenFoodsState extends State<ChefScreenFoods> {
             : widget.chefDetailsList!.data!.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 2 / 2.8,
+            childAspectRatio: 2 / 2.5,
             crossAxisSpacing: 20.0,
             mainAxisSpacing: 20.0),
         itemBuilder: (BuildContext context, int index) {
@@ -511,75 +465,172 @@ class _ChefScreenFoodsState extends State<ChefScreenFoods> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width / 3,
-                                    child: Text(
-                                      widget.chefDetailsList!.data![index]
-                                          .productTitle
-                                          .toString(),
-                                      style: FoodigyTextStyle
-                                          .itemAvialableDisableTitleStyle,
-                                    ),
-                                  ),
-                                  Text(
-                                    "${iRubee.toString()}${widget.chefDetailsList!.data![index].productCost}",
-                                    style: TextStyle(
-                                        color: Colors.grey,
-                                        //  fontFamily: 'Poppins',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                              Text(
-                                widget.chefDetailsList!.data![index]
-                                    .productDescription
-                                    .toString(),
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                    color: Colors.grey.shade500,
-                                    fontFamily: 'Poppins',
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              widget.chefDetailsList!.data![index]
-                                          .productAvailableTime
-                                          .toString() ==
-                                      ""
-                                  ? Container()
-                                  : Row(
-                                      children: [
-                                        Text(
-                                          'Order before: ${widget.chefDetailsList!.data![index].productAvailableTime.toString()}',
-                                          style: TextStyle(
-                                              color: Colors.grey.shade500,
-                                              fontFamily: 'Poppins',
-                                              fontSize: 8,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ],
-                                    ),
-                              widget.chefDetailsList!.data![index]
-                                          .orderCutOffTime ==
-                                      ""
-                                  ? Container()
-                                  : Row(
-                                      children: [
-                                        Text(
-                                          'Deliver Available from: ${widget.chefDetailsList!.data![index].orderCutOffTime}',
-                                          style: TextStyle(
-                                              color: Colors.grey.shade500,
-                                              fontFamily: 'Poppins',
-                                              fontSize: 8,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ],
-                                    )
+                            Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          SizedBox(
+                                                            width: 100,
+                                                            child: Text(
+                                                             widget.chefDetailsList!
+                                                                  .data![index]
+                                                                  .productTitle
+                                                                  .toString(),
+                                                              //  textAlign: TextAlign.justify,
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontSize: 10,
+                                                                  fontFamily:
+                                                                      'Poppins'),
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            'By ${widget.chefDetailsList!.data![index].profileName}',
+                                                            style: FoodigyTextStyle
+                                                                .smallTextStyle,
+                                                          )
+                                                        ],
+                                                      ),
+                                                      Container(
+                                                        height: 25,
+                                                        width: 25,
+                                                        decoration: BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: NetworkImage(widget.chefDetailsList!
+                                                                    .data![
+                                                                        index]
+                                                                    .profileImage
+                                                                    .toString()),
+                                                                fit: BoxFit
+                                                                    .cover),
+                                                            shape: BoxShape
+                                                                .circle),
+                                                      )
+                                                    ],
+                                                  ),
+                                                   SizedBox(
+                                                    height: 5,
+                                                  ),
+                              // Text(
+                              //   widget.chefDetailsList!.data![index]
+                              //       .productDescription
+                              //       .toString(),
+                              //   overflow: TextOverflow.ellipsis,
+                              //   style: TextStyle(
+                              //       color: Colors.grey.shade500,
+                              //       fontFamily: 'Poppins',
+                              //       fontSize: 10,
+                              //       fontWeight: FontWeight.w500),
+                              // ),
+                                Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                     widget.chefDetailsList!
+                                                              .data![index]
+                                                              .availableCustomization!
+                                                              .custom!
+                                                              .isEmpty
+                                                          ? SizedBox(
+                                                              //   height: 25,
+                                                              child: Text(
+                                                                "",
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        10,
+                                                                    fontFamily:
+                                                                        'Poppins'),
+                                                              ),
+                                                            )
+                                                          : SizedBox(
+                                                              //   height: 25,
+                                                              child: Text(
+                                                                "Personalize",
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .grey,
+                                                                    fontSize:
+                                                                        10,
+                                                                    fontFamily:
+                                                                        'Poppins'),
+                                                              ),
+                                                            ),
+                                                      RichText(
+                                                        text: TextSpan(
+                                                          style: TextStyle(
+                                                            color: Colors.black,
+                                                          ),
+                                                          children: <TextSpan>[
+                                                            TextSpan(
+                                                                text:
+                                                                    '${iRubee.toString()} ${widget.chefDetailsList!.data![index].productCost.toString()} ',
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .grey,
+                                                                    fontSize:
+                                                                        25,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .normal)),
+                                                            TextSpan(
+                                                                text: '',
+                                                                style: FoodigyTextStyle
+                                                                    .smallTextStyle),
+                                                          ],
+                                                        ),
+                                                        textScaleFactor: 0.5,
+                                                      ),
+                                                    ],
+                                                  ),
+                              // widget.chefDetailsList!.data![index]
+                              //             .productAvailableTime
+                              //             .toString() ==
+                              //         ""
+                              //     ? Container()
+                              //     : Row(
+                              //         children: [
+                              //           Text(
+                              //             'Order before: ${widget.chefDetailsList!.data![index].productAvailableTime.toString()}',
+                              //             style: TextStyle(
+                              //                 color: Colors.grey.shade500,
+                              //                 fontFamily: 'Poppins',
+                              //                 fontSize: 8,
+                              //                 fontWeight: FontWeight.w500),
+                              //           ),
+                              //         ],
+                              //       ),
+                              // widget.chefDetailsList!.data![index]
+                              //             .orderCutOffTime ==
+                              //         ""
+                              //     ? Container()
+                              //     : Row(
+                              //         children: [
+                              //           Text(
+                              //             'Deliver Available from: ${widget.chefDetailsList!.data![index].orderCutOffTime}',
+                              //             style: TextStyle(
+                              //                 color: Colors.grey.shade500,
+                              //                 fontFamily: 'Poppins',
+                              //                 fontSize: 8,
+                              //                 fontWeight: FontWeight.w500),
+                              //           ),
+                              //         ],
+                              //       )
                             ],
                           ),
                         )
@@ -680,77 +731,162 @@ class _ChefScreenFoodsState extends State<ChefScreenFoods> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width / 4,
-                                    child: Text(
-                                      widget.chefDetailsList!.data![index]
-                                          .productTitle
-                                          .toString(),
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Poppins',
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                  ),
-                                  Text(
-                                    "${iRubee.toString()}${widget.chefDetailsList!.data![index].productCost}",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        //  fontFamily: 'Poppins',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                              Text(
-                                widget.chefDetailsList!.data![index]
-                                    .productDescription
-                                    .toString(),
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                    color: Colors.grey.shade500,
-                                    fontFamily: 'Poppins',
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              widget.chefDetailsList!.data![index]
-                                          .productAvailableTime
-                                          .toString() ==
-                                      ""
-                                  ? Container()
-                                  : Row(
-                                      children: [
-                                        Text(
-                                          'Order before: ${widget.chefDetailsList!.data![index].productAvailableTime.toString()}',
-                                          style: TextStyle(
-                                              color: Colors.grey.shade500,
-                                              fontFamily: 'Poppins',
-                                              fontSize: 8,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ],
-                                    ),
-                              widget.chefDetailsList!.data![index]
-                                          .orderCutOffTime ==
-                                      ""
-                                  ? Container()
-                                  : Row(
-                                      children: [
-                                        Text(
-                                          'Deliver Available from: ${widget.chefDetailsList!.data![index].orderCutOffTime}',
-                                          style: TextStyle(
-                                              color: Colors.grey.shade500,
-                                              fontFamily: 'Poppins',
-                                              fontSize: 8,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ],
-                                    )
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          SizedBox(
+                                                            width: 100,
+                                                            child: Text(
+                                                             widget.chefDetailsList!
+                                                                  .data![index]
+                                                                  .productTitle
+                                                                  .toString(),
+                                                              //  textAlign: TextAlign.justify,
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontSize: 10,
+                                                                  fontFamily:
+                                                                      'Poppins'),
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            'By ${widget.chefDetailsList!.data![index].profileName}',
+                                                            style: FoodigyTextStyle
+                                                                .smallTextStyle,
+                                                          )
+                                                        ],
+                                                      ),
+                                                      Container(
+                                                        height: 25,
+                                                        width: 25,
+                                                        decoration: BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: NetworkImage(widget.chefDetailsList!
+                                                                    .data![
+                                                                        index]
+                                                                    .profileImage
+                                                                    .toString()),
+                                                                fit: BoxFit
+                                                                    .cover),
+                                                            shape: BoxShape
+                                                                .circle),
+                                                      )
+                                                    ],
+                                                  ),
+                                                  SizedBox(
+                                                    height: 5,
+                                                  ),
+                                                  
+                          
+                               Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                     widget.chefDetailsList!
+                                                              .data![index]
+                                                              .availableCustomization!
+                                                              .custom!
+                                                              .isEmpty
+                                                          ?Container(): Row(
+                                                              // ignore: prefer_const_literals_to_create_immutables
+
+                                                              // ignore: prefer_const_literals_to_create_immutables
+                                                              children: [
+                                                                SizedBox(
+                                                                  child:Image(image: 
+                                                                    AssetImage("assets/images/personalize.png"),
+                                                                    width:24,
+                                                                  ), 
+                                                                ),
+                                                                SizedBox(
+                                                                  //   height: 25,
+                                                                  child: Text(
+                                                                    "Personalize",
+                                                                    style: TextStyle(
+                                                                        color: Colors
+                                                                            .grey,
+                                                                        fontSize:
+                                                                            10,
+                                                                        fontFamily:
+                                                                            'Poppins'),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                      RichText(
+                                                        text: TextSpan(
+                                                          style: TextStyle(
+                                                            color: Colors.black,
+                                                          ),
+                                                          children: <TextSpan>[
+                                                            TextSpan(
+                                                                text:
+                                                                    '${iRubee.toString()} ${widget.chefDetailsList!.data![index].productCost.toString()} ',
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .grey,
+                                                                    fontSize:
+                                                                        25,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .normal)),
+                                                            TextSpan(
+                                                                text: '',
+                                                                style: FoodigyTextStyle
+                                                                    .smallTextStyle),
+                                                          ],
+                                                        ),
+                                                        textScaleFactor: 0.5,
+                                                      ),
+                                                    ],
+                                                  ),
+                              // widget.chefDetailsList!.data![index]
+                              //             .productAvailableTime
+                              //             .toString() ==
+                              //         ""
+                              //     ? Container()
+                              //     : Row(
+                              //         children: [
+                              //           Text(
+                              //             'Order before: ${widget.chefDetailsList!.data![index].productAvailableTime.toString()}',
+                              //             style: TextStyle(
+                              //                 color: Colors.grey.shade500,
+                              //                 fontFamily: 'Poppins',
+                              //                 fontSize: 8,
+                              //                 fontWeight: FontWeight.w500),
+                              //           ),
+                              //         ],
+                              //       ),
+                              // widget.chefDetailsList!.data![index]
+                              //             .orderCutOffTime ==
+                              //         ""
+                              //     ? Container()
+                              //     : Row(
+                              //         children: [
+                              //           Text(
+                              //             'Deliver Available from: ${widget.chefDetailsList!.data![index].orderCutOffTime}',
+                              //             style: TextStyle(
+                              //                 color: Colors.grey.shade500,
+                              //                 fontFamily: 'Poppins',
+                              //                 fontSize: 8,
+                              //                 fontWeight: FontWeight.w500),
+                              //           ),
+                              //         ],
+                              //       )
                             ],
                           ),
                         )
