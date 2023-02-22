@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:async';
 
 import 'package:foodigy/utilities/api_const_value.dart';
@@ -16,7 +18,6 @@ import 'package:foodigy/utilities/const_value.dart';
 import 'package:foodigy/widgets/custom_appbar.dart';
 import 'package:foodigy/widgets/profile/order_button.dart';
 import 'package:intl/intl.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OrderViewSummary extends StatefulWidget {
@@ -338,7 +339,7 @@ class _OrderViewSummaryState extends State<OrderViewSummary> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 40,
                     width: MediaQuery.of(context).size.width / 2.2,
                     // decoration: BoxDecoration(
@@ -364,7 +365,7 @@ class _OrderViewSummaryState extends State<OrderViewSummary> {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     height: 40,
                     width: MediaQuery.of(context).size.width / 2.2,
                     // decoration: BoxDecoration(

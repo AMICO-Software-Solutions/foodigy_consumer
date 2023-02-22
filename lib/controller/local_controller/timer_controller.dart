@@ -1,6 +1,7 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:get/get.dart';
 import 'package:quiver/async.dart';
-
 
 class TImerController extends GetxController{
 
@@ -19,7 +20,7 @@ class TImerController extends GetxController{
     });
 
     sub.onDone(() {
-      print("Done");
+      ////print("Done");
       sub.cancel();
     });
   }
@@ -31,7 +32,7 @@ class TImerController extends GetxController{
     count.value++;
     value = value + addValue!;
     // totValu.value = 0;
-    print(value);
+   //// print(value);
     update();
     return null;
   }

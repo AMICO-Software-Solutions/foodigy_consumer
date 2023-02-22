@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, unused_local_variable
 
 import 'dart:async';
 import 'dart:convert';
@@ -34,8 +34,7 @@ var isLoading = false.obs;
     TokenGeneretor().postClientId();
     if (currentUserGoogle != null) {
        isLoading(true);
-      GoogleSignInAuthentication currentUserAuth =
-          await currentUserGoogle!.authentication;
+      GoogleSignInAuthentication currentUserAuth =  await currentUserGoogle!.authentication;
      //// print("current user list ${currentUserAuth.accessToken}");
       //// print("email ${currentUserGoogle!.email}");
       //// print("id is ${currentUserGoogle!.id.toString()}");

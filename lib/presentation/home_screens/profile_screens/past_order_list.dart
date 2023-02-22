@@ -1,10 +1,7 @@
 // ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/order_controller/past_order_controller.dart';
-import 'package:foodigy/presentation/home_screens/home.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/past_order_list_cart_design.dart';
-import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:get/get.dart';
 

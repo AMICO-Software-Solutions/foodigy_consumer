@@ -1,7 +1,5 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:foodigy/controller/tokens.dart';
 import 'package:foodigy/controller/user_contoller/google_login_controller.dart';
 import 'package:foodigy/controller/user_contoller/login_controller.dart';
 import 'package:foodigy/presentation/sign_in/forgot_password_screen.dart';
@@ -35,8 +33,9 @@ class _LoginSCreenState extends State<LoginSCreen> {
   void _toggleObscured() {
     setState(() {
       _obscured = !_obscured;
-      if (textFieldFocusNode.hasPrimaryFocus)
-        return; // If focus is on text field, dont unfocus
+      if (textFieldFocusNode.hasPrimaryFocus) {
+        return;
+      } // If focus is on text field, dont unfocus
       textFieldFocusNode.canRequestFocus =
           false; // Prevents focus if tap on eye
     });

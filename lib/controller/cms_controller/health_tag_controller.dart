@@ -3,8 +3,6 @@
 import 'package:foodigy/model/cms_model/health_tag_model.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
-
-import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class HealthTagController extends GetxController {
@@ -31,7 +29,7 @@ class HealthTagController extends GetxController {
       if (response.statusCode == 200 ||
           response.statusCode == 201 ||
           response.statusCode == 202) {
-        var result = jsonDecode(response.body);
+       // var result = jsonDecode(response.body);
   
       //   print(result);
         healthTagList =healthTagModelFromJson(response.body);

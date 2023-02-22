@@ -2,6 +2,8 @@
 //
 //     final popularChefModelList = popularChefModelListFromJson(jsonString);
 
+// ignore_for_file: prefer_if_null_operators
+
 import 'dart:convert';
 
 List<PopularChefModelList> popularChefModelListFromJson(String str) => List<PopularChefModelList>.from(json.decode(str).map((x) => PopularChefModelList.fromJson(x)));

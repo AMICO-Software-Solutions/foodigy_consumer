@@ -1,10 +1,7 @@
 // ignore_for_file: avoid_print
 
-import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:foodigy/controller/cms_controller/search_address_controller.dart';
-import 'package:foodigy/presentation/location_screens/explore_location_screen.dart';
-import 'package:http/http.dart' as http;
 import 'package:foodigy/controller/onboading_controller.dart';
 import 'package:foodigy/presentation/sign_in/login_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
@@ -12,7 +9,6 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/widgets/foodigy_button.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../../utilities/const_value.dart';
 
 class Onbording extends StatefulWidget {

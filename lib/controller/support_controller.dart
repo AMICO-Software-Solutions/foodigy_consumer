@@ -2,8 +2,6 @@
 
 import 'dart:convert';
 import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -20,9 +18,9 @@ class SupportController {
       String? name,
       File? file}) async {
     Uint8List imgbytes = await file!.readAsBytes();
-    Uint8List imgbytes1 = file.readAsBytesSync();
-    Uint8List bytes = Uint8List.fromList(imgbytes);
-    List<int> binaries = await file.readAsBytes();
+   //// Uint8List imgbytes1 = file.readAsBytesSync();
+   /// Uint8List bytes = Uint8List.fromList(imgbytes);
+    ////List<int> binaries = await file.readAsBytes();
     // Uint8List bytes = file.readAsBytesSync() as Uint8List;
     print('bytes');
     print(file.path);

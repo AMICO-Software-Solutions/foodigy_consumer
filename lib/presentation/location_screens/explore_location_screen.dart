@@ -25,7 +25,7 @@ class _ExploreLocationScreenState extends State<ExploreLocationScreen> {
     String formattedDate = formatter.format(now);
      var inputFormat = DateFormat('dd/MM/yyyy');
     String formattedDisplayDate = inputFormat.format(now);
-    print(formattedDate); 
+    //print(formattedDate); 
     selectDisaplayDate =formattedDisplayDate.toString();
     selectDate = formattedDate.toString();
     passDate= formattedDate.toString();

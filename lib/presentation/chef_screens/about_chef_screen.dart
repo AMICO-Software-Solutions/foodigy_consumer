@@ -4,7 +4,6 @@ import 'package:foodigy/model/chef_details_model.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:get/get.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class AboutChefScreen extends StatefulWidget {
   final  ChefDetailsModelList? chefDetailsList;

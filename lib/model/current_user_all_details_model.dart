@@ -2,6 +2,8 @@
 //
 //     final currentUserAllDetailsModel = currentUserAllDetailsModelFromJson(jsonString);
 
+// ignore_for_file: prefer_if_null_operators, prefer_null_aware_operators
+
 import 'dart:convert';
 
 CurrentUserAllDetailsModel currentUserAllDetailsModelFromJson(String str) => CurrentUserAllDetailsModel.fromJson(json.decode(str));

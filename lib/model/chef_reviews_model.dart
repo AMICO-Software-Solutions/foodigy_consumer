@@ -59,7 +59,7 @@ class Datum {
     DateTime? createdAt;
     DateTime? updatedAt;
     int? createdBy;
-    dynamic? updatedBy;
+    dynamic updatedBy;
 
     factory Datum.fromJson(Map<String, dynamic> json) => Datum(
         commentId: json["commentId"] == null ? null : json["commentId"],

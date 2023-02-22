@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Color firstColor = Color.fromRGBO(9, 127, 52, 1);

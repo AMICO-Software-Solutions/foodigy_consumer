@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, depend_on_referenced_packages, must_be_immutable
 
 import 'dart:async';
 import 'dart:convert';

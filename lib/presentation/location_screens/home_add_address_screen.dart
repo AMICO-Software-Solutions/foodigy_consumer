@@ -6,7 +6,6 @@ import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/widgets/foodigy_button.dart';
 import 'package:foodigy/widgets/foodigy_textfield.dart';
-import 'package:foodigy/widgets/profile/profile_appbar.dart';
 
 class HomeAddAddress extends StatefulWidget {
   final String? addressLine1;

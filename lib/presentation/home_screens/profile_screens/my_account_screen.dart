@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/user_contoller/current_user_profie_controller.dart';
-import 'package:foodigy/model/curent_user_profile_model.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/change_password_screen.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/general_screen.dart';
 import 'package:foodigy/widgets/profile/account_container.dart';
@@ -32,7 +30,6 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
   @override
   void didUpdateWidget(covariant MyAccountScreen oldWidget) {
     registerController.getProfile();
-    // TODO: implement didUpdateWidget
     super.didUpdateWidget(oldWidget);
   }
 

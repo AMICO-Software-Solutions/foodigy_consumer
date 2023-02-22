@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
 import 'package:foodigy/controller/local_controller/time_controller.dart';
 import 'package:foodigy/model/chef_details_model.dart';
-import 'package:foodigy/model/local_model/filter_model.dart';
 import 'package:foodigy/presentation/sign_in/login_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
@@ -404,7 +403,7 @@ class _ChefFoodDetailsScreenState extends State<ChefFoodDetailsScreen> {
                                                               // future: cartCOntroller.add(addValue),
                                                               builder: (context,
                                                                   snapshot) {
-                                                            return Container(
+                                                            return SizedBox(
                                                                 height: 25,
                                                                 width: 105,
                                                                 // decoration:
@@ -708,7 +707,7 @@ class _ChefFoodDetailsScreenState extends State<ChefFoodDetailsScreen> {
                           backgroundColor: Colors.transparent,
                           onClosing: () {},
                           builder: (BuildContext context) {
-                            return Container(
+                            return SizedBox(
                               height: 70,
                               width: double.infinity,
                               child: Padding(

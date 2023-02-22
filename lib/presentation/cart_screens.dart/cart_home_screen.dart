@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, unnecessary_null_comparison
+// ignore_for_file: avoid_print, unnecessary_null_comparison, deprecated_member_use
 import 'dart:async';
 import 'dart:math';
 import 'package:declarative_refresh_indicator/declarative_refresh_indicator.dart';
@@ -329,11 +329,11 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
 
                         double percentage =
                             (2.5 / 100) * int.parse(totalValue.toString());
-                        var taxtotalCost = (percentage * 2);
+                       //// var taxtotalCost = (percentage * 2);
                         var totalTax = roundDouble(percentage, 2) +
                             roundDouble(percentage, 2);
                         //    var totalTax = (percentage * 2) + deliveryCharge;
-                        var tTotalTx = totalTax.toInt();
+                       //// var tTotalTx = totalTax.toInt();
 
                         int totalAmountWithTax = totalTax.toInt() + totalValue;
 
@@ -1174,9 +1174,8 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                       .white),
                                                             ),
                                                             style: TextButton.styleFrom(
-                                                                primary: Colors
-                                                                    .purple,
-                                                                backgroundColor:
+                                                                foregroundColor: Colors
+                                                                    .purple, backgroundColor:
                                                                     firstColor,
                                                                 textStyle: const TextStyle(
                                                                     fontSize:
@@ -1846,8 +1845,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
       pickUpDate = DateFormat('yyyy-MM-dd').format(pickedDate).toString();
 
       bookingIsoDate = isoFormatted;
-      DateTime newDateTimeObj2 =
-          DateFormat("dd/MM/yyyy HH:mm:ss").parse("18/11/2022 19:30:00");
+    ////  DateTime newDateTimeObj2 = DateFormat("dd/MM/yyyy HH:mm:ss").parse("18/11/2022 19:30:00");
       // print(newDateTimeObj2);
       // print(newDateTimeObj2.microsecondsSinceEpoch);
       // print(formatted);

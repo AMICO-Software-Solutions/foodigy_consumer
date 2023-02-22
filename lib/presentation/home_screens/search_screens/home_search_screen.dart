@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:foodigy/presentation/home_screens/search_screens/filter_enable_screen.dart';
@@ -9,8 +8,6 @@ import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert' as convert;
 
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 

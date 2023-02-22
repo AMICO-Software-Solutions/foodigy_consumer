@@ -126,7 +126,7 @@ class _AddAddressMapScreenState extends State<AddAddressMapScreen> {
                                 'City *',
                                 style: FoodigyTextStyle.addTocartStyle,
                               ),
-                              Container(
+                              SizedBox(
                                 width: MediaQuery.of(context).size.width / 2.5,
                                 height: 70,
                                 //   color: textFormColor,

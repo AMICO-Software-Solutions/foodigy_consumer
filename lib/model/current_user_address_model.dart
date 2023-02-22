@@ -2,6 +2,8 @@
 //
 //     final currentUserAddressModel = currentUserAddressModelFromJson(jsonString);
 
+// ignore_for_file: prefer_if_null_operators, prefer_null_aware_operators
+
 import 'dart:convert';
 
 CurrentUserAddressModel currentUserAddressModelFromJson(String str) => CurrentUserAddressModel.fromJson(json.decode(str));

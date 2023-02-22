@@ -3,7 +3,6 @@
 import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'dart:convert';
 import 'package:foodigy/presentation/location_screens/explore_location_screen.dart';
 import 'package:http/http.dart' as http;
@@ -48,9 +47,6 @@ class SearchAddressController extends GetxController{
         return null;
       }
     } catch (e) {
-      //  return null;
-      // return addressGetFromJson(data);
-      // ignore: avoid_print
       print(e.toString());
     } finally {
     isLoading(false);

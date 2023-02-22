@@ -1,7 +1,5 @@
 // ignore_for_file: avoid_print
 
-import 'dart:convert';
-
 import 'package:foodigy/controller/user_contoller/google_login_controller.dart';
 import 'package:foodigy/presentation/sign_in/login_screen.dart';
 import 'package:foodigy/utilities/api_const_value.dart';
@@ -31,8 +29,8 @@ class LogOutController extends GetxController {
           responseData.statusCode == 202 ||
           responseData.statusCode == 203) {
         print(responseData.body);
-        Map<String, dynamic> map = {};
-        map = json.decode(responseData.body);
+        // Map<String, dynamic> map = {};
+        // map = json.decode(responseData.body);
         logOutAuth();
       } else {
         print("error");

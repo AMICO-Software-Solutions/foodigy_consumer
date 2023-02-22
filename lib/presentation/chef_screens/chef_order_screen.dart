@@ -5,9 +5,7 @@ import 'package:foodigy/controller/chef_order_controller.dart';
 import 'package:foodigy/presentation/chef_screens/chef_order_screens/chef_your_active_order.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
-import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class ChefOrderScreen extends StatefulWidget {
   final String? userId;
@@ -33,7 +31,7 @@ class _ChefOrderScreenState extends State<ChefOrderScreen> {
 
   @override
   Widget build(BuildContext context) {
-    double spaceHeight = 15;
+   /// double spaceHeight = 15;
     return Scaffold(
       body: Obx(() {
         if (chefOrderController.isDataLoading.isTrue) {

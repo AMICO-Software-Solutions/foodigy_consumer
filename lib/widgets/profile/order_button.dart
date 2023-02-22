@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodigy/utilities/const_color.dart';
 
 class OrderButton extends StatefulWidget {
   final String text;
@@ -25,7 +24,7 @@ class OrderButton extends StatefulWidget {
 class _OrderButtonState extends State<OrderButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // width: double.infinity,
       // decoration: BoxDecoration(border: Border.all(color: widget.color)),
       height: 40,

@@ -1,6 +1,6 @@
-import 'dart:io';
+// ignore_for_file: avoid_print
 
-import 'package:downloads_path_provider_28/downloads_path_provider_28.dart';
+import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
@@ -55,7 +55,7 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
           ),
         ],
       ),
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: PDFView(
@@ -72,7 +72,7 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
         if (await _requestPermission(Permission.storage)) {
           directory = await getExternalStorageDirectory();
           String newPath = "";
-          print(directory);
+        ///  print(directory);
           List<String> paths = directory!.path.split("/");
           for (int x = 1; x < paths.length; x++) {
             String folder = paths[x];

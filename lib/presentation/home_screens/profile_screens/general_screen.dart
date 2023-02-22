@@ -4,10 +4,8 @@ import 'package:foodigy/model/curent_user_profile_model.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/widgets/foodigy_button.dart';
-import 'package:foodigy/widgets/foodigy_textfield.dart';
 import 'package:foodigy/widgets/profile/profile_appbar.dart';
 import 'package:foodigy/widgets/profile/profile_textForm_field.dart';
-import 'package:get/get.dart';
 
 class GeneralScreen extends StatefulWidget {
   final CurrentUserProfileModel? currentProfile;

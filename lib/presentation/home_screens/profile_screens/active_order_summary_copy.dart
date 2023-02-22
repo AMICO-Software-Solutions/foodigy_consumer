@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, must_be_immutable
 
 import 'dart:async';
 import 'dart:convert';
@@ -33,7 +33,7 @@ class ActiveOrderViewSummary extends StatefulWidget {
   List<RazorpayPayment>? razer;
   int index;
   String? orderPlacedTime;
-  ActiveOrderViewSummary(
+   ActiveOrderViewSummary(
       {super.key,
       this.orderList,
       this.delivery,

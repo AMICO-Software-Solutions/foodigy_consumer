@@ -4,11 +4,7 @@ import 'package:foodigy/presentation/chef_screens/chef_page.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/widgets/custom_appbar.dart';
-import 'package:foodigy/widgets/glass_blur.dart';
 import 'package:get/get.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
-import '../../../utilities/const_value.dart';
 
 class PopularViewAllChef extends StatefulWidget {
   final String? uId;

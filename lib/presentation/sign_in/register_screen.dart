@@ -4,7 +4,6 @@ import 'package:foodigy/controller/user_contoller/register_controller.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/terms&condition_profile_screen.dart';
 import 'package:foodigy/presentation/sign_in/login_screen.dart';
 import 'package:foodigy/presentation/sign_in/privacy_policy_screen.dart';
-import 'package:foodigy/presentation/sign_in/terms_and_condition_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/widgets/foodigy_button.dart';

@@ -437,7 +437,7 @@ class _ChefPageState extends State<ChefPage>
                                 ? 0
                                 : chefReviewController.chefsReview!.data!.length,
                             itemBuilder: (context, index) {
-                              return Container(
+                              return SizedBox(
                                 height: 60,
                                 width: MediaQuery.of(context).size.width / 1.7,
                                 child: Row(children: [

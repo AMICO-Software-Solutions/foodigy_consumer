@@ -1,9 +1,9 @@
+// ignore_for_file: avoid_print
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:foodigy/presentation/on_boarding_screen/on_board_screen.dart';
 import 'package:foodigy/utilities/const_color.dart';
-import 'package:foodigy/utilities/const_value.dart';
-import 'package:intl/intl.dart';
 import 'package:platform_device_id/platform_device_id.dart';
 
 DateTime now = DateTime.now();

@@ -1,7 +1,5 @@
 // ignore_for_file: avoid_print
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:foodigy/presentation/home_screens/search_screens/home_search_screen.dart';
 import 'package:foodigy/utilities/const_value.dart';

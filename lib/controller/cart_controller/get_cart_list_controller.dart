@@ -6,14 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:foodigy/model/cart_details_model.dart';
 import 'package:foodigy/presentation/cart_screens.dart/cart_home_screen.dart';
-import 'package:foodigy/routes/navigate_routes.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:path/path.dart';
 
 class GetCartDetailsController extends GetxController {
   // @override
@@ -424,8 +422,8 @@ class GetCartDetailsController extends GetxController {
         ));
       } else {
         print(responseData.body);
-        Map<String, dynamic> map = json.decode(responseData.body);
-        String data = map['message'];
+      //  Map<String, dynamic> map = json.decode(responseData.body);
+       // String data = map['message'];
 
         // Fluttertoast.showToast(
         //     msg: data,

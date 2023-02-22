@@ -1,11 +1,10 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, depend_on_referenced_packages
 
 import 'dart:async';
 import 'dart:convert';
 import 'package:declarative_refresh_indicator/declarative_refresh_indicator.dart';
 import 'package:foodigy/controller/chef_profile_controller.dart';
 import 'package:foodigy/controller/order_controller/order_complete_api_controller.dart';
-import 'package:foodigy/model/order_completed_model.dart';
 import 'package:foodigy/presentation/chef_screens/payment_success_food_list.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';

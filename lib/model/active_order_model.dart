@@ -571,20 +571,20 @@ class RazorpayPayment {
     String? amountRefunded;
     dynamic refundStatus;
     bool? capture;
-    dynamic? cardId;
-    dynamic? card;
+    dynamic cardId;
+    dynamic card;
     String? bank;
-    dynamic? wallet;
+    dynamic wallet;
     String? vpa;
     String? email;
     String? contact;
     String? fee;
     String? tax;
-    dynamic? errorCode;
-    dynamic? errorDescription;
-    dynamic? errorSource;
-    dynamic? errorStep;
-    dynamic? errorReason;
+    dynamic errorCode;
+    dynamic errorDescription;
+    dynamic errorSource;
+    dynamic errorStep;
+    dynamic errorReason;
     AcquirerData? acquirerData;
     DateTime? razorpayCreatedAt;
     DateTime? createdAt;
@@ -710,9 +710,7 @@ class EnumValues<T> {
     EnumValues(this.map);
 
     Map<T, String> get reverse {
-        if (reverseMap == null) {
-            reverseMap = map.map((k, v) => new MapEntry(v, k));
-        }
+        reverseMap ??= map.map((k, v) => MapEntry(v, k));
         return reverseMap!;
     }
 }

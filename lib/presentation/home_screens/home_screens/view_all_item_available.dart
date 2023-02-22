@@ -6,7 +6,6 @@ import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:foodigy/widgets/glass_blur.dart';
 import 'package:get/get.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class ViewAllItemAvailable extends StatefulWidget {
@@ -211,99 +210,97 @@ class _ViewAllItemAvailableState extends State<ViewAllItemAvailable> {
                               SizedBox(
                                 height: 5,
                               ),
-                              Container(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SizedBox(
-                                    //  height: ,
-                                    width: double.infinity,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(itemAvailableController
-                                                .searchModel!
-                                                .data![index]
-                                                .productTitle
-                                                .toString()),
-                                            RichText(
-                                              text: TextSpan(
-                                                style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 12),
-                                                children: [
-                                                  TextSpan(
-                                                      text:
-                                                          '$iRubee ${itemAvailableController.searchModel!.data![index].productCost.toString()}',
-                                                      style: TextStyle(
-                                                          fontSize: 12,
-                                                          color: Colors.black)),
-                                                  TextSpan(
-                                                      text: '/Per Person ',
-                                                      style: TextStyle(
-                                                          fontSize: 7,
-                                                          color: Colors
-                                                              .grey.shade500,
-                                                          fontFamily:
-                                                              'Poppins')),
-                                                ],
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  //  height: ,
+                                  width: double.infinity,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(itemAvailableController
+                                              .searchModel!
+                                              .data![index]
+                                              .productTitle
+                                              .toString()),
+                                          RichText(
+                                            text: TextSpan(
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 12),
+                                              children: [
+                                                TextSpan(
+                                                    text:
+                                                        '$iRubee ${itemAvailableController.searchModel!.data![index].productCost.toString()}',
+                                                    style: TextStyle(
+                                                        fontSize: 12,
+                                                        color: Colors.black)),
+                                                TextSpan(
+                                                    text: '/Per Person ',
+                                                    style: TextStyle(
+                                                        fontSize: 7,
+                                                        color: Colors
+                                                            .grey.shade500,
+                                                        fontFamily:
+                                                            'Poppins')),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 2,
+                                      ),
+                                      Text(
+                                        "By ${itemAvailableController.searchModel!.data![index].profileName.toString()}",
+                                        style: FoodigyTextStyle
+                                            .smallGreyTextStyle,
+                                      ),
+                                      SizedBox(
+                                        height: 2,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Row(
+                                            children: [
+                                             
+                                              Text(
+                                                'Order before: ',
+                                                style: FoodigyTextStyle
+                                                    .smallGreyTextStyle,
                                               ),
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 2,
-                                        ),
-                                        Text(
-                                          "By ${itemAvailableController.searchModel!.data![index].profileName.toString()}",
-                                          style: FoodigyTextStyle
-                                              .smallGreyTextStyle,
-                                        ),
-                                        SizedBox(
-                                          height: 2,
-                                        ),
-                                        Row(
-                                          children: [
-                                            Row(
-                                              children: [
-                                               
-                                                Text(
-                                                  'Order before: ',
-                                                  style: FoodigyTextStyle
-                                                      .smallGreyTextStyle,
-                                                ),
-                                                Text(
-                                                        itemAvailableController.searchModel!.data![index].orderCutOffTime.toString(),
-                                                        style: TextStyle(
-                                                          fontSize: 10,
-                                                          color: Colors.red,
-                                                          fontFamily: 'Poppins',
-                                                        )),
-                                              ],
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Row(
-                                              children: [
-                                               
-                                                Text(
-                                                  " ${itemAvailableController.searchModel!.data![index].productAvailableTime.toString()}",
-                                                  style: FoodigyTextStyle
-                                                      .smallGreyTextStyle,
-                                                )
-                                              ],
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
+                                              Text(
+                                                      itemAvailableController.searchModel!.data![index].orderCutOffTime.toString(),
+                                                      style: TextStyle(
+                                                        fontSize: 10,
+                                                        color: Colors.red,
+                                                        fontFamily: 'Poppins',
+                                                      )),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Row(
+                                            children: [
+                                             
+                                              Text(
+                                                " ${itemAvailableController.searchModel!.data![index].productAvailableTime.toString()}",
+                                                style: FoodigyTextStyle
+                                                    .smallGreyTextStyle,
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      )
+                                    ],
                                   ),
                                 ),
                               )

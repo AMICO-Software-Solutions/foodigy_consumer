@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_print
 
 import 'dart:convert';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:foodigy/presentation/cart_screens.dart/cart_home_screen.dart';
 import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_value.dart';
@@ -54,12 +53,6 @@ class CartCountController extends GetxController {
     update();
     return null;
   }
-  // @override
-  // void onInit() {
-  //   // TODO: implement onInit
-  //   super.onInit();
-  // }
-
   void countIncrease({
     String? itemCost,
     String? cartDetailsId,
@@ -136,6 +129,7 @@ class CartCountController extends GetxController {
       //     quotationList[i][2]),
     }
     update();
+    return null;
     // return null;
     // ];
   }

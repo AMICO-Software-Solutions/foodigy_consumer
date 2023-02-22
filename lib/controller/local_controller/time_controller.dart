@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, avoid_returning_null_for_void
+
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
@@ -38,7 +40,7 @@ class TimeController extends GetxController {
     DateTime dateTime = DateTime(
         date.year, date.month, date.day + 1, date.hour + 1, date.minute);
     print(dateTime.day);
-    var time = "${dateTime.day}, ${dateTime.hour}, ${dateTime.minute}";
+   // var time = "${dateTime.day}, ${dateTime.hour}, ${dateTime.minute}";
     //   print(time);
 
     print(DateFormat.jm().format(DateFormat("hh:mm:ss")

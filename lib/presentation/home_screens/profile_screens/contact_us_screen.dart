@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
@@ -5,15 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:foodigy/controller/support_controller.dart';
 import 'package:foodigy/presentation/home_screens/profile_screens/pdf_view_page.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
-import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/foodigy_const_data.dart';
-import 'package:foodigy/widgets/profile/order_button.dart';
 import 'package:foodigy/widgets/profile/profile_appbar.dart';
 import 'package:foodigy/widgets/profile/profile_textForm_field.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'dart:async';
-import 'dart:io';
 import 'dart:typed_data';
 
 class ContactUsScreen extends StatefulWidget {
@@ -99,7 +98,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 200,
                     width: double.infinity,
                     // decoration: BoxDecoration(
@@ -254,8 +253,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                               style: TextStyle(color: Colors.grey),
                             ),
                             style: TextButton.styleFrom(
-                                primary: Colors.purple,
-                                backgroundColor: Colors.white,
+                                foregroundColor: Colors.purple, backgroundColor: Colors.white,
                                 textStyle: const TextStyle(
                                     fontSize: 14, fontFamily: 'Poppins',)),
                             onPressed: (){

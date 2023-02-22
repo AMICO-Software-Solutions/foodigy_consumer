@@ -3,7 +3,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:foodigy/model/active_order_model.dart';
 import 'package:foodigy/model/curent_user_profile_model.dart';
 import 'package:foodigy/utilities/api_const_value.dart';
 import 'package:foodigy/utilities/const_color.dart';

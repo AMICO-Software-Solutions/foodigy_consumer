@@ -43,7 +43,7 @@ class _OtpScreenState extends State<OtpScreen> {
     if (!mounted) return;
     setState(() {
       _comingSms = comingSms;
-      print("====>Message: ${_comingSms}");
+      print("====>Message: $_comingSms");
       print(" ${_comingSms[32]}");
       textEditingController1!.text = _comingSms[36] +
           _comingSms[37] +
@@ -208,7 +208,7 @@ class _OtpScreenState extends State<OtpScreen> {
                               print(value);
                               setState(() {
                                 otpCode = value;
-                                print('$value');
+                                print(' $value');
                               });
                             },
                           ),

@@ -2,6 +2,8 @@
 //
 //     final currentUserProfileModel = currentUserProfileModelFromJson(jsonString);
 
+// ignore_for_file: prefer_if_null_operators, prefer_null_aware_operators
+
 import 'dart:convert';
 
 CurrentUserProfileModel currentUserProfileModelFromJson(String str) => CurrentUserProfileModel.fromJson(json.decode(str));

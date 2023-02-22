@@ -1,5 +1,7 @@
 
 
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:foodigy/widgets/profile/profile_appbar.dart';
 import 'package:webview_flutter/webview_flutter.dart';

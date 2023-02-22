@@ -104,7 +104,7 @@ class MobileOTPController extends GetxController {
       UserLoginController().getRecent();
 
       } else {
-        var ma = json.decode(responseData.body);
+      //  var ma = json.decode(responseData.body);
         // print(responseData.body);
         // print(ma["errorMessage"]);
         // print(ma["errorMessage"]);
