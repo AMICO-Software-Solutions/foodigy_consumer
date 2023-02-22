@@ -29,7 +29,7 @@ class _OrderPlaceScreenState extends State<OrderPlaceScreen> {
         body: Obx(
            () {
             if(orderCompletedApi.isDataLoading.isTrue){
-              return Center(child: CircularProgressIndicator(),);
+              return Center(child: CircularProgressIndicator(color: firstColor,),);
             }else {   return SafeArea(
               child: SizedBox(
             height: double.infinity,

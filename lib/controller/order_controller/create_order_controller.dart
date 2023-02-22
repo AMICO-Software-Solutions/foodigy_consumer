@@ -7,6 +7,7 @@ import 'package:foodigy/controller/address_controller/address_controller.dart';
 import 'package:foodigy/controller/cart_controller/cart_count_controller.dart';
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
 import 'package:foodigy/controller/chef_profile_controller.dart';
+import 'package:foodigy/controller/order_controller/order_loader_screen.dart';
 import 'package:foodigy/controller/user_contoller/current_user_profie_controller.dart';
 import 'package:foodigy/model/cart_details_model.dart';
 import 'package:foodigy/model/create_order_model.dart';
@@ -27,7 +28,7 @@ class CreateOrderController extends GetxController {
   var isDataLoading = false.obs;
 
   //create Order
-  Future createOrder(
+  Future  createOrder(
       {var cart,
       CartDetailsModel? cartData,
       int? index,
@@ -170,12 +171,12 @@ class CreateOrderController extends GetxController {
         //    ordeCompleted: orderCompleted)), ModalRoute.withName('toNewLogin') );
           // Get.offUntil(GetPageRoute(page: () =>Home()), ModalRoute.withName('toNewLogin') );
    
-     Timer(Duration(milliseconds: 200), (){
+     Timer(Duration(milliseconds: 500), (){
       Get.delete<GetCartDetailsController>();
       Get.delete<GetAddressDetailsController>();
       Get.delete<CurrentUserProfileController>();
       Get.delete<ChefProfileController>();
-      Get.delete<CreateOrderController>();
+    //  Get.delete<CreateOrderController>();
       Get.delete<CartCountController>();
      // Get.delete<CartTimerController>();
       }
@@ -239,6 +240,7 @@ class CreateOrderController extends GetxController {
   // }
 
   void handlePaymentSuccess(PaymentSuccessResponse response) {
+    Get.to(OrderLoaderScreen(orderCompleted: orderCompleted,));
     razorSuccess(response);
     print('raso response');
     print(response.orderId);
