@@ -44,13 +44,13 @@ class _OtpScreenState extends State<OtpScreen> {
     setState(() {
       _comingSms = comingSms;
       print("====>Message: ${_comingSms}");
-      print("${_comingSms[32]}");
-      textEditingController1!.text = _comingSms[32] +
-          _comingSms[33] +
-          _comingSms[34] +
-          _comingSms[35] +
-          _comingSms[36] +
-          _comingSms[37]; //used to set the code in the message to a string and setting it to a textcontroller. message length is 38. so my code is in string index 32-37.
+      print(" ${_comingSms[32]}");
+      textEditingController1!.text = _comingSms[36] +
+          _comingSms[37] +
+          _comingSms[38] +
+          _comingSms[39] +
+          _comingSms[40] +
+          _comingSms[41]; //used to set the code in the message to a string and setting it to a textcontroller. message length is 38. so my code is in string index 32-37.
     });
   }
 

@@ -58,7 +58,7 @@ class _CartBuildDataState extends State<CartBuildData> {
         int.parse(widget.cartData!.data!.cartDetails![widget.index].itemCost
             .toString());
     totalValue = value + totalValue;
-    // cartCOntroller.totValu.value = value + totalValue;
+    //// cartCOntroller.totValu.value = value + totalValue;
     return Padding(
       padding: const EdgeInsets.only(
         bottom: 10,
@@ -92,7 +92,7 @@ class _CartBuildDataState extends State<CartBuildData> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 1.3,
+                        width: MediaQuery.of(context).size.width / 1.25,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -100,18 +100,22 @@ class _CartBuildDataState extends State<CartBuildData> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  widget.cartData!.data!
-                                      .cartDetails![widget.index].itemName
-                                      .toString(),
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 12,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w400),
+                                SizedBox(
+                                   width: MediaQuery.of(context).size.width / 2.5,
+                                  child: Text(
+                                    widget.cartData!.data!
+                                        .cartDetails![widget.index].itemName
+                                        .toString(),
+                                           overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 12,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                 ),
                                 SizedBox(
-                                  width: MediaQuery.of(context).size.width / 3,
+                                  width: MediaQuery.of(context).size.width / 2.5,
                                   child: Text(
                                     widget.cartData!.data!
                                         .cartDetails![widget.index].itemDesc
@@ -129,181 +133,162 @@ class _CartBuildDataState extends State<CartBuildData> {
                             SizedBox(
                               width: 10,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                GetBuilder<CartCountController>(
-                                    init: CartCountController(),
-                                    builder: (cartCOntroller) {
-                                      return FutureBuilder(
-                                          // future: cartCOntroller.add(addValue),
-                                          builder: (context, snapshot) {
-                                        return Row(
-                                          children: [
-                                            InkWell(
-                                              onTap: () {
-                                                //     setState(() {
-                                                if (_counter <= 1) {
-                                                  return null;
-                                                } else {
-                                                  _counter--;
-                                                     countIncrease(
-                                                  cartId: widget
-                                                      .cartData!
-                                                      .data!
-                                                      .cartDetails![
-                                                          widget.index]
-                                                      .cartId,
-                                                  itemCost: widget
-                                                      .cartData!
-                                                      .data!
-                                                      .cartDetails![
-                                                          widget.index]
-                                                      .itemCost,
-                                                  cartDetailsId: widget
-                                                      .cartData!
-                                                      .data!
-                                                      .cartDetails![
-                                                          widget.index]
-                                                      .cartDetailsId,
-                                                      quantity:  _counter.toString()
-                                                );
-                                                  //  totalValue = totalValue - value;
-                                                  // cartCOntroller
-                                                  //     .subtract(value);
-                                                  // cartCOntroller.countIncrease(
-                                                  //     cartId: widget
-                                                  //         .cartData!
-                                                  //         .data!
-                                                  //         .cartDetails![
-                                                  //             widget.index]
-                                                  //         .cartId,
-                                                  //     itemCost: widget
-                                                  //         .cartData!
-                                                  //         .data!
-                                                  //         .cartDetails![
-                                                  //             widget.index]
-                                                  //         .itemCost,
-                                                  //     cartDetailsId: widget
-                                                  //         .cartData!
-                                                  //         .data!
-                                                  //         .cartDetails![
-                                                  //             widget.index]
-                                                  //         .cartDetailsId,
-                                                  //     quantity:
-                                                  //         _counter.toString());
-                                                }
-                                                print(_counter);
-                                                //     });
-                                              },
-                                              child: Container(
-                                                height: 25,
-                                                width: 25,
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      color: Colors.grey),
-                                                  borderRadius:
-                                                      BorderRadius.circular(5),
-                                                ),
-                                                child: Center(
-                                                    child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child: Divider(
-                                                    height: 2,
-                                                    color: Colors.black,
+                            SizedBox(
+                             // width: 200,     
+                                                       child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  GetBuilder<CartCountController>(
+                                      init: CartCountController(),
+                                      builder: (cartCOntroller) {
+                                        return FutureBuilder(
+                                            // future: cartCOntroller.add(addValue),
+                                            builder: (context, snapshot) {
+                                          return Row(
+                                            children: [
+                                              InkWell(
+                                                onTap: () {
+                                                  //     setState(() {
+                                                  if (_counter <= 1) {
+                                                    return null;
+                                                  } else {
+                                                    _counter--;
+                                                       countIncrease(
+                                                    cartId: widget
+                                                        .cartData!
+                                                        .data!
+                                                        .cartDetails![
+                                                            widget.index]
+                                                        .cartId,
+                                                    itemCost: widget
+                                                        .cartData!
+                                                        .data!
+                                                        .cartDetails![
+                                                            widget.index]
+                                                        .itemCost,
+                                                    cartDetailsId: widget
+                                                        .cartData!
+                                                        .data!
+                                                        .cartDetails![
+                                                            widget.index]
+                                                        .cartDetailsId,
+                                                        quantity:  _counter.toString()
+                                                  );
+                                                  
+                                                  }
+                                                  print(_counter);
+                                                  //     });
+                                                },
+                                                child: Container(
+                                                  height: 25,
+                                                  width: 25,
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                        color: Colors.grey),
+                                                    borderRadius:
+                                                        BorderRadius.circular(5),
                                                   ),
-                                                )),
-                                              ),
-                                            ),
-                                            Container(
-                                              height: 20,
-                                              width: 30,
-                                              color: Colors.white,
-                                              child: Center(
-                                                child: Text(
-                                                  _counter.toString(),
-                                                  style: FoodigyTextStyle
-                                                      .addTocartStyle,
+                                                  child: Center(
+                                                      child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8.0),
+                                                    child: Divider(
+                                                      height: 2,
+                                                      color: Colors.black,
+                                                    ),
+                                                  )),
                                                 ),
                                               ),
-                                            ),
-                                            InkWell(
-                                              onTap: () {                                              
-                                                //              setState(() {
-                                                _counter++;
-                                                // totalValue = totalValue + value;
-                                                print(_counter);
-                                                //  cartCOntroller.add(value);
-                                                // cartCOntroller.addCart(
-                                                //     widget.cartData, _counter);
-                                                print(widget
-                                                    .cartData!
-                                                    .data!
-                                                    .cartDetails![widget.index]
-                                                    .itemName);
-                                                //worked
-                                                countIncrease(
-                                                  cartId: widget
-                                                      .cartData!
-                                                      .data!
-                                                      .cartDetails![
-                                                          widget.index]
-                                                      .cartId,
-                                                  itemCost: widget
-                                                      .cartData!
-                                                      .data!
-                                                      .cartDetails![
-                                                          widget.index]
-                                                      .itemCost,
-                                                  cartDetailsId: widget
-                                                      .cartData!
-                                                      .data!
-                                                      .cartDetails![
-                                                          widget.index]
-                                                      .cartDetailsId,
-                                                      quantity:  _counter.toString()
-                                                );                                               
-                                                // cartCOntroller.addCart(
-                                                //     widget.cartData,
-                                                //     _counter);
-
-                                                //   print(value);
-                                                //            });
-                                              },
-                                              child: Container(
-                                                height: 25,
-                                                width: 25,
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      color: Colors.grey),
-                                                  borderRadius:
-                                                      BorderRadius.circular(5),
-                                                ),
+                                              Container(
+                                                height: 20,
+                                                width: 30,
+                                                color: Colors.white,
                                                 child: Center(
-                                                    child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(2.0),
-                                                  child: Text("+"),
-                                                )),
+                                                  child: Text(
+                                                    _counter.toString(),
+                                                    style: FoodigyTextStyle
+                                                        .addTocartStyle,
+                                                  ),
+                                                ),
                                               ),
-                                            ),
-                                          ],
-                                        );
-                                      });
-                                    }),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                SizedBox(
-                                  //     width: 70,
-                                  child: Text(
-                                    // " \u{20B9} $value",
-                                    "${iRubee.toString()} ${double.parse(value.toString()).toStringAsFixed(2)}",
-                                    style: FoodigyTextStyle.amountStyle,
+                                              InkWell(
+                                                onTap: () {                                              
+                                                  //              setState(() {
+                                                  _counter++;
+                                                  // totalValue = totalValue + value;
+                                                  print(_counter);
+                                                  //  cartCOntroller.add(value);
+                                                  // cartCOntroller.addCart(
+                                                  //     widget.cartData, _counter);
+                                                  print(widget
+                                                      .cartData!
+                                                      .data!
+                                                      .cartDetails![widget.index]
+                                                      .itemName);
+                                                  //worked
+                                                  countIncrease(
+                                                    cartId: widget
+                                                        .cartData!
+                                                        .data!
+                                                        .cartDetails![
+                                                            widget.index]
+                                                        .cartId,
+                                                    itemCost: widget
+                                                        .cartData!
+                                                        .data!
+                                                        .cartDetails![
+                                                            widget.index]
+                                                        .itemCost,
+                                                    cartDetailsId: widget
+                                                        .cartData!
+                                                        .data!
+                                                        .cartDetails![
+                                                            widget.index]
+                                                        .cartDetailsId,
+                                                        quantity:  _counter.toString()
+                                                  );                                               
+                                                  // cartCOntroller.addCart(
+                                                  //     widget.cartData,
+                                                  //     _counter);
+                            
+                                                  //   print(value);
+                                                  //            });
+                                                },
+                                                child: Container(
+                                                  height: 25,
+                                                  width: 25,
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                        color: Colors.grey),
+                                                    borderRadius:
+                                                        BorderRadius.circular(5),
+                                                  ),
+                                                  child: Center(
+                                                      child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(2.0),
+                                                    child: Text("+"),
+                                                  )),
+                                                ),
+                                              ),
+                                            ],
+                                          );
+                                        });
+                                      }),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                 
+                                  SizedBox(
+                                   //      width: 90,
+                                    child: Text(
+                                      // " \u{20B9} $value",
+                                      "${iRubee.toString()} ${double.parse(value.toString()).toStringAsFixed(2)}",
+                                      style: FoodigyTextStyle.amountStyle,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ],
                         ),

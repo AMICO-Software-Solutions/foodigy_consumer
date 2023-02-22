@@ -1436,7 +1436,6 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                           ),
                         );
                       } else {
-                       
                         return InkWell(
                           onTap: () {},
                           child: Padding(
@@ -1466,10 +1465,12 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                       SizedBox(
                                         width: 5,
                                       ),
-                                      Text(
-                                        "Dunzo service charge",
-                                        style: FoodigyTextStyle
-                                            .addTocartDisableStyle,
+                                      SizedBox(
+                                        width: MediaQuery.of(context).size.width/1.6,
+                                        child: Text(
+                                          "Dunzo is not available to deliver at tis time. Please select another delivery type",
+                                          style: FoodigyTextStyle.addTocartDeliveryDisableStyle,
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -1640,11 +1641,13 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                     SizedBox(
                                       width: 5,
                                     ),
-                                    Text(
-                                      "PickDrop service charge",
-                                      style: FoodigyTextStyle
-                                          .addTocartDisableStyle,
-                                    ),
+                                    SizedBox(
+                                        width: MediaQuery.of(context).size.width/1.6,
+                                        child: Text(
+                                          "PickDrop is not available to deliver at tis time. Please select another delivery type",
+                                          style: FoodigyTextStyle.addTocartDeliveryDisableStyle,
+                                        ),
+                                      ),
                                   ],
                                 ),
                                 Row(

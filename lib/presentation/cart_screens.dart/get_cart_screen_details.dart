@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:foodigy/model/cart_details_model.dart';
 import 'package:foodigy/presentation/cart_screens.dart/cart_screen.dart';
-import 'package:get/get.dart';
-
 
 class GetCartScreenDetails extends StatelessWidget {
   final String? uId;
    final CartDetailsModel? cartData;
   const GetCartScreenDetails({super.key, this.uId, this.cartData});
-  // GetCartDetailsController cartListController =
   @override
   Widget build(BuildContext context) {
     totalValue = 0;
         double height = 80;
-        double legnth = cartData!.data!.cartDetails!.length == null
+        double legnth = cartData!.data!.cartDetails!.isEmpty
             ? 0
             : cartData!.data!.cartDetails!.length.toDouble();
         double? to;
-
         to = height * legnth;
         return Column(
               children: [
@@ -48,10 +44,6 @@ class GetCartScreenDetails extends StatelessWidget {
                
               ],
             );
-          
-        
-      
-    
   }
 }
 

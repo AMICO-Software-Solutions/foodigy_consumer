@@ -34,6 +34,11 @@ class FoodigyTextStyle {
       fontSize: 12,
       color: Colors.grey,
       fontWeight: FontWeight.w400);
+        static const addTocartDeliveryDisableStyle = TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: 12,
+      color: Colors.red,
+      fontWeight: FontWeight.w400);
   static const bigTextStyle = TextStyle(
       fontFamily: 'Poppins',
       fontSize: 17,
