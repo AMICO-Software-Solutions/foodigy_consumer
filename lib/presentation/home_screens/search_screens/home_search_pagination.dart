@@ -43,9 +43,6 @@ class _HomeSearchPaginationState extends State<HomeSearchPagination> {
     passValue =
         selectedProductTiming.isEmpty ? selectedProductTiming : anySelected;
     super.initState();
-    // selectedProductTiming.isEmpty
-    //     ? selectedProductTiming
-    //     : selectedProductTiming.add("ANYTIME");
     fetchData(paraOffset: offset, value: widget.search);
     handleNext();
   }
@@ -57,6 +54,17 @@ class _HomeSearchPaginationState extends State<HomeSearchPagination> {
     String? value,
   }) async {
     try {
+      ////  print('search data');
+      //// print(passValue);
+      //// print(vegOrNonveg);
+      //// print(healthTags);
+     //// print(selectedCuisineList);
+     //// print(value);
+      //// print(sortBy);
+      //// print(latFoodigy);
+      //// print(longFoodigy);
+      //// print(paraOffset);
+      //// print(passDate);
       setState(() {
         isNoData == true ? loading = false : loading = true;
       });
@@ -72,7 +80,7 @@ class _HomeSearchPaginationState extends State<HomeSearchPagination> {
             "natureofProduct": vegOrNonveg,
             "healthTag": healthTags,
             "menuTag": selectedCuisineList,
-            "text": value,
+            "text": value.toString(),
             "productPrice": sortBy,
             "latitude": latFoodigy,
             "limit": 10,
@@ -96,7 +104,7 @@ class _HomeSearchPaginationState extends State<HomeSearchPagination> {
           print('result is null');
           setState(() {
             loading = false;
-            isNoData=true;
+            //isNoData=true;
             print('loading false');
           });
         } else {
@@ -107,15 +115,12 @@ class _HomeSearchPaginationState extends State<HomeSearchPagination> {
             offset = localOffset;
            
             Timer( Duration(seconds: 2), (){
-               setState(() {
-                loading = false;
+             setState(() {
+                  loading = false;
                 isNoData = true;
-                print('no data true');
-      
+             });
+                print('no data true');   
             });
-
-            });
-            
             print(offset);
             print(result);
           });
@@ -132,12 +137,9 @@ class _HomeSearchPaginationState extends State<HomeSearchPagination> {
       print(e);
     } finally {
       setState(() {
-        //  loading = true;
         print('value is $value');
       });
     }
-
-    // print(sortBy);
   }
 
   void handleNext() {

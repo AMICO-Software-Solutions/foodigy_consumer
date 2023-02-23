@@ -10,16 +10,13 @@ import 'package:foodigy/utilities/const_value.dart';
 class ItemAvailableProductDisable extends StatefulWidget {
   final List<Datum>? result;
   final int index;
-  const ItemAvailableProductDisable(
-      {super.key, this.result, required this.index});
+  const ItemAvailableProductDisable({super.key, this.result, required this.index});
 
   @override
-  State<ItemAvailableProductDisable> createState() =>
-      _ItemAvailableProductDisableState();
+  State<ItemAvailableProductDisable> createState() =>  _ItemAvailableProductDisableState();
 }
 
-class _ItemAvailableProductDisableState
-    extends State<ItemAvailableProductDisable> {
+class _ItemAvailableProductDisableState  extends State<ItemAvailableProductDisable> {
   @override
   void initState() {
     productTime = widget.result![widget.index].productAvailableTime.toString();
@@ -30,9 +27,7 @@ class _ItemAvailableProductDisableState
   }
 
   DateTime now = DateTime.now();
-//DateTime date = DateTime(now.year, now.month, now.day);
-  DateTime dateToday =
-      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+    DateTime dateToday = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
   int? groupValue;
   String title = '';
   int? typeValue;
@@ -78,7 +73,7 @@ class _ItemAvailableProductDisableState
       child: InkWell(
         onTap: () {},
         child: Container(
-          height: 220,
+         // height: 220,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
