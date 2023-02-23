@@ -23,7 +23,7 @@ class SearchAddressController extends GetxController{
             //  "Authorization": 'Bearer $token',
           },
           body: jsonEncode({"address": address}));
-      print("status code is ${responseData.statusCode.toString()}");
+      print(" get address status code is ${responseData.statusCode.toString()}");
       if (responseData.statusCode == 200 ||
           responseData.statusCode == 201 ||
           responseData.statusCode == 202 ||

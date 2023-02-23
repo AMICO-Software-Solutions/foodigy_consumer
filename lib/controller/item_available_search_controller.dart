@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'dart:async';
 import 'dart:convert';
 import 'package:foodigy/controller/tokens.dart';
 import 'package:foodigy/model/item_available_search_model.dart';
@@ -9,6 +10,14 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 class ItemAvailableSearchController extends GetxController {
+  
+  getLoader(){
+    isDataLoading(true);
+   Timer(const Duration(seconds: 1),(){
+    isDataLoading(false);
+
+   });
+  }
   //AddressGet addressGet =<AddressGet>[].obs;
   ItemAvailableSearchFoodModel? searchModel;
   var isDataLoading = false.obs;

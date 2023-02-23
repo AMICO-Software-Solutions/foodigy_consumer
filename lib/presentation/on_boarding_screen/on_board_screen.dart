@@ -3,6 +3,7 @@
 import 'package:flutter/services.dart';
 import 'package:foodigy/controller/cms_controller/search_address_controller.dart';
 import 'package:foodigy/controller/onboading_controller.dart';
+import 'package:foodigy/controller/tokens.dart';
 import 'package:foodigy/presentation/sign_in/login_screen.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:get/get.dart';
@@ -29,6 +30,7 @@ class _OnbordingState extends State<Onbording> {
   @override
   void initState() {
     onboadingController.getOnboading();
+    TokenGeneretor().postClientId();
     //  getImages();
     _controller = PageController(initialPage: 0);
     super.initState();

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/cart_controller/get_cart_list_controller.dart';
+import 'package:foodigy/controller/item_available_search_controller.dart';
 import 'package:foodigy/controller/update_values_controller.dart';
 import 'package:foodigy/controller/user_contoller/current_user_all_details_controller.dart';
 import 'package:foodigy/controller/user_contoller/current_user_details.dart';
@@ -34,11 +35,14 @@ class _HomePageState extends State<HomePage> {
   MainScreenController updateController = Get.put(MainScreenController());
   GetCartDetailsController cartListController =
       Get.put(GetCartDetailsController());
+        ItemAvailableSearchController itemAvailableController =
+      Get.put(ItemAvailableSearchController());
 
   @override
   void initState() {
     curent.getRecent();
     cartListController.getCartDetails('');
+     itemAvailableController.getItemSearchFood(timing: ["ANYTIME"]);
 
     super.initState();
   }
