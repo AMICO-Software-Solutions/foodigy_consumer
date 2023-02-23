@@ -511,15 +511,29 @@ class _OrderViewSummaryState extends State<OrderViewSummary> {
                   SizedBox(
                     height: 10,
                   ),
-                   paymentCard(
-                      title: "Discount",
-                      value:widget.pastOrder!.data![widget.index].productTotalCost==null ? '0':  discountValue.toString()),
+                    paymentCard(
+                          title: "Discount",
+                          value: widget.pastOrder!.data![widget.index]
+                                      .couponCost ==
+                                  null
+                              ? '0'
+                              : "${int.parse(widget.pastOrder!.data![widget.index].couponCost.toString())}"),
+                  //  paymentCard(
+                  //     title: "Discount",
+                  //     value:widget.pastOrder!.data![widget.index].productTotalCost==null ? '0':  discountValue.toString()),
                   SizedBox(
                     height: 10,
                   ),
                    paymentCard(
-                      title: "After Discount",
-                      value:widget.pastOrder!.data![widget.index].couponCost==null ? '0':  "${int.parse(widget.pastOrder!.data![widget.index].couponCost.toString())}"),
+                          title:  "After Discount",
+                          value: widget.pastOrder!.data![widget.index]
+                                      .productTotalCost ==
+                                  null
+                              ? '0'
+                              : discountValue.toString()),
+                  //  paymentCard(
+                  //     title: "After Discount",
+                  //     value:widget.pastOrder!.data![widget.index].couponCost==null ? '0':  "${int.parse(widget.pastOrder!.data![widget.index].couponCost.toString())}"),
                   SizedBox(
                     height: 10,
                   ),

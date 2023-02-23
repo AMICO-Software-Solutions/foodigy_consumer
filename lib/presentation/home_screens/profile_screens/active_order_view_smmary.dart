@@ -836,6 +836,8 @@ String? takeAwayOrderDeliveryTime='';
                       SizedBox(
                         height: 10,
                       ),
+
+                      
                       
                       paymentCard(
                           title: "Discount",

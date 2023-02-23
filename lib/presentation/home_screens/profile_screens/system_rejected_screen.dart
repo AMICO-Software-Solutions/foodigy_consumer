@@ -205,12 +205,14 @@ class _SystemRejectedScreenState extends State<SystemRejectedScreen> {
                                 child: ListView.builder(
                                   itemCount: 1,
                                   itemBuilder:(context, i){
-                                    return widget.pastOrder!.data![widget.index].razorpayPayment![i].paymentStatus.toString()=="failed"?
-                                       Container():  Text(
-                                  " ${widget.pastOrder!.data![widget.index].razorpayPayment![i].razorpayRefund![0].refundStatus.toString()}",
-                                //  "Refund Completed",
-                                  style: FoodigyTextStyle.smallGreyTextStyle,
-                                );
+                                    return widget.pastOrder!.data![widget.index].razorpayPayment![i].paymentStatus.toString()=="captured"? Container(): SizedBox(
+                                      child: widget.pastOrder!.data![widget.index].razorpayPayment![i].paymentStatus.toString()=="failed"?
+                                         Container():  Text(
+                                                                      " ${widget.pastOrder!.data![widget.index].razorpayPayment![i].razorpayRefund![0].refundStatus.toString()}",
+                                                                    //  "Refund Completed",
+                                                                      style: FoodigyTextStyle.smallGreyTextStyle,
+                                                                    ),
+                                    );
                                    
                                     
                               
@@ -427,14 +429,29 @@ class _SystemRejectedScreenState extends State<SystemRejectedScreen> {
                     height: 10,
                   ),
                    paymentCard(
-                      title: "Discount",
-                      value:widget.pastOrder!.data![widget.index].productTotalCost==null ? '0':  discountValue.toString()),
+                          title: "Discount",
+                          value: widget.pastOrder!.data![widget.index]
+                                      .couponCost ==
+                                  null
+                              ? '0'
+                              : "${int.parse(widget.pastOrder!.data![widget.index].couponCost.toString())}"),
+                            
+                  //  paymentCard(
+                  //     title: "Discount",
+                  //     value:widget.pastOrder!.data![widget.index].productTotalCost==null ? '0':  discountValue.toString()),
                   SizedBox(
                     height: 10,
                   ),
-                   paymentCard(
-                      title: "After Discount",
-                      value:widget.pastOrder!.data![widget.index].couponCost==null ? '0':  "${int.parse(widget.pastOrder!.data![widget.index].couponCost.toString())}"),
+                      paymentCard(
+                          title:  "After Discount",
+                          value: widget.pastOrder!.data![widget.index]
+                                      .productTotalCost ==
+                                  null
+                              ? '0'
+                              : discountValue.toString()),
+                  //  paymentCard(
+                  //     title: "After Discount",
+                  //     value:widget.pastOrder!.data![widget.index].couponCost==null ? '0':  "${int.parse(widget.pastOrder!.data![widget.index].couponCost.toString())}"),
                   SizedBox(
                     height: 10,
                   ),
