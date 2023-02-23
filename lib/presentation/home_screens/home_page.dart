@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     curent.getRecent();
     cartListController.getCartDetails('');
-     itemAvailableController.getItemSearchFood(timing: ["ANYTIME"]);
+     ///itemAvailableController.getItemSearchFood(timing: ["ANYTIME"]);
 
     super.initState();
   }

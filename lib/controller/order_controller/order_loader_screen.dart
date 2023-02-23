@@ -20,7 +20,7 @@ class _OrderLoaderScreenState extends State<OrderLoaderScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-       Get.to(()=>OrderPlaceScreen(
+       Get.off(()=>OrderPlaceScreen(
            ordeCompleted: widget.orderCompleted,
         ));
     });

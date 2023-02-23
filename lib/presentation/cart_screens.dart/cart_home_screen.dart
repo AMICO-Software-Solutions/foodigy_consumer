@@ -1223,8 +1223,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                                       currentProfile:
                                                                           registerController
                                                                               .currentProfile,
-                                                                      cartData:
-                                                                          cartListController
+                                                                      cartData:  cartListController
                                                                               .cartList,
                                                                       addressId: selectPayType == "Takeaway"
                                                                           ? chefProfileController

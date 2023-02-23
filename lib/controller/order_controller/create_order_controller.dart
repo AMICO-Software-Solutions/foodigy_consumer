@@ -240,7 +240,7 @@ class CreateOrderController extends GetxController {
   // }
 
   void handlePaymentSuccess(PaymentSuccessResponse response) {
-    Get.to(OrderLoaderScreen(orderCompleted: orderCompleted,));
+    Get.off(OrderLoaderScreen(orderCompleted: orderCompleted,));
     razorSuccess(response);
     print('raso response');
     print(response.orderId);
