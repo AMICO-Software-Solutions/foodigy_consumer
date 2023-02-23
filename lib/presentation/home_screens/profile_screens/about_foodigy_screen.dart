@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:foodigy/utilities/foodigy_const_data.dart';
 import 'package:foodigy/widgets/profile/profile_appbar.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -18,7 +19,7 @@ class _AboutFoodigyScreenState extends State<AboutFoodigyScreen> {
       appBar: ProfileAppBar(text: 'About Foodigy'),
       body: SafeArea(
         child: WebView(
-          initialUrl: 'https://www.foodigy.co.in/ourstory.php',
+          initialUrl: FoodigyConstUrlLinks().aboutFoodigyLink,
           javascriptMode: JavascriptMode.unrestricted,
           onWebViewCreated: (WebViewController webViewController) {
             //  _controller.complete(webViewController);

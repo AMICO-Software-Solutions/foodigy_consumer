@@ -11,3 +11,9 @@ class FoodigyConstData {
   static const String apiKey="gUxXfqhrr6xxoWwnz5m4cAtzH24eHIfh";
   static const String scopeUser="users";
 }
+
+class FoodigyConstUrlLinks{
+  String privacyPolicyLink="https://www.foodigy.in/privacy-policy.php";
+  String termsAndConditionLink="https://www.foodigy.in/terms-conditions.php";
+  String aboutFoodigyLink="https://www.foodigy.in/ourstory.php";
+}

@@ -3,6 +3,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:foodigy/utilities/foodigy_const_data.dart';
 import 'package:foodigy/widgets/profile/profile_appbar.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -20,7 +21,7 @@ class _TermsAndConditionProfileState extends State<TermsAndConditionProfile> {
       appBar: ProfileAppBar(text: 'Terms & Conditions'),
        body: SafeArea(
         child: WebView(
-          initialUrl: 'https://www.foodigy.co.in/terms-conditions.php',
+          initialUrl: FoodigyConstUrlLinks().termsAndConditionLink,
           javascriptMode: JavascriptMode.unrestricted,
           onWebViewCreated: (WebViewController webViewController) {
             //  _controller.complete(webViewController);

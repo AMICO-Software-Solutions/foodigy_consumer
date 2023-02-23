@@ -3,6 +3,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:foodigy/utilities/foodigy_const_data.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../widgets/profile/profile_appbar.dart';
@@ -23,7 +24,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
      
       body: SafeArea(
         child: WebView(
-         initialUrl: 'https://www.foodigy.co.in/privacy-policy.php',
+         initialUrl: FoodigyConstUrlLinks().privacyPolicyLink,
         //  initialUrl: 'https://www.foodigy.co.in/privacy-policy.php',
 
          javascriptMode: JavascriptMode.unrestricted,
