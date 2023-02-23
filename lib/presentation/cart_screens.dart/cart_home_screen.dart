@@ -14,6 +14,9 @@ import 'package:foodigy/controller/delivery_type_controller/pick_drop_controller
 import 'package:foodigy/controller/order_controller/create_order_controller.dart';
 import 'package:foodigy/controller/user_contoller/current_user_profie_controller.dart';
 import 'package:foodigy/presentation/cart_screens.dart/cart_screen.dart';
+import 'package:foodigy/presentation/cart_screens.dart/cart_widgets/error_container.dart';
+import 'package:foodigy/presentation/cart_screens.dart/cart_widgets/place_order_disable.dart';
+import 'package:foodigy/presentation/cart_screens.dart/cart_widgets/text_field_cart.dart';
 import 'package:foodigy/presentation/cart_screens.dart/get_cart_screen_details.dart';
 import 'package:foodigy/presentation/home_screens/home.dart';
 import 'package:foodigy/styles/foodigy_text_style.dart';
@@ -1469,7 +1472,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                       SizedBox(
                                         width: MediaQuery.of(context).size.width/1.6,
                                         child: Text(
-                                          "Dunzo is not available to deliver at tis time. Please select another delivery type",
+                                          "Dunzo is not available to deliver at this time. Please select another delivery type",
                                           style: FoodigyTextStyle.addTocartDeliveryDisableStyle,
                                         ),
                                       ),
@@ -1645,7 +1648,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                     SizedBox(
                                         width: MediaQuery.of(context).size.width/1.6,
                                         child: Text(
-                                          "PickDrop is not available to deliver at tis time. Please select another delivery type",
+                                          "PickDrop is not available to deliver at this time. Please select another delivery type",
                                           style: FoodigyTextStyle.addTocartDeliveryDisableStyle,
                                         ),
                                       ),
@@ -1910,7 +1913,8 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                               padding: const EdgeInsets.all(0.0),
                               child: InkWell(
                                 onTap: () {
-                                  setState(() {
+                                     if(couponController.couponModel!.data![index].detectionType.toString()=="PERCENTAGE"){
+                                      setState(() {
                                     double roundDouble(
                                         double value, int places) {
                                       num mod = pow(10.0, places);
@@ -1963,6 +1967,56 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                     // print(totalTaxCoupon);
                                     // print(percentag);
                                   });
+
+                                    }else{
+                                      print("flat");
+                                         setState(() {
+                                    double roundDouble(
+                                        double value, int places) {
+                                      num mod = pow(10.0, places);
+                                      return ((value * mod).round().toDouble() /
+                                          mod);
+                                    }
+
+                                    isCoupon = true;
+                                    couponId = couponController.couponModel!.data![index].couponId .toString();
+                                    couponCode = couponController .couponModel!.data![index].couponCode  .toString();
+
+                                    double discountedValue =    double.parse(totalValue.toString()) -double.parse(couponController
+                                                    .couponModel!
+                                                    .data![index]
+                                                    .couponValue
+                                                    .toString());
+                                    discountValue = totalValue.toDouble() -discountedValue.toDouble();
+                                    afterDiscountValue =
+                                        discountedValue.toInt();
+                                    // totalValue = discountValue.toInt();
+                                    print(discountedValue.toString());
+                                    totalAmountWithTaxCoupon =discountedValue.toString();
+                                    double percentag = (2.5 / 100) *
+                                        double.parse(totalAmountWithTaxCoupon
+                                            .toString());
+                                    sgstCostCoupon = percentag.toString();
+                                    cgstCostCoupon = percentag.toString();
+                                    var totalTax = roundDouble(percentag, 2) +
+                                        roundDouble(percentag, 2);
+                                    int totalTax2 = discountedValue.toInt();
+                                    totalTaxCoupon = totalTax.toString();
+                                    totalCostWithCouponTax =
+                                        totalTax2 + totalTax.toInt();
+                                    print('discount');
+                                    print(totalCostWithCouponTax);
+                                    // print(totalTax3);
+                                    // print(totalCostWithCouponTax);
+                                    // print(totalTax.roundToDouble());
+                                    // print(totalTax2.round());
+                                    // print(totalAmountWithTaxCoupon);
+                                    // print(totalTaxCoupon);
+                                    // print(percentag);
+                                  });
+
+                                    }
+                                  
                                 },
                                 child: Container(
                                   color: Colors.white,
@@ -2125,107 +2179,4 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
   }
 }
 
-class TextFieldCart extends StatelessWidget {
-  const TextFieldCart({
-    Key? key,
-    required this.noteController,
-  }) : super(key: key);
 
-  final TextEditingController noteController;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey.shade200,
-      height: 40,
-      child: Padding(
-        padding: const EdgeInsets.all(3.0),
-        child: TextField(
-          controller: noteController,
-          readOnly: false,
-          autofocus: false,
-          autocorrect: false,
-          scribbleEnabled: false,
-          decoration: InputDecoration(
-              hintText: "Cooking Instructions (Optional)",
-              hintStyle: FoodigyTextStyle.addressTextStyle),
-        ),
-      ),
-    );
-  }
-}
-
-// ignore: camel_case_types
-class placeOrderButtondisable extends StatelessWidget {
-  const placeOrderButtondisable({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 38,
-      width: MediaQuery.of(context).size.width / 3,
-      child: TextButton(
-        // ignore: sort_child_properties_last
-        child: Text(
-          "Place order",
-          style: TextStyle(color: Colors.grey),
-        ),
-        style: TextButton.styleFrom(
-            primary: Colors.purple,
-            backgroundColor: Colors.grey.shade200,
-            textStyle: const TextStyle(fontSize: 14, fontFamily: 'Poppins')),
-        onPressed: () {},
-      ),
-    );
-  }
-}
-
-class ErrorContainer extends StatelessWidget {
-  const ErrorContainer({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-          child: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.red,
-                )),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 5, top: 5, bottom: 5),
-                  child: SizedBox(
-                      child: Row(children: const [
-                    Text(
-                      "Choose delivery type*",
-                      style: FoodigyTextStyle.addTocartStyle,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Icon(
-                      MdiIcons.chevronDown,
-                      size: 18,
-                    )
-                  ])),
-                ),
-              ),
-              Text(
-                "Please select delivery type",
-                style: FoodigyTextStyle.errorStyle,
-              )
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
