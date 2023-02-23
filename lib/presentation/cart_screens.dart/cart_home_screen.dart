@@ -41,6 +41,7 @@ String? selectPayType;
 //delivery charge variable
 bool isDeliveryCharge = false;
 String? valueChoose;
+   String deliveryDisplayDate = DateFormat('dd-MM-yyyy').format(DateTime.now());
 
 class _CartHomeScreenState extends State<CartHomeScreen> {
   GetAddressDetailsController addressListController =
@@ -62,6 +63,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
   CouponsController couponController = Get.put(CouponsController());
 
   late var _razorpay;
+
 
   bool isCoupon = false;
 
@@ -123,7 +125,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
   DateTime? newDateTimeObj2;
   //calendar date
   String deliveryDate = DateFormat('MM-dd-yyyy').format(DateTime.now());
-  String deliveryDisplayDate = DateFormat('dd-MM-yyyy').format(DateTime.now());
+
   var bookingIsoDate =
       DateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(DateTime.now());
   List items = ["item1", "item2", "item3", "item4"];
@@ -1074,7 +1076,7 @@ class _CartHomeScreenState extends State<CartHomeScreen> {
                                                     SizedBox(
                                                       height: 5,
                                                     ),
-                                                    Text(
+                                                  Text(
                                                         'Delivery date : $deliveryDisplayDate',
                                                         style: FoodigyTextStyle
                                                             .smallTextStyle),

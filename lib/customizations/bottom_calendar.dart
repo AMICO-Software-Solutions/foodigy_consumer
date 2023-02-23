@@ -5,6 +5,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/update_values_controller.dart';
+import 'package:foodigy/presentation/cart_screens.dart/cart_home_screen.dart';
 import 'package:foodigy/presentation/home_screens/home.dart';
 import 'package:foodigy/utilities/const_color.dart';
 import 'package:foodigy/utilities/const_value.dart';
@@ -93,6 +94,7 @@ class _CalendarTableState extends State<CalendarTable> {
                   // print(_selectedDay);
                   selectDate ="${_selectedDay!.month}/${_selectedDay!.day}/${_selectedDay!.year}";
                   selectDisaplayDate="${_selectedDay!.day}/${_selectedDay!.month}/${_selectedDay!.year}";
+                  deliveryDisplayDate = "${_selectedDay!.day}-${_selectedDay!.month}-${_selectedDay!.year}";
                   // print('seleceted date');
                   // print(selectDate);
                 });
