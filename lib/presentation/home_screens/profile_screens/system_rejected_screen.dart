@@ -7,7 +7,6 @@ import 'package:foodigy/styles/foodigy_text_style.dart';
 import 'package:foodigy/utilities/const_value.dart';
 import 'package:foodigy/widgets/custom_appbar.dart';
 import 'package:intl/intl.dart';
-
 import '../../../utilities/const_color.dart';
 
 class SystemRejectedScreen extends StatefulWidget {
@@ -73,19 +72,23 @@ class _SystemRejectedScreenState extends State<SystemRejectedScreen> {
           if (valu! < 12) {
           String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} $third";
+            print('am 1');
           } else {
              valu =valu! - 12;
              String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} PM";
+               print('am 2');
           }
         } else {
           if (valu! < 12) {
             String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${second.toString()} $third";
+               print('am 3');
           } else {
              valu =valu! - 12;
                  String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${second.toString()} PM";
+               print('am 4');
           }
         }
         print("am values");
@@ -99,20 +102,24 @@ class _SystemRejectedScreenState extends State<SystemRejectedScreen> {
             valu =valu!-12;
                 String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} PM";
+              print('value pm 24 $pATIme');
           } else {
              valu =valu! - 12;
-                 String valuTwo =  valu.toString()=="0"?"12": valu.toString();
+                 String valuTwo =  valu.toString()=="13"?"1": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} AM";
+             print('value else 24   kkkmkm $pATIme');
           }
         } else {
           if (valu! < 24) {
              valu =valu!-12;
                  String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${second.toString()} PM";
+             print('value <24 $pATIme');
           } else {
              valu =valu! - 12;
                  String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${second.toString()} AM";
+            print('value else 24 $pATIme');
           }
         }
       }
@@ -173,11 +180,19 @@ class _SystemRejectedScreenState extends State<SystemRejectedScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                widget
-                                    .pastOrder!.data![widget.index].profileName
-                                    .toString(),
-                                style: FoodigyTextStyle.homeHeadLine,
+                              InkWell(
+                                onTap: (){
+                                  String? productTime = DateFormat('HH:mm a').format(widget.orderCancelledDate!);
+                                  print(productTime);
+                                  print("19:50 PM");
+                                  maaa(productTime);
+                                },
+                                child: Text(
+                                  widget
+                                      .pastOrder!.data![widget.index].profileName
+                                      .toString(),
+                                  style: FoodigyTextStyle.homeHeadLine,
+                                ),
                               ),
                               SizedBox(
                                 width: MediaQuery.of(context).size.width / 3,

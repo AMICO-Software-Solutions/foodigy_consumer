@@ -136,7 +136,7 @@ class _OrderViewSummaryState extends State<OrderViewSummary> {
             pATIme = "${valuTwo.toString()}:${seco.toString()} PM";
           } else {
              valu =valu! - 12;
-                 String valuTwo =  valu.toString()=="0"?"12": valu.toString();
+                 String valuTwo =  valu.toString()=="13"?"1": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} AM";
           }
         } else {
