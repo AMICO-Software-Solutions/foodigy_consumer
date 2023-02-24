@@ -184,7 +184,8 @@ class _SystemRejectedScreenState extends State<SystemRejectedScreen> {
                                 onTap: (){
                                   String? productTime = DateFormat('HH:mm a').format(widget.orderCancelledDate!);
                                   print(productTime);
-                                  print("19:50 PM");
+                                  // print("19:50 PM");
+                                  print("00:02 AM");
                                   maaa(productTime);
                                 },
                                 child: Text(

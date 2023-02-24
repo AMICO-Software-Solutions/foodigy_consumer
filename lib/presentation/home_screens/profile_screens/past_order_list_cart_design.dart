@@ -2,7 +2,6 @@
 // ignore_for_file: avoid_print
 
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:foodigy/controller/order_controller/past_order_controller.dart';
 import 'package:foodigy/model/past_order_model.dart';
@@ -49,6 +48,7 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
     });
     Timer(const Duration(seconds: 0), () {
      String? productTime = DateFormat('HH:mm a').format(date!);
+   ///  maaa("11:48 PM");
       maaa(productTime);
     });
 
@@ -101,22 +101,26 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
           if (valu! < 12) {
           String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} $third";
+               print('am 1');
           } else {
              valu =valu! - 12;
              String valuTwo =  valu.toString()=="0"?"12": valu.toString();
 
             pATIme = "${valuTwo.toString()}:${seco.toString()} PM";
+               print('am 2');
           }
         } else {
           if (valu! < 12) {
             print("$valu $second $third");
             String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${second.toString()} $third";
+               print('am 3');
           } else {
              valu =valu! - 12;
                  String valuTwo =  valu.toString()=="0"?"12": valu.toString();
           //  print("$valu $second PM");
             pATIme = "${valuTwo.toString()}:${second.toString()} PM";
+               print('am 4');
           }
         }
 
@@ -128,13 +132,21 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
           second =second! -60;
            String  seco =second.toString().length ==1? "0$second":second.toString();
           if (valu! < 24) { 
-            valu =valu!-12;
+            valu =valu! -12;
+            print('val');
+            print(valu);
                 String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} PM";
+            print('pm 1');
+            print(valuTwo);
+            print(productTime);
           } else {
-             valu =valu! - 12;
-                 String valuTwo =  valu.toString()=="13"?"1": valu.toString();
+            //new
+             valu =valu! - 24;
+                 String valuTwo =  valu.toString()=="25"?"1": valu.toString();
             pATIme = "${valuTwo.toString()}:${seco.toString()} AM";
+            print('pm 2');
+            print(valuTwo);
           }
         } else {
           if (valu! < 24) {
@@ -142,10 +154,12 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
              valu =valu!-12;
                  String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${second.toString()} PM";
+            print('pm 3');
           } else {
              valu =valu! - 12;
                  String valuTwo =  valu.toString()=="0"?"12": valu.toString();
             pATIme = "${valuTwo.toString()}:${second.toString()} AM";
+            print('pm 3');
          //   print("$valu $second PM");
           }
         }
@@ -340,11 +354,19 @@ class _PastOrderListCardDesignState extends State<PastOrderListCardDesign> {
                                 children: [
                                   Row(
                                     children: [
-                                      Text(
-                                        widget.pastOrder!.data![widget.index]
-                                            .profileName
-                                            .toString(),
-                                        style: FoodigyTextStyle.homeHeadLine,
+                                      InkWell(
+                                        onTap: (){
+                                               String? productTime = DateFormat('HH:mm a').format(date!);
+                                               print(productTime);
+                                               print('23:47 PM');
+                                          maaa("23:47 PM");
+                                        },
+                                        child: Text(
+                                          widget.pastOrder!.data![widget.index]
+                                              .profileName
+                                              .toString(),
+                                          style: FoodigyTextStyle.homeHeadLine,
+                                        ),
                                       ),
                                       SizedBox(
                                         width: 20,

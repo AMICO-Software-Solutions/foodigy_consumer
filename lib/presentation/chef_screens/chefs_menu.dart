@@ -57,23 +57,12 @@ class _ChefMenuState extends State<ChefMenu> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: chefDetailsController.chefDetails(
-            chefId: widget.chefId.toString(),
-            menuTag: selecedFood,
-            nProduct: nProduct),
+        // future: chefDetailsController.chefDetails(
+        //     chefId: widget.chefId.toString(),
+        //     menuTag: selecedFood,
+        //     nProduct: nProduct),
         builder: (context, snapshot) {
-          return Obx(() {
-            if (chefDetailsController.isDataLoading.value == true) {
-              return Center(
-                child: CircularProgressIndicator(
-                  color: firstColor,
-                ),
-              );
-            }
-            else if(chefDetailsController.chefDetailsList!.data!.isEmpty){
-              return Center(child: Text('This chef is not available at this location', style: FoodigyTextStyle.homeHeadLine,),);
-            }
-            else {
+         
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SingleChildScrollView(
@@ -186,8 +175,13 @@ class _ChefMenuState extends State<ChefMenu> {
                                   //   print(valueTwo);
                                 }),
                               ),
-                              Text('Non-Veg',
-                                  style: FoodigyTextStyle.addTocartStyle)
+                              InkWell(
+                                onTap: (){
+                                  print(nProduct);
+                                },
+                                child: Text('Non-Veg',
+                                    style: FoodigyTextStyle.addTocartStyle),
+                              )
                             ],
                           ),
                           Row(
@@ -198,7 +192,7 @@ class _ChefMenuState extends State<ChefMenu> {
                                 onChanged: (valueThree) => setState(() {
                                   this.valueThree = valueThree;
 
-                                  if (valueTwo == true) {
+                                  if (valueThree == true) {
                                     nProduct.add('eggeterian');
                                     chefDetailsController.chefDetails(
                                         chefId: widget.chefId.toString(),
@@ -224,17 +218,42 @@ class _ChefMenuState extends State<ChefMenu> {
                           ),
                         ],
                       ),
-                      ChefScreenFoods(
-                        chefId: widget.chefId.toString(),
-                        uId: widget.uId.toString(),
-                        chefDetailsList: chefDetailsController.chefDetailsList,
+                      Obx( () {
+                        if (chefDetailsController.isDataLoading.value == true) {
+              return Center(
+                child: CircularProgressIndicator(
+                  color: firstColor,
+                ),
+              );
+            }
+            else if(chefDetailsController.chefDetailsList!.data!.isEmpty){
+              return SizedBox(
+                height: MediaQuery.of(context).size.height/2,
+                child: Center(child: Text('This chef is not available at this location', style: FoodigyTextStyle.homeHeadLine,),));
+            }else{
+                return FutureBuilder(
+                  future:  chefDetailsController.chefDetails(
+            chefId: widget.chefId.toString(),
+            menuTag: selecedFood,
+            nProduct: nProduct),
+                  builder: (context, snapshot) {
+                    return ChefScreenFoods(
+                                chefId: widget.chefId.toString(),
+                                uId: widget.uId.toString(),
+                                chefDetailsList: chefDetailsController.chefDetailsList,
+                              );
+                  }
+                );
+
+            }
+                        
+                        }
                       )
                     ],
                   ),
                 ),
               );
-            }
-          });
+           
         });
   }
 
